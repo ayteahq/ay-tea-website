@@ -6,8 +6,14 @@
 <title>AY-TEA — IT Services | Websites, Google Business, Automation</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111522'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%23111522'/%3E%3C/svg%3E">
 <meta name="description" content="AY-TEA: Google Business Profile optimization, modern one-page websites and custom automation. Remote & fair — IT services from Ulm, Germany.">
+<meta property="og:title" content="AY-TEA — IT Services">
+<meta property="og:description" content="Websites, Google Business Profile & Automatisierung — technisch sauber, fair kalkuliert. 100 % remote.">
+<meta property="og:url" content="https://ay-tea.de">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1E3FA4">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"AY-TEA","url":"https://ay-tea.de","email":"info@ay-tea.de","areaServed":"DE","sameAs":["https://instagram.com/ayteahq","https://www.tiktok.com/@ayteahq","https://github.com/ayteahq"]}</script>
 <style>
-  /* Lokale Fonts — Dateien liegen im Ordner fonts/ (siehe Anleitung) */
+  /* Lokale Fonts — Dateien liegen im Ordner fonts/ */
   @font-face{font-family:'Archivo';font-style:normal;font-weight:700;src:url('fonts/archivo-700.woff2') format('woff2');font-display:swap}
   @font-face{font-family:'Archivo';font-style:normal;font-weight:800;src:url('fonts/archivo-800.woff2') format('woff2');font-display:swap}
   @font-face{font-family:'Archivo';font-style:normal;font-weight:900;src:url('fonts/archivo-900.woff2') format('woff2');font-display:swap}
@@ -134,7 +140,7 @@
   }
   .term-bar span{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.16)}
   .term-bar span:first-child{background:var(--iznik-red)}
-  .term-body{padding:22px 22px 26px;color:#D7DCEA;min-height:196px}
+  .term-body{padding:22px 22px 26px;color:#D7DCEA;min-height:196px;max-height:320px;overflow:auto}
   .term-body .prompt{color:var(--turquoise)}
   .term-body .ok{color:var(--turquoise)}
   .term-line{display:block;margin-bottom:10px;opacity:0;animation:lineIn .3s forwards}
@@ -144,12 +150,13 @@
   .term-line:nth-child(4){animation-delay:2.3s}
   .term-line:nth-child(5){animation-delay:3s}
   @keyframes lineIn{to{opacity:1}}
-  .cursor{
-    display:inline-block;width:.55em;height:1.05em;
-    background:var(--turquoise);vertical-align:text-bottom;
-    animation:blink 1s step-end infinite;
+  .term-input{
+    background:transparent;border:0;outline:0;
+    color:#D7DCEA;font:inherit;caret-color:var(--turquoise);
+    width:65%;
   }
-  @keyframes blink{50%{opacity:0}}
+  .term-input::placeholder{color:rgba(215,220,234,.35)}
+  .term-out{color:#9FB0D0}
 
   /* ——— Sections ——— */
   section{padding:76px 0;border-bottom:1px solid var(--line)}
@@ -159,6 +166,15 @@
     margin-bottom:14px;
   }
   .section-lead{max-width:56ch;color:rgba(17,21,34,.75);margin-bottom:44px}
+
+  /* İznik-Muster-Divider */
+  .pattern-divider{
+    height:38px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='38'%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%231E3FA4' stroke-opacity='.16'/%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%2317A398' stroke-opacity='.22' transform='rotate(45 19 19)'/%3E%3Ccircle cx='19' cy='19' r='1.6' fill='%23C6402F' fill-opacity='.25'/%3E%3C/svg%3E");
+    background-size:38px 38px;
+    background-repeat:repeat-x;
+    background-position:center;
+  }
 
   /* Leistungen */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -175,6 +191,37 @@
   }
   .card h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.18rem}
   .card p{font-size:.95rem;color:rgba(17,21,34,.75);flex:1}
+
+  /* Vorher/Nachher-Demo */
+  .demo-toggle{
+    display:inline-flex;gap:4px;border:1px solid var(--line);
+    border-radius:999px;padding:4px;margin-bottom:24px;background:#fff;
+  }
+  .demo-toggle button{
+    border:0;background:transparent;cursor:pointer;font:inherit;
+    font-weight:600;font-size:.92rem;padding:8px 22px;
+    border-radius:999px;color:var(--ink);transition:background .2s,color .2s;
+  }
+  .demo-toggle button.active{background:var(--cobalt);color:#fff}
+  .gcard{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    max-width:560px;padding:26px;
+    box-shadow:0 18px 40px -26px rgba(21,44,116,.3);
+  }
+  .gcard-head{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px;
+  }
+  .gcard-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.2rem}
+  .gcard-meta{font-size:.88rem;color:rgba(17,21,34,.65)}
+  .gcard-meta .stars{color:#E8A33D;letter-spacing:1px}
+  .gcard-pin{font-size:1.4rem}
+  .gcard-list{list-style:none;display:none}
+  .gcard-list.active{display:block}
+  .gcard-list li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:.95rem}
+  .gcard-list .x{color:var(--iznik-red);font-weight:700}
+  .gcard-list .ok2{color:var(--turquoise);font-weight:700}
+  .demo-note{margin-top:14px;font-size:.8rem;color:rgba(17,21,34,.5)}
 
   /* Warum */
   .why{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px;max-width:880px}
@@ -221,14 +268,6 @@
     color:rgba(255,255,255,.75);
   }
 
-  /* Footer */
-  footer{padding:44px 0 60px;font-size:.88rem;color:rgba(17,21,34,.7)}
-  .foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-  footer details{max-width:640px;margin-top:22px}
-  footer summary{cursor:pointer;font-weight:600;color:var(--ink);margin-bottom:8px}
-  footer details p{margin-bottom:10px}
-  footer a{color:var(--cobalt)}
-
   /* Socials */
   .socials{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .socials a{
@@ -245,15 +284,11 @@
   .foot-social a:hover{opacity:1;color:var(--cobalt)}
   .foot-social svg{width:18px;height:18px;fill:currentColor;display:block}
 
-  /* Interaktives Terminal */
-  .term-body{max-height:320px;overflow:auto}
-  .term-input{
-    background:transparent;border:0;outline:0;
-    color:#D7DCEA;font:inherit;caret-color:var(--turquoise);
-    width:65%;
-  }
-  .term-input::placeholder{color:rgba(215,220,234,.35)}
-  .term-out{color:#9FB0D0}
+  /* Footer */
+  footer{padding:44px 0 60px;font-size:.88rem;color:rgba(17,21,34,.7)}
+  .foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+  footer a{color:var(--cobalt)}
+  .foot-legal{margin-top:22px}
 
   /* Scroll-Reveal */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -302,6 +337,8 @@
   </div>
 </header>
 
+<div class="pattern-divider" aria-hidden="true"></div>
+
 <section id="leistungen">
   <div class="wrap">
     <h2 data-i18n="s1_h">Leistungen</h2>
@@ -323,6 +360,43 @@
         <p data-i18n="c3_p">Wiederkehrende Aufgaben abgeben: individuelle Skripte, Datenauswertung, kleine Web-Tools und Schnittstellen — maßgeschneidert statt Software von der Stange.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <h2 data-i18n="d_h">Vorher / Nachher: ein Google-Profil im Vergleich</h2>
+    <p class="section-lead" data-i18n="d_lead">Genau das macht AY-TEA: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden überzeugt. Klicken Sie selbst:</p>
+    <div class="demo-toggle" role="group" aria-label="Vorher / Nachher">
+      <button type="button" class="active" data-state="before" data-i18n="d_before">Vorher</button>
+      <button type="button" data-state="after" data-i18n="d_after">Nachher</button>
+    </div>
+    <div class="gcard">
+      <div class="gcard-head">
+        <div>
+          <div class="gcard-name">Café Luna</div>
+          <div class="gcard-meta"><span class="stars">★★★★☆</span> 4,3 · Café · Ulm</div>
+        </div>
+        <span class="gcard-pin" aria-hidden="true">📍</span>
+      </div>
+      <ul class="gcard-list gcard-before active">
+        <li><span class="x">✗</span> <span data-i18n="db1">Nur 2 Fotos, keine Innenaufnahmen</span></li>
+        <li><span class="x">✗</span> <span data-i18n="db2">Öffnungszeiten fehlen oder sind falsch</span></li>
+        <li><span class="x">✗</span> <span data-i18n="db3">Keine Website verlinkt</span></li>
+        <li><span class="x">✗</span> <span data-i18n="db4">Beschreibung leer</span></li>
+        <li><span class="x">✗</span> <span data-i18n="db5">Bewertungen bleiben unbeantwortet</span></li>
+        <li><span class="x">✗</span> <span data-i18n="db6">Ungenaue Kategorie: nur „Café"</span></li>
+      </ul>
+      <ul class="gcard-list gcard-after">
+        <li><span class="ok2">✓</span> <span data-i18n="da1">26 professionelle Fotos</span></li>
+        <li><span class="ok2">✓</span> <span data-i18n="da2">Öffnungszeiten aktuell, Feiertage gepflegt</span></li>
+        <li><span class="ok2">✓</span> <span data-i18n="da3">Website &amp; Reservierungslink verknüpft</span></li>
+        <li><span class="ok2">✓</span> <span data-i18n="da4">Beschreibung mit relevanten Suchbegriffen</span></li>
+        <li><span class="ok2">✓</span> <span data-i18n="da5">Jede Bewertung bekommt eine Antwort</span></li>
+        <li><span class="ok2">✓</span> <span data-i18n="da6">Präzise Kategorien: Café · Frühstück · Brunch</span></li>
+      </ul>
+    </div>
+    <p class="demo-note" data-i18n="d_note">Fiktives Beispielprofil zur Veranschaulichung.</p>
   </div>
 </section>
 
@@ -385,6 +459,8 @@
   </div>
 </section>
 
+<div class="pattern-divider" aria-hidden="true"></div>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -396,20 +472,9 @@
         <a href="https://github.com/ayteahq" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
       </div>
     </div>
-    <details>
-      <summary>Impressum</summary>
-      <p>Angaben gemäß § 5 DDG<br>
-      AY-TEA — Inhaber: Celaleddin Mert Eraslan<br>
-      Tannenweg 2<br>
-      89359 Kötz, Deutschland<br>
-      E-Mail: info@ay-tea.de</p>
-      <p>Umsatzsteuer: Kleinunternehmer gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.</p>
-    </details>
-    <details>
-      <summary>Datenschutzerklärung</summary>
-      <p>Diese Website verwendet keine Cookies und keine personenbezogenen Tracking-Dienste. Zur anonymen Reichweitenmessung setzen wir GoatCounter ein (Betreiber: Martin Tournoij, Irland/EU-Hosting): Dabei werden keine Cookies gesetzt und keine Nutzerprofile erstellt; erfasst werden lediglich anonymisierte Zugriffsdaten wie aufgerufene Seite, Herkunftsland, Referrer und Gerätetyp (Rechtsgrundlage: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO — berechtigtes Interesse an der Reichweitenanalyse). Beim Aufruf der Seite verarbeitet zudem der Hosting-Anbieter technisch notwendige Daten (z.&nbsp;B. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logfiles auf Grundlage von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO.</p>
-      <p>Bei Kontaktaufnahme per E-Mail werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO) und nicht ohne Einwilligung weitergegeben. Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten. Verantwortlicher: siehe Impressum. Alle Schriftarten sind lokal eingebunden; es werden keine Verbindungen zu Drittanbietern aufgebaut.</p>
-    </details>
+    <div class="foot-legal">
+      <a href="impressum.html">Impressum</a> · <a href="impressum.html#datenschutz">Datenschutz</a>
+    </div>
   </div>
 </footer>
 
@@ -430,6 +495,22 @@ const T = {
     c2_p:"Moderne, schnelle Website auf einer Seite: responsiv, DSGVO-konform, mit Kontaktformular und Basis-SEO. Auf Wunsch mehrsprachig — Deutsch, Englisch oder Türkisch.",
     c3_h:"Automatisierung & Tools",
     c3_p:"Wiederkehrende Aufgaben abgeben: individuelle Skripte, Datenauswertung, kleine Web-Tools und Schnittstellen — maßgeschneidert statt Software von der Stange.",
+    d_h:"Vorher / Nachher: ein Google-Profil im Vergleich",
+    d_lead:"Genau das macht AY-TEA: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden überzeugt. Klicken Sie selbst:",
+    d_before:"Vorher", d_after:"Nachher",
+    db1:"Nur 2 Fotos, keine Innenaufnahmen",
+    db2:"Öffnungszeiten fehlen oder sind falsch",
+    db3:"Keine Website verlinkt",
+    db4:"Beschreibung leer",
+    db5:"Bewertungen bleiben unbeantwortet",
+    db6:"Ungenaue Kategorie: nur „Café\u201C",
+    da1:"26 professionelle Fotos",
+    da2:"Öffnungszeiten aktuell, Feiertage gepflegt",
+    da3:"Website & Reservierungslink verknüpft",
+    da4:"Beschreibung mit relevanten Suchbegriffen",
+    da5:"Jede Bewertung bekommt eine Antwort",
+    da6:"Präzise Kategorien: Café · Frühstück · Brunch",
+    d_note:"Fiktives Beispielprofil zur Veranschaulichung.",
     s2_h:"Warum AY-TEA?",
     s2_lead:"Kurze Wege, ehrliche Preise, technisches Verständnis.",
     w1_h:"Informatik-Hintergrund",
@@ -468,6 +549,22 @@ const T = {
     c2_p:"A modern, fast single-page website: responsive, GDPR-compliant, with contact form and basic SEO. Multilingual on request — German, English or Turkish.",
     c3_h:"Automation & tools",
     c3_p:"Hand off repetitive tasks: custom scripts, data processing, small web tools and integrations — tailor-made instead of off-the-shelf.",
+    d_h:"Before / after: one Google profile compared",
+    d_lead:"This is exactly what AY-TEA does: turning a neglected listing into a profile that wins customers. Try it yourself:",
+    d_before:"Before", d_after:"After",
+    db1:"Only 2 photos, no interior shots",
+    db2:"Opening hours missing or wrong",
+    db3:"No website linked",
+    db4:"Empty description",
+    db5:"Reviews left unanswered",
+    db6:"Vague category: just \u201ECafé\u201C",
+    da1:"26 professional photos",
+    da2:"Hours up to date, holidays included",
+    da3:"Website & booking link connected",
+    da4:"Description with relevant keywords",
+    da5:"Every review gets a reply",
+    da6:"Precise categories: café · breakfast · brunch",
+    d_note:"Fictional example profile for illustration.",
     s2_h:"Why AY-TEA?",
     s2_lead:"Short paths, honest pricing, real technical understanding.",
     w1_h:"Computer science background",
@@ -506,6 +603,22 @@ const T = {
     c2_p:"Modern ve hızlı tek sayfalık web sitesi: mobil uyumlu, GDPR uyumlu, iletişim formu ve temel SEO ile. İsteğe bağlı çok dilli — Almanca, İngilizce veya Türkçe.",
     c3_h:"Otomasyon & araçlar",
     c3_p:"Tekrarlayan işleri devredin: özel scriptler, veri işleme, küçük web araçları ve entegrasyonlar — hazır yazılım yerine size özel.",
+    d_h:"Öncesi / Sonrası: bir Google profili karşılaştırması",
+    d_lead:"AY-TEA tam olarak bunu yapar: ihmal edilmiş bir kaydı müşteri kazandıran bir profile dönüştürür. Kendiniz deneyin:",
+    d_before:"Öncesi", d_after:"Sonrası",
+    db1:"Sadece 2 fotoğraf, iç mekân yok",
+    db2:"Çalışma saatleri eksik veya yanlış",
+    db3:"Web sitesi bağlı değil",
+    db4:"Açıklama boş",
+    db5:"Yorumlar yanıtsız",
+    db6:"Belirsiz kategori: sadece \u201EKafe\u201C",
+    da1:"26 profesyonel fotoğraf",
+    da2:"Saatler güncel, tatiller dahil",
+    da3:"Web sitesi & rezervasyon bağlantısı",
+    da4:"Doğru anahtar kelimelerle açıklama",
+    da5:"Her yoruma yanıt",
+    da6:"Net kategoriler: kafe · kahvaltı · brunch",
+    d_note:"Örnek amaçlı kurgusal profil.",
     s2_h:"Neden AY-TEA?",
     s2_lead:"Kısa iletişim yolları, dürüst fiyatlar, gerçek teknik bilgi.",
     w1_h:"Bilgisayar bilimi altyapısı",
@@ -553,25 +666,28 @@ document.querySelectorAll('.lang button').forEach(b=>{
 /* ——— Interaktives Terminal ——— */
 const TERM = {
   de:{ ph:'tippe "help"',
-    help:'Befehle: services · contact · socials · moon · clear',
+    help:'Befehle: services · contact · socials · moon · history · clear',
     services:'Google-Profile · Onepager-Websites · Automatisierung & Tools',
     contact:'info@ay-tea.de — Antwort innerhalb von 24h',
     socials:'Instagram & TikTok: @ayteahq',
     moon:'🌙 „Ay" ist Türkisch für Mond. AY-TEA = IT. Jetzt weißt du es.',
+    hist:"🏛️ Eines der ersten Kaffeehäuser der Welt eröffnete 1554 in Istanbul — gute Ideen brauchen seit jeher gute Getränke. ☕",
     unknown:'Unbekannter Befehl — probier "help"' },
   en:{ ph:'type "help"',
-    help:'Commands: services · contact · socials · moon · clear',
+    help:'Commands: services · contact · socials · moon · history · clear',
     services:'Google profiles · one-page websites · automation & tools',
     contact:'info@ay-tea.de — reply within 24h',
     socials:'Instagram & TikTok: @ayteahq',
     moon:'🌙 "Ay" is Turkish for moon. AY-TEA = IT. Now you know.',
+    hist:"🏛️ One of the first coffee houses in the world opened in Istanbul in 1554 — good ideas have always needed good drinks. ☕",
     unknown:'Unknown command — try "help"' },
   tr:{ ph:'"help" yaz',
-    help:'Komutlar: services · contact · socials · moon · clear',
+    help:'Komutlar: services · contact · socials · moon · history · clear',
     services:'Google profilleri · tek sayfalık siteler · otomasyon & araçlar',
     contact:'info@ay-tea.de — 24 saat içinde yanıt',
     socials:'Instagram & TikTok: @ayteahq',
     moon:'🌙 "Ay" zaten biliyorsun. AY-TEA = IT. Şimdi tamam.',
+    hist:"🏛️ Dünyanın ilk kahvehanelerinden biri 1554'te İstanbul'da açıldı — iyi fikirler her zaman iyi içecek ister. ☕",
     unknown:'Bilinmeyen komut — "help" dene' }
 };
 
@@ -609,8 +725,19 @@ termInput.addEventListener('keydown', e=>{
   else if(['contact','kontakt','iletişim','iletisim','mail','email'].includes(c)) out = t.contact;
   else if(['socials','social','insta','instagram','tiktok','github'].includes(c)) out = t.socials;
   else if(['moon','ay','mond'].includes(c)) out = t.moon;
+  else if(['history','tarih','geschichte'].includes(c)) out = t.hist;
   else if(['ay-tea','aytea','ay-tea --start'].includes(c)) out = '✓ ' + t.services;
   termAdd('<span class="term-out">' + out + '</span>');
+});
+
+/* ——— Vorher/Nachher-Demo ——— */
+document.querySelectorAll('.demo-toggle button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.demo-toggle button').forEach(x=>x.classList.toggle('active', x===b));
+    const after = b.dataset.state === 'after';
+    document.querySelector('.gcard-before').classList.toggle('active', !after);
+    document.querySelector('.gcard-after').classList.toggle('active', after);
+  });
 });
 
 /* ——— Scroll-Reveal ——— */
@@ -620,7 +747,7 @@ if('IntersectionObserver' in window){
       if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
     });
   }, {threshold:.15});
-  document.querySelectorAll('.card,.step,.why-item,.contact').forEach(el=>{
+  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard').forEach(el=>{
     el.classList.add('reveal');
     io.observe(el);
   });
