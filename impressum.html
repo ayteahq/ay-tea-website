@@ -3,52 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Impressum & Datenschutz — AY-TEA</title>
-<!-- WICHTIG: noindex hält diese Seite aus Google & Co. heraus -->
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E3FA4">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111522'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%23111522'/%3E%3C/svg%3E">
+
 <style>
-  :root{--ink:#111522;--paper:#F7F5EF;--cobalt:#1E3FA4;--line:rgba(17,21,34,.14)}
+  :root{
+    --ink:#111522;
+    --paper:#F7F5EF;
+    --card:#FFFFFF;
+    --cobalt:#1E3FA4;
+    --cobalt-deep:#152C74;
+    --turquoise:#17A398;
+    --line:rgba(17,21,34,.14);
+    --muted:rgba(17,21,34,.68);
+    --radius:16px;
+  }
+
   *{margin:0;padding:0;box-sizing:border-box}
+
+  html{scroll-behavior:smooth}
+
   body{
-    font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
-    background:var(--paper);color:var(--ink);
-    line-height:1.65;padding:48px 24px 80px;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:
+      radial-gradient(circle at 8% 0%, rgba(30,63,164,.10), transparent 28rem),
+      radial-gradient(circle at 90% 6%, rgba(23,163,152,.10), transparent 26rem),
+      var(--paper);
+    color:var(--ink);
+    line-height:1.68;
+    padding:44px 22px 80px;
   }
-  main{max-width:680px;margin:0 auto}
+
+  main{
+    max-width:780px;
+    margin:0 auto;
+  }
+
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    margin-bottom:40px;
+  }
+
+  .brand{
+    font-weight:900;
+    letter-spacing:.02em;
+    color:var(--cobalt);
+    text-decoration:none;
+    font-size:1.08rem;
+  }
+
   .back{
-    display:inline-block;margin-bottom:36px;
-    color:var(--cobalt);text-decoration:none;font-weight:600;font-size:.95rem;
+    display:inline-block;
+    color:var(--cobalt);
+    text-decoration:none;
+    font-weight:700;
+    font-size:.95rem;
   }
-  .back:hover{text-decoration:underline}
-  h1{font-size:1.9rem;margin-bottom:10px;letter-spacing:-.01em}
-  h2{font-size:1.25rem;margin:42px 0 12px;padding-top:26px;border-top:1px solid var(--line)}
-  p{margin-bottom:12px;font-size:.97rem}
-  .muted{color:rgba(17,21,34,.6);font-size:.85rem}
-  a{color:var(--cobalt)}
+
+  .back:hover,
+  .brand:hover{
+    color:var(--cobalt-deep);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  .hero{
+    background:rgba(255,255,255,.64);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:34px 32px;
+    margin-bottom:28px;
+  }
+
+  h1{
+    font-size:clamp(2rem,5vw,2.75rem);
+    line-height:1.08;
+    letter-spacing:-.03em;
+    margin-bottom:10px;
+  }
+
+  .lead{
+    color:var(--muted);
+    max-width:62ch;
+  }
+
+  section{
+    background:rgba(255,255,255,.72);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:30px 32px;
+    margin-top:18px;
+  }
+
+  h2{
+    font-size:1.35rem;
+    line-height:1.2;
+    letter-spacing:-.015em;
+    margin-bottom:14px;
+  }
+
+  h3{
+    font-size:1.04rem;
+    margin:24px 0 8px;
+  }
+
+  p{
+    margin-bottom:12px;
+    font-size:.98rem;
+  }
+
+  ul{
+    margin:8px 0 16px 1.25rem;
+  }
+
+  li{
+    margin-bottom:6px;
+  }
+
+  a{
+    color:var(--cobalt);
+    text-underline-offset:3px;
+  }
+
+  a:hover{
+    color:var(--cobalt-deep);
+  }
+
+  .muted{
+    color:var(--muted);
+    font-size:.9rem;
+  }
+
+  .small{
+    font-size:.9rem;
+  }
+
+  .notice{
+    border-left:4px solid var(--turquoise);
+    background:rgba(23,163,152,.08);
+    padding:14px 16px;
+    border-radius:12px;
+    margin:18px 0 4px;
+  }
+
+  .legal-block{
+    margin-top:8px;
+  }
+
+  @media(max-width:620px){
+    body{padding:28px 16px 64px}
+    .topbar{align-items:flex-start;flex-direction:column;margin-bottom:28px}
+    .hero, section{padding:24px 20px}
+  }
 </style>
 </head>
+
 <body>
 <main>
-  <a class="back" href="index.html">← Zurück zu ay-tea.de</a>
+  <div class="topbar">
+    <a class="brand" href="index.html">AY-TEA</a>
+    <a class="back" href="index.html">← Zurück zur Startseite</a>
+  </div>
 
-  <h1>Impressum</h1>
-  <p>Angaben gemäß § 5 DDG</p>
-  <p>
-    AY-TEA — Inhaber: Celaleddin Mert Eraslan<br>
-    Tannenweg 2<br>
-    89359 Kötz, Deutschland<br>
-    E-Mail: <a href="mailto:info@ay-tea.de">info@ay-tea.de</a>
-  </p>
-  <p>Umsatzsteuer: Kleinunternehmer gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.</p>
+  <div class="hero">
+    <h1>Impressum & Datenschutz</h1>
+    <p class="lead">Rechtliche Angaben und Informationen zur Datenverarbeitung auf ay-tea.de.</p>
+  </div>
 
-  <h2 id="datenschutz">Datenschutzerklärung</h2>
-  <p>Diese Website verwendet keine Cookies und keine personenbezogenen Tracking-Dienste. Zur anonymen Reichweitenmessung setzen wir GoatCounter ein: Dabei werden keine Cookies gesetzt und keine Nutzerprofile erstellt; erfasst werden lediglich anonymisierte Zugriffsdaten wie aufgerufene Seite, Herkunftsland, Referrer und Gerätetyp (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse an der Reichweitenanalyse).</p>
-  <p>Beim Aufruf der Seite verarbeitet zudem der Hosting-Anbieter (GitHub Pages, GitHub Inc.) technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logfiles auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
-  <p>Bei Kontaktaufnahme per E-Mail werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert (Art. 6 Abs. 1 lit. b DSGVO) und nicht ohne Einwilligung weitergegeben. Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten. Verantwortlicher: siehe Impressum.</p>
-  <p>Alle Schriftarten sind lokal eingebunden; es werden keine Verbindungen zu Schriftarten-Drittanbietern aufgebaut.</p>
+  <section aria-labelledby="impressum">
+    <h2 id="impressum">Impressum</h2>
 
-  <p class="muted">Stand: Juli 2026</p>
+    <p class="muted">Angaben gemäß § 5 DDG</p>
+
+    <div class="legal-block">
+      <p>
+        <strong>AY-TEA</strong><br>
+        Inhaber: Celaleddin Mert Eraslan<br>
+        Tannenweg 2<br>
+        89359 Kötz<br>
+        Deutschland
+      </p>
+
+      <p>
+        E-Mail: <a href="mailto:info@ay-tea.de">info@ay-tea.de</a>
+      </p>
+    </div>
+
+    <h3>Umsatzsteuer</h3>
+    <p>
+      Kleinunternehmer gemäß § 19 UStG. Es wird keine Umsatzsteuer ausgewiesen.
+    </p>
+
+    <h3>Verantwortlich für den Inhalt</h3>
+    <p>
+      Celaleddin Mert Eraslan, Anschrift wie oben.
+    </p>
+  </section>
+
+  <section id="datenschutz" aria-labelledby="datenschutz-heading">
+    <h2 id="datenschutz-heading">Datenschutzerklärung</h2>
+
+    <h3>1. Verantwortlicher</h3>
+    <p>
+      Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+    </p>
+    <p>
+      Celaleddin Mert Eraslan<br>
+      Tannenweg 2<br>
+      89359 Kötz<br>
+      Deutschland<br>
+      E-Mail: <a href="mailto:info@ay-tea.de">info@ay-tea.de</a>
+    </p>
+
+    <h3>2. Allgemeine Hinweise</h3>
+    <p>
+      Diese Website verwendet keine Cookies, kein Kontaktformular, keinen Newsletter und keine personenbezogenen Werbe- oder Tracking-Dienste.
+      Die Kontaktaufnahme erfolgt ausschließlich per E-Mail oder über externe Social-Media-Profile, sofern Sie diese freiwillig aufrufen.
+    </p>
+
+    <h3>3. Hosting über GitHub Pages</h3>
+    <p>
+      Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website werden technisch notwendige Zugriffsdaten verarbeitet,
+      insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten, Referrer sowie Browser- und Geräteinformationen.
+      Diese Verarbeitung ist erforderlich, um die Website sicher, stabil und funktionsfähig bereitzustellen.
+    </p>
+    <p>
+      Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website.
+      Anbieter ist GitHub, Inc. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub:
+      <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
+    </p>
+
+    <h3>4. Reichweitenmessung mit GoatCounter</h3>
+    <p>
+      Zur anonymen und datenschutzfreundlichen Reichweitenmessung wird GoatCounter eingesetzt. GoatCounter setzt keine Cookies auf dieser Website
+      und erstellt keine personenbezogenen Nutzerprofile. Erfasst werden statistische Zugriffsdaten, zum Beispiel aufgerufene Seiten, Referrer,
+      ungefähres Herkunftsland, Browser-/Gerätetyp und Bildschirmgröße.
+    </p>
+    <p>
+      Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt darin, die Nutzung der Website
+      statistisch auszuwerten und das Angebot technisch sowie inhaltlich zu verbessern.
+      Weitere Informationen finden Sie in der Datenschutzerklärung von GoatCounter:
+      <a href="https://goatcounter.com/help/privacy" target="_blank" rel="noopener noreferrer">GoatCounter Privacy Policy</a>.
+    </p>
+
+    <h3>5. Kontaktaufnahme per E-Mail</h3>
+    <p>
+      Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen übermittelten Angaben verarbeitet, insbesondere Ihre E-Mail-Adresse,
+      Ihr Name, sofern angegeben, sowie der Inhalt Ihrer Nachricht. Die Daten werden ausschließlich zur Bearbeitung der Anfrage verwendet.
+    </p>
+    <p>
+      Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist.
+      In allen anderen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, dem berechtigten Interesse an der Bearbeitung
+      eingehender Anfragen.
+    </p>
+    <p>
+      Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet wurde, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+    </p>
+
+    <h3>6. Lokale Schriftarten</h3>
+    <p>
+      Auf dieser Website werden Schriftarten lokal eingebunden. Es werden beim Laden der Schriftarten keine Verbindungen zu Schriftarten-Drittanbietern
+      wie Google Fonts aufgebaut.
+    </p>
+
+    <h3>7. Externe Links und Social Media</h3>
+    <p>
+      Diese Website enthält Links zu externen Plattformen wie Instagram, TikTok und GitHub. Beim Anklicken dieser Links verlassen Sie diese Website.
+      Für die Datenverarbeitung auf den verlinkten Plattformen sind die jeweiligen Anbieter verantwortlich.
+    </p>
+
+    <h3>8. Ihre Rechte</h3>
+    <p>
+      Sie haben im Rahmen der gesetzlichen Voraussetzungen folgende Rechte:
+    </p>
+    <ul>
+      <li>Auskunft über die zu Ihrer Person gespeicherten Daten,</li>
+      <li>Berichtigung unrichtiger Daten,</li>
+      <li>Löschung Ihrer Daten,</li>
+      <li>Einschränkung der Verarbeitung,</li>
+      <li>Datenübertragbarkeit,</li>
+      <li>Widerspruch gegen bestimmte Verarbeitungen,</li>
+      <li>Beschwerde bei einer Datenschutzaufsichtsbehörde.</li>
+    </ul>
+
+    <h3>9. Keine automatisierte Entscheidungsfindung</h3>
+    <p>
+      Es findet keine automatisierte Entscheidungsfindung einschließlich Profiling statt.
+    </p>
+
+    <div class="notice">
+      <p class="small">
+        Diese Datenschutzerklärung ist auf eine einfache statische Website mit GitHub Pages, GoatCounter, lokalen Schriftarten und E-Mail-Kontakt zugeschnitten.
+      </p>
+    </div>
+
+    <p class="muted">Stand: Juli 2026</p>
+  </section>
 </main>
 </body>
 </html>
