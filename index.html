@@ -596,146 +596,6 @@
     color:rgba(17,21,34,.52);
   }
 
-
-
-  /* DITIB-Datenprojekt */
-  #datenprojekt{
-    background:
-      radial-gradient(circle at 10% 10%, rgba(23,163,152,.10), transparent 24rem),
-      radial-gradient(circle at 90% 80%, rgba(30,63,164,.10), transparent 28rem);
-  }
-
-  .ditib-showcase{
-    display:grid;
-    grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
-    gap:24px;
-    align-items:stretch;
-  }
-
-  .ditib-copy{
-    background:var(--ink);
-    color:#fff;
-    border-radius:22px;
-    padding:38px;
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
-
-  .ditib-copy .eyebrow{
-    margin-bottom:14px;
-    color:#6ED8D0;
-  }
-
-  .ditib-copy h2{
-    color:#fff;
-    margin-bottom:16px;
-  }
-
-  .ditib-copy > p{
-    color:rgba(255,255,255,.76);
-  }
-
-  .ditib-facts{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
-    margin:26px 0 24px;
-  }
-
-  .ditib-count{
-    min-width:170px;
-    padding:16px 18px;
-    border-radius:14px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.11);
-  }
-
-  .ditib-count strong{
-    display:block;
-    font-family:'Archivo',sans-serif;
-    font-size:2.35rem;
-    line-height:1;
-    color:#6ED8D0;
-  }
-
-  .ditib-count span{
-    display:block;
-    margin-top:6px;
-    color:rgba(255,255,255,.72);
-    font-size:.9rem;
-  }
-
-  .ditib-status{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    padding:10px 13px;
-    border-radius:999px;
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.10);
-    color:rgba(255,255,255,.78);
-    font-size:.86rem;
-    font-weight:600;
-  }
-
-  .ditib-status-dot{
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:#6ED8D0;
-    box-shadow:0 0 0 5px rgba(110,216,208,.13);
-  }
-
-  .ditib-copy .btn{
-    align-self:flex-start;
-    background:var(--turquoise);
-    color:#fff;
-  }
-
-  .ditib-copy .btn:hover{
-    background:#12867E;
-    color:#fff;
-  }
-
-  .ditib-note{
-    margin-top:15px;
-    font-size:.78rem;
-    color:rgba(255,255,255,.48) !important;
-  }
-
-  .ditib-map-card{
-    position:relative;
-    min-height:520px;
-    overflow:hidden;
-    border-radius:22px;
-    border:1px solid var(--line);
-    background:#d8eef0;
-    box-shadow:0 22px 55px -34px rgba(21,44,116,.42);
-  }
-
-  .ditib-map-card iframe{
-    display:block;
-    width:100%;
-    height:100%;
-    min-height:520px;
-    border:0;
-  }
-
-  @media(max-width:900px){
-    .ditib-showcase{grid-template-columns:1fr}
-    .ditib-map-card,
-    .ditib-map-card iframe{min-height:440px}
-  }
-
-  @media(max-width:560px){
-    .ditib-copy{padding:28px 24px}
-    .ditib-map-card,
-    .ditib-map-card iframe{min-height:360px}
-  }
-
   /* Warum */
   .why{
     display:grid;
@@ -1148,50 +1008,6 @@
     </div>
   </section>
 
-
-
-  <section id="datenprojekt">
-    <div class="wrap">
-      <div class="ditib-showcase">
-        <div class="ditib-copy">
-          <span class="eyebrow" data-i18n="map_eyebrow">// eigenes Datenprojekt</span>
-          <h2 data-i18n="map_h">DITIB-Standorte in Deutschland auf einer Karte</h2>
-          <p data-i18n="map_p">
-            Für diese eigene Übersicht wurden 811 Datensätze zu DITIB-Moscheen und Gemeinden in Deutschland manuell gesammelt und in einer interaktiven My-Maps-Karte gebündelt.
-          </p>
-
-          <div class="ditib-facts">
-            <div class="ditib-count">
-              <strong>811</strong>
-              <span data-i18n="map_stat">erfasste Datensätze</span>
-            </div>
-            <div class="ditib-status">
-              <span class="ditib-status-dot" aria-hidden="true"></span>
-              <span data-i18n="map_live">Direkt auf dieser Seite interaktiv</span>
-            </div>
-          </div>
-
-          <a class="btn" href="https://www.google.com/maps/d/viewer?mid=10zcKGRWegSDAKt9Gyag8XhbdKTyAJ-Y" target="_blank" rel="noopener noreferrer" data-i18n="map_btn">
-            Karte in neuem Tab öffnen
-          </a>
-          <p class="ditib-note" data-i18n="map_note">Stand: Juli 2026 · Eigene Datensammlung · Angaben ohne Gewähr</p>
-        </div>
-
-        <div class="ditib-map-card">
-          <iframe
-            src="https://www.google.com/maps/d/u/1/embed?mid=10zcKGRWegSDAKt9Gyag8XhbdKTyAJ-Y&ehbc=2E312F"
-            title="Interaktive Karte der erfassten DITIB-Standorte in Deutschland"
-            width="640"
-            height="480"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="warum">
     <div class="wrap">
       <h2 data-i18n="s2_h">Warum AY-TEA?</h2>
@@ -1372,15 +1188,6 @@ const T = {
     da5:"Bewertungen werden professionell beantwortet",
     da6:"Präzisere Kategorien: Café · Frühstück · Brunch",
     d_note:"Fiktives Beispielprofil zur Veranschaulichung. Ergebnisse können je nach Unternehmen, Wettbewerb und Ausgangslage variieren.",
-    map_eyebrow:"// eigenes Datenprojekt",
-    map_h:"DITIB-Standorte in Deutschland auf einer Karte",
-    map_p:"Für diese eigene Übersicht wurden 811 Datensätze zu DITIB-Moscheen und Gemeinden in Deutschland manuell gesammelt und in einer interaktiven My-Maps-Karte gebündelt.",
-    map_stat:"erfasste Datensätze",
-    map_live:"Direkt auf dieser Seite interaktiv",
-    map_btn:"Karte in neuem Tab öffnen",
-    map_note:"Stand: Juli 2026 · Eigene Datensammlung · Angaben ohne Gewähr",
-    map_open:"Karte ansehen ↗",
-    map_external:"Öffnet Google Maps in einem neuen Tab",
     s2_h:"Warum AY-TEA?",
     s2_lead:"Kurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.",
     w1_h:"Informatik-Hintergrund",
@@ -1454,15 +1261,6 @@ const T = {
     da5:"Reviews are answered professionally",
     da6:"More precise categories: café · breakfast · brunch",
     d_note:"Fictional example profile for illustration. Results can vary depending on company, competition and starting point.",
-    map_eyebrow:"// independent data project",
-    map_h:"DITIB locations across Germany on one map",
-    map_p:"For this independent overview, 811 records of DITIB mosques and communities across Germany were collected manually and combined in an interactive My Maps map.",
-    map_stat:"collected records",
-    map_live:"Interactive directly on this page",
-    map_btn:"Open map in a new tab",
-    map_note:"As of July 2026 · Independent data collection · No guarantee of completeness",
-    map_open:"View map ↗",
-    map_external:"Opens Google Maps in a new tab",
     s2_h:"Why AY-TEA?",
     s2_lead:"Short paths, honest pricing and technical understanding — without unnecessary complexity.",
     w1_h:"Computer science background",
@@ -1536,15 +1334,6 @@ const T = {
     da5:"Yorumlar profesyonel şekilde yanıtlanır",
     da6:"Daha net kategoriler: kafe · kahvaltı · brunch",
     d_note:"Açıklama amaçlı kurgusal profil. Sonuçlar işletmeye, rekabete ve başlangıç durumuna göre değişebilir.",
-    map_eyebrow:"// bağımsız veri projesi",
-    map_h:"Almanya’daki DITIB noktaları tek haritada",
-    map_p:"Bu bağımsız genel bakış için Almanya’daki DITIB camileri ve derneklerine ait 811 veri kaydı manuel olarak toplandı ve etkileşimli bir My Maps haritasında birleştirildi.",
-    map_stat:"toplanan veri kaydı",
-    map_live:"Doğrudan bu sayfada etkileşimli",
-    map_btn:"Haritayı yeni sekmede aç",
-    map_note:"Temmuz 2026 itibarıyla · Bağımsız veri derlemesi · Eksiksizlik garantisi yoktur",
-    map_open:"Haritayı görüntüle ↗",
-    map_external:"Google Maps yeni sekmede açılır",
     s2_h:"Neden AY-TEA?",
     s2_lead:"Kısa iletişim yolları, dürüst fiyatlar ve teknik anlayış — gereksiz karmaşıklık olmadan.",
     w1_h:"Bilgisayar bilimi altyapısı",
@@ -1760,7 +1549,7 @@ if('IntersectionObserver' in window){
     });
   }, {threshold:.15});
 
-  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard,.audience-box,details,.ditib-copy,.ditib-map-card').forEach(el=>{
+  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard,.audience-box,details').forEach(el=>{
     el.classList.add('reveal');
     io.observe(el);
   });
