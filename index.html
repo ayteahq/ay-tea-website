@@ -1,1449 +1,1660 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+!DOCTYPE html
+html lang=de
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1.0
 
-<title>AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung</title>
-<meta name="description" content="AY-TEA unterstützt kleine Unternehmen mit modernen Onepager-Websites, Google-Unternehmensprofilen und Automatisierung. Remote, fair und technisch sauber.">
-<link rel="canonical" href="https://ay-tea.de/">
-<meta name="theme-color" content="#1E3FA4">
-<meta name="robots" content="index, follow">
+titleAY-TEA — Websites, Google-Unternehmensprofile & Automatisierungtitle
+meta name=description content=AY-TEA unterstützt kleine Unternehmen mit modernen Onepager-Websites, Google-Unternehmensprofilen und Automatisierung. Remote, fair und technisch sauber.
+link rel=canonical href=httpsay-tea.de
+meta name=theme-color content=#1E3FA4
+meta name=robots content=index, follow
 
-<meta property="og:title" content="AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung">
-<meta property="og:description" content="Moderne Websites, Google-Unternehmensprofile und Automatisierung für kleine Unternehmen — fair kalkuliert, technisch sauber, 100 % remote.">
-<meta property="og:url" content="https://ay-tea.de/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
+meta property=ogtitle content=AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung
+meta property=ogdescription content=Moderne Websites, Google-Unternehmensprofile und Automatisierung für kleine Unternehmen — fair kalkuliert, technisch sauber, 100 % remote.
+meta property=ogurl content=httpsay-tea.de
+meta property=ogtype content=website
+meta property=oglocale content=de_DE
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111522'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%23111522'/%3E%3C/svg%3E">
+link rel=icon href=dataimagesvg+xml,%3Csvg xmlns='httpwww.w3.org2000svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111522'%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'%3E%3Ccircle cx='37' cy='28' r='13' fill='%23111522'%3E%3Csvg%3E
 
-<script type="application/ld+json">
+script type=applicationld+json
 {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "AY-TEA",
-  "url": "https://ay-tea.de/",
-  "email": "info@ay-tea.de",
-  "areaServed": "DE",
-  "founder": {
-    "@type": "Person",
-    "name": "Celaleddin Mert Eraslan"
+  @context httpsschema.org,
+  @type ProfessionalService,
+  name AY-TEA,
+  url httpsay-tea.de,
+  email info@ay-tea.de,
+  areaServed DE,
+  founder {
+    @type Person,
+    name Celaleddin Mert Eraslan
   },
-  "sameAs": [
-    "https://instagram.com/ayteahq",
-    "https://www.tiktok.com/@ayteahq",
-    "https://github.com/ayteahq"
+  sameAs [
+    httpsinstagram.comayteahq,
+    httpswww.tiktok.com@ayteahq,
+    httpsgithub.comayteahq
   ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "AY-TEA Leistungen",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google-Unternehmensprofil Optimierung"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Onepager-Website"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatisierung und kleine Web-Tools"}}
+  hasOfferCatalog {
+    @type OfferCatalog,
+    name AY-TEA Leistungen,
+    itemListElement [
+      {@type Offer, itemOffered {@type Service, name Google-Unternehmensprofil Optimierung}},
+      {@type Offer, itemOffered {@type Service, name Onepager-Website}},
+      {@type Offer, itemOffered {@type Service, name Automatisierung und kleine Web-Tools}}
     ]
   }
 }
-</script>
+script
 
-<style>
-  /* Lokale Fonts — Dateien liegen im Ordner fonts/ */
-  @font-face{font-family:'Archivo';font-style:normal;font-weight:700;src:url('fonts/archivo-700.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'Archivo';font-style:normal;font-weight:800;src:url('fonts/archivo-800.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'Archivo';font-style:normal;font-weight:900;src:url('fonts/archivo-900.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400;src:url('fonts/instrument-sans-400.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;src:url('fonts/instrument-sans-500.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;src:url('fonts/instrument-sans-600.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('fonts/ibm-plex-mono-400.woff2') format('woff2');font-display:swap}
-  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('fonts/ibm-plex-mono-500.woff2') format('woff2');font-display:swap}
-</style>
+style
+   Lokale Fonts — Dateien liegen im Ordner fonts 
+  @font-face{font-family'Archivo';font-stylenormal;font-weight700;srcurl('fontsarchivo-700.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'Archivo';font-stylenormal;font-weight800;srcurl('fontsarchivo-800.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'Archivo';font-stylenormal;font-weight900;srcurl('fontsarchivo-900.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'Instrument Sans';font-stylenormal;font-weight400;srcurl('fontsinstrument-sans-400.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'Instrument Sans';font-stylenormal;font-weight500;srcurl('fontsinstrument-sans-500.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'Instrument Sans';font-stylenormal;font-weight600;srcurl('fontsinstrument-sans-600.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'IBM Plex Mono';font-stylenormal;font-weight400;srcurl('fontsibm-plex-mono-400.woff2') format('woff2');font-displayswap}
+  @font-face{font-family'IBM Plex Mono';font-stylenormal;font-weight500;srcurl('fontsibm-plex-mono-500.woff2') format('woff2');font-displayswap}
+style
 
-<style>
-  :root{
-    --ink:#111522;
-    --paper:#F7F5EF;
-    --card:#FFFFFF;
-    --cobalt:#1E3FA4;
-    --cobalt-deep:#152C74;
-    --turquoise:#17A398;
-    --iznik-red:#C6402F;
-    --gold:#E8A33D;
-    --line:rgba(17,21,34,.14);
-    --muted:rgba(17,21,34,.72);
-    --soft:rgba(30,63,164,.08);
-    --radius:16px;
-    --max:1080px;
-    --shadow:0 22px 60px -36px rgba(21,44,116,.45);
+style
+  root{
+    --ink#111522;
+    --paper#F7F5EF;
+    --card#FFFFFF;
+    --cobalt#1E3FA4;
+    --cobalt-deep#152C74;
+    --turquoise#17A398;
+    --iznik-red#C6402F;
+    --gold#E8A33D;
+    --linergba(17,21,34,.14);
+    --mutedrgba(17,21,34,.72);
+    --softrgba(30,63,164,.08);
+    --radius16px;
+    --max1080px;
+    --shadow0 22px 60px -36px rgba(21,44,116,.45);
   }
 
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  {margin0;padding0;box-sizingborder-box}
+  html{scroll-behaviorsmooth}
 
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    *,*::before,*::after{
-      animation-duration:.01ms !important;
-      animation-iteration-count:1 !important;
-      scroll-behavior:auto !important;
-      transition-duration:.01ms !important;
+  @media (prefers-reduced-motion reduce){
+    html{scroll-behaviorauto}
+    ,before,after{
+      animation-duration.01ms !important;
+      animation-iteration-count1 !important;
+      scroll-behaviorauto !important;
+      transition-duration.01ms !important;
     }
   }
 
   body{
-    font-family:'Instrument Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    background:
+    font-family'Instrument Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background
       radial-gradient(circle at 10% 0%, rgba(30,63,164,.10), transparent 34rem),
       radial-gradient(circle at 92% 8%, rgba(23,163,152,.10), transparent 30rem),
       var(--paper);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+    colorvar(--ink);
+    line-height1.6;
+    -webkit-font-smoothingantialiased;
+    text-renderingoptimizeLegibility;
   }
 
-  ::selection{background:var(--turquoise);color:#fff}
+  selection{backgroundvar(--turquoise);color#fff}
 
-  a{color:var(--cobalt);text-underline-offset:3px}
-  a:hover{color:var(--cobalt-deep)}
+  a{colorvar(--cobalt);text-underline-offset3px}
+  ahover{colorvar(--cobalt-deep)}
 
   .skip-link{
-    position:absolute;
-    top:-48px;
-    left:16px;
-    z-index:999;
-    background:var(--ink);
-    color:#fff;
-    padding:10px 14px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
+    positionabsolute;
+    top-48px;
+    left16px;
+    z-index999;
+    backgroundvar(--ink);
+    color#fff;
+    padding10px 14px;
+    border-radius999px;
+    text-decorationnone;
+    font-weight700;
   }
-  .skip-link:focus{top:16px}
+  .skip-linkfocus{top16px}
 
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .wrap{max-widthvar(--max);margin0 auto;padding0 24px}
 
-  /* ——— Nav ——— */
+   ——— Nav ——— 
   .site-nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(247,245,239,.88);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    positionsticky;
+    top0;
+    z-index50;
+    backgroundrgba(247,245,239,.88);
+    backdrop-filterblur(10px);
+    -webkit-backdrop-filterblur(10px);
+    border-bottom1px solid var(--line);
   }
 
   .nav-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    min-height:66px;
-    gap:16px;
+    displayflex;
+    align-itemscenter;
+    justify-contentspace-between;
+    min-height66px;
+    gap16px;
   }
 
   .logo{
-    font-family:'Archivo',sans-serif;
-    font-weight:900;
-    font-size:1.25rem;
-    letter-spacing:.01em;
-    color:var(--cobalt);
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    gap:.4em;
-    white-space:nowrap;
+    font-family'Archivo',sans-serif;
+    font-weight900;
+    font-size1.25rem;
+    letter-spacing.01em;
+    colorvar(--cobalt);
+    text-decorationnone;
+    displayflex;
+    align-itemscenter;
+    gap.4em;
+    white-spacenowrap;
   }
 
   .logo .moon{
-    width:.66em;
-    height:.66em;
-    border-radius:50%;
-    background:radial-gradient(circle at 68% 35%, transparent 52%, var(--turquoise) 54%);
-    display:inline-block;
-    flex:none;
+    width.66em;
+    height.66em;
+    border-radius50%;
+    backgroundradial-gradient(circle at 68% 35%, transparent 52%, var(--turquoise) 54%);
+    displayinline-block;
+    flexnone;
   }
 
   .nav-links{
-    display:flex;
-    gap:24px;
-    align-items:center;
+    displayflex;
+    gap24px;
+    align-itemscenter;
   }
 
   .nav-links a{
-    text-decoration:none;
-    color:var(--ink);
-    font-size:.93rem;
-    font-weight:600;
+    text-decorationnone;
+    colorvar(--ink);
+    font-size.93rem;
+    font-weight600;
   }
 
-  .nav-links a:hover{color:var(--cobalt)}
+  .nav-links ahover{colorvar(--cobalt)}
 
   .nav-cta{
-    background:var(--cobalt);
-    color:#fff !important;
-    padding:9px 18px;
-    border-radius:999px;
-    transition:background .2s, transform .15s;
+    backgroundvar(--cobalt);
+    color#fff !important;
+    padding9px 18px;
+    border-radius999px;
+    transitionbackground .2s, transform .15s;
   }
 
-  .nav-cta:hover{background:var(--cobalt-deep)}
-  .nav-cta:active{transform:scale(.98)}
+  .nav-ctahover{backgroundvar(--cobalt-deep)}
+  .nav-ctaactive{transformscale(.98)}
 
   .lang{
-    display:flex;
-    gap:4px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:3px;
-    background:rgba(255,255,255,.45);
+    displayflex;
+    gap4px;
+    border1px solid var(--line);
+    border-radius999px;
+    padding3px;
+    backgroundrgba(255,255,255,.45);
   }
 
   .lang button{
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.78rem;
-    padding:5px 10px;
-    border-radius:999px;
-    color:var(--ink);
+    border0;
+    backgroundtransparent;
+    cursorpointer;
+    font-family'IBM Plex Mono',monospace;
+    font-size.78rem;
+    padding5px 10px;
+    border-radius999px;
+    colorvar(--ink);
   }
 
   .lang button.active{
-    background:var(--cobalt);
-    color:#fff;
+    backgroundvar(--cobalt);
+    color#fff;
   }
 
-  @media(max-width:760px){
-    .nav-links a:not(.nav-cta){display:none}
+  @media(max-width760px){
+    .nav-links anot(.nav-cta){displaynone}
   }
 
-  @media(max-width:560px){
-    .nav-inner{gap:10px}
-    .nav-cta{display:none}
-    .wrap{padding:0 18px}
+  @media(max-width560px){
+    .nav-inner{gap10px}
+    .nav-cta{displaynone}
+    .wrap{padding0 18px}
   }
 
-  /* ——— Hero ——— */
+   ——— Hero ——— 
   header{
-    padding:88px 0 34px;
-    border-bottom:1px solid var(--line);
+    padding88px 0 34px;
+    border-bottom1px solid var(--line);
   }
 
   .hero-grid{
-    display:grid;
-    grid-template-columns:minmax(0, 1.13fr) minmax(320px, .87fr);
-    gap:56px;
-    align-items:center;
+    displaygrid;
+    grid-template-columnsminmax(0, 1.13fr) minmax(320px, .87fr);
+    gap56px;
+    align-itemscenter;
   }
 
-  @media(max-width:880px){
-    .hero-grid{grid-template-columns:1fr;gap:42px}
+  @media(max-width880px){
+    .hero-grid{grid-template-columns1fr;gap42px}
   }
 
   .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.82rem;
-    color:var(--turquoise);
-    letter-spacing:.04em;
-    margin-bottom:20px;
-    display:block;
+    font-family'IBM Plex Mono',monospace;
+    font-size.82rem;
+    colorvar(--turquoise);
+    letter-spacing.04em;
+    margin-bottom20px;
+    displayblock;
   }
 
   h1{
-    font-family:'Archivo',sans-serif;
-    font-weight:900;
-    font-size:clamp(2.55rem,7vw,4.7rem);
-    line-height:1.02;
-    letter-spacing:-.025em;
-    color:var(--ink);
-    max-width:14ch;
+    font-family'Archivo',sans-serif;
+    font-weight900;
+    font-sizeclamp(2.55rem,7vw,4.7rem);
+    line-height1.02;
+    letter-spacing-.025em;
+    colorvar(--ink);
+    max-width14ch;
   }
 
-  h1 .blue{color:var(--cobalt)}
+  h1 .blue{colorvar(--cobalt)}
 
   .sub{
-    margin-top:22px;
-    font-size:1.13rem;
-    max-width:55ch;
-    color:rgba(17,21,34,.80);
+    margin-top22px;
+    font-size1.13rem;
+    max-width55ch;
+    colorrgba(17,21,34,.80);
   }
 
   .hero-actions{
-    margin-top:32px;
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
+    margin-top32px;
+    displayflex;
+    gap14px;
+    flex-wrapwrap;
   }
 
   .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-weight:700;
-    padding:13px 26px;
-    border-radius:999px;
-    font-size:.98rem;
-    transition:transform .15s, background .2s, border-color .2s, color .2s;
+    displayinline-flex;
+    align-itemscenter;
+    justify-contentcenter;
+    text-decorationnone;
+    font-weight700;
+    padding13px 26px;
+    border-radius999px;
+    font-size.98rem;
+    transitiontransform .15s, background .2s, border-color .2s, color .2s;
   }
 
-  .btn:active{transform:scale(.97)}
-  .btn-primary{background:var(--cobalt);color:#fff}
-  .btn-primary:hover{background:var(--cobalt-deep);color:#fff}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--cobalt);color:var(--cobalt)}
+  .btnactive{transformscale(.97)}
+  .btn-primary{backgroundvar(--cobalt);color#fff}
+  .btn-primaryhover{backgroundvar(--cobalt-deep);color#fff}
+  .btn-ghost{border1.5px solid var(--ink);colorvar(--ink)}
+  .btn-ghosthover{border-colorvar(--cobalt);colorvar(--cobalt)}
 
   .trust-row{
-    margin-top:26px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    max-width:58ch;
+    margin-top26px;
+    displayflex;
+    flex-wrapwrap;
+    gap9px;
+    max-width58ch;
   }
 
   .trust-pill{
-    border:1px solid var(--line);
-    background:rgba(255,255,255,.62);
-    border-radius:999px;
-    padding:7px 11px;
-    font-size:.86rem;
-    color:rgba(17,21,34,.70);
-    font-weight:600;
+    border1px solid var(--line);
+    backgroundrgba(255,255,255,.62);
+    border-radius999px;
+    padding7px 11px;
+    font-size.86rem;
+    colorrgba(17,21,34,.70);
+    font-weight600;
   }
 
-  /* Terminal — Signatur */
+   Terminal — Signatur 
   .terminal{
-    background:var(--ink);
-    border-radius:var(--radius);
-    box-shadow:0 24px 60px -24px rgba(21,44,116,.45);
-    overflow:hidden;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.88rem;
+    backgroundvar(--ink);
+    border-radiusvar(--radius);
+    box-shadow0 24px 60px -24px rgba(21,44,116,.45);
+    overflowhidden;
+    font-family'IBM Plex Mono',monospace;
+    font-size.88rem;
   }
 
   .term-bar{
-    display:flex;
-    gap:7px;
-    padding:12px 16px;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    displayflex;
+    gap7px;
+    padding12px 16px;
+    border-bottom1px solid rgba(255,255,255,.08);
   }
 
   .term-bar span{
-    width:11px;
-    height:11px;
-    border-radius:50%;
-    background:rgba(255,255,255,.16);
+    width11px;
+    height11px;
+    border-radius50%;
+    backgroundrgba(255,255,255,.16);
   }
 
-  .term-bar span:first-child{background:var(--iznik-red)}
-  .term-bar span:nth-child(2){background:#E8A33D}
-  .term-bar span:nth-child(3){background:var(--turquoise)}
+  .term-bar spanfirst-child{backgroundvar(--iznik-red)}
+  .term-bar spannth-child(2){background#E8A33D}
+  .term-bar spannth-child(3){backgroundvar(--turquoise)}
 
   .term-body{
-    padding:22px 22px 26px;
-    color:#D7DCEA;
-    min-height:210px;
-    max-height:340px;
-    overflow:auto;
+    padding22px 22px 26px;
+    color#D7DCEA;
+    min-height210px;
+    max-height340px;
+    overflowauto;
   }
 
-  .term-body .prompt{color:var(--turquoise)}
-  .term-body .ok{color:var(--turquoise)}
+  .term-body .prompt{colorvar(--turquoise)}
+  .term-body .ok{colorvar(--turquoise)}
 
   .term-line{
-    display:block;
-    margin-bottom:10px;
-    opacity:0;
-    animation:lineIn .3s forwards;
+    displayblock;
+    margin-bottom10px;
+    opacity0;
+    animationlineIn .3s forwards;
   }
 
-  .term-line:nth-child(1){animation-delay:.25s}
-  .term-line:nth-child(2){animation-delay:.85s}
-  .term-line:nth-child(3){animation-delay:1.35s}
-  .term-line:nth-child(4){animation-delay:1.85s}
-  .term-line:nth-child(5){animation-delay:2.35s}
+  .term-linenth-child(1){animation-delay.25s}
+  .term-linenth-child(2){animation-delay.85s}
+  .term-linenth-child(3){animation-delay1.35s}
+  .term-linenth-child(4){animation-delay1.85s}
+  .term-linenth-child(5){animation-delay2.35s}
 
-  @keyframes lineIn{to{opacity:1}}
+  @keyframes lineIn{to{opacity1}}
 
   .term-input{
-    background:transparent;
-    border:0;
-    outline:0;
-    color:#D7DCEA;
-    font:inherit;
-    caret-color:var(--turquoise);
-    width:min(68%, 260px);
+    backgroundtransparent;
+    border0;
+    outline0;
+    color#D7DCEA;
+    fontinherit;
+    caret-colorvar(--turquoise);
+    widthmin(68%, 260px);
   }
 
-  .term-input::placeholder{color:rgba(215,220,234,.38)}
-  .term-out{color:#AAB8D6}
+  .term-inputplaceholder{colorrgba(215,220,234,.38)}
+  .term-out{color#AAB8D6}
 
-  @media(max-width:460px){
-    .terminal{font-size:.78rem}
-    .term-input{width:58%}
+  @media(max-width460px){
+    .terminal{font-size.78rem}
+    .term-input{width58%}
   }
 
-  /* ——— Sections ——— */
+   ——— Sections ——— 
   main section{
-    padding:76px 0;
-    border-bottom:1px solid var(--line);
+    padding76px 0;
+    border-bottom1px solid var(--line);
   }
 
   h2{
-    font-family:'Archivo',sans-serif;
-    font-weight:800;
-    font-size:clamp(1.75rem,4vw,2.45rem);
-    line-height:1.14;
-    letter-spacing:-.02em;
-    margin-bottom:14px;
+    font-family'Archivo',sans-serif;
+    font-weight800;
+    font-sizeclamp(1.75rem,4vw,2.45rem);
+    line-height1.14;
+    letter-spacing-.02em;
+    margin-bottom14px;
   }
 
   .section-lead{
-    max-width:58ch;
-    color:var(--muted);
-    margin-bottom:44px;
-    font-size:1.02rem;
+    max-width58ch;
+    colorvar(--muted);
+    margin-bottom44px;
+    font-size1.02rem;
   }
 
   .pattern-divider{
-    height:38px;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='38'%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%231E3FA4' stroke-opacity='.16'/%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%2317A398' stroke-opacity='.22' transform='rotate(45 19 19)'/%3E%3Ccircle cx='19' cy='19' r='1.6' fill='%23C6402F' fill-opacity='.25'/%3E%3C/svg%3E");
-    background-size:38px 38px;
-    background-repeat:repeat-x;
-    background-position:center;
+    height38px;
+    background-imageurl(dataimagesvg+xml,%3Csvg xmlns='httpwww.w3.org2000svg' width='38' height='38'%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%231E3FA4' stroke-opacity='.16'%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%2317A398' stroke-opacity='.22' transform='rotate(45 19 19)'%3E%3Ccircle cx='19' cy='19' r='1.6' fill='%23C6402F' fill-opacity='.25'%3E%3Csvg%3E);
+    background-size38px 38px;
+    background-repeatrepeat-x;
+    background-positioncenter;
   }
 
-  /* Leistungen */
+   Leistungen 
   .cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    displaygrid;
+    grid-template-columnsrepeat(3,1fr);
+    gap20px;
   }
 
-  @media(max-width:860px){
-    .cards{grid-template-columns:1fr}
+  @media(max-width860px){
+    .cards{grid-template-columns1fr}
   }
 
   .card{
-    background:rgba(255,255,255,.84);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:28px 26px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    box-shadow:0 16px 44px -36px rgba(21,44,116,.35);
-    transition:transform .18s, box-shadow .18s, border-color .18s;
+    backgroundrgba(255,255,255,.84);
+    border1px solid var(--line);
+    border-radiusvar(--radius);
+    padding28px 26px;
+    displayflex;
+    flex-directioncolumn;
+    gap12px;
+    box-shadow0 16px 44px -36px rgba(21,44,116,.35);
+    transitiontransform .18s, box-shadow .18s, border-color .18s;
   }
 
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 22px 46px -30px rgba(21,44,116,.36);
-    border-color:rgba(30,63,164,.24);
+  .cardhover{
+    transformtranslateY(-4px);
+    box-shadow0 22px 46px -30px rgba(21,44,116,.36);
+    border-colorrgba(30,63,164,.24);
   }
 
   .card .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.74rem;
-    color:var(--turquoise);
-    letter-spacing:.05em;
+    font-family'IBM Plex Mono',monospace;
+    font-size.74rem;
+    colorvar(--turquoise);
+    letter-spacing.05em;
   }
 
   .card h3{
-    font-family:'Archivo',sans-serif;
-    font-weight:700;
-    font-size:1.18rem;
+    font-family'Archivo',sans-serif;
+    font-weight700;
+    font-size1.18rem;
   }
 
   .card p{
-    font-size:.96rem;
-    color:var(--muted);
-    flex:1;
+    font-size.96rem;
+    colorvar(--muted);
+    flex1;
   }
 
   .mini-list{
-    list-style:none;
-    display:grid;
-    gap:6px;
-    margin-top:6px;
-    color:rgba(17,21,34,.66);
-    font-size:.9rem;
+    list-stylenone;
+    displaygrid;
+    gap6px;
+    margin-top6px;
+    colorrgba(17,21,34,.66);
+    font-size.9rem;
   }
 
-  .mini-list li::before{
-    content:"✓";
-    color:var(--turquoise);
-    font-weight:900;
-    margin-right:8px;
+  .mini-list libefore{
+    content✓;
+    colorvar(--turquoise);
+    font-weight900;
+    margin-right8px;
   }
 
-  /* Für wen */
+   Für wen 
   .audience{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    align-items:start;
+    displaygrid;
+    grid-template-columns1fr 1fr;
+    gap22px;
+    align-itemsstart;
   }
 
   .audience-box{
-    background:rgba(255,255,255,.78);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:26px;
+    backgroundrgba(255,255,255,.78);
+    border1px solid var(--line);
+    border-radiusvar(--radius);
+    padding26px;
   }
 
   .audience-box h3{
-    font-family:'Archivo',sans-serif;
-    font-size:1.18rem;
-    margin-bottom:8px;
+    font-family'Archivo',sans-serif;
+    font-size1.18rem;
+    margin-bottom8px;
   }
 
-  .audience-box p{color:var(--muted)}
+  .audience-box p{colorvar(--muted)}
 
-  @media(max-width:760px){
-    .audience{grid-template-columns:1fr}
+  @media(max-width760px){
+    .audience{grid-template-columns1fr}
   }
 
-  /* Vorher/Nachher-Demo */
+   VorherNachher-Demo 
   .demo-toggle{
-    display:inline-flex;
-    gap:4px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:4px;
-    margin-bottom:24px;
-    background:#fff;
+    displayinline-flex;
+    gap4px;
+    border1px solid var(--line);
+    border-radius999px;
+    padding4px;
+    margin-bottom24px;
+    background#fff;
   }
 
   .demo-toggle button{
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    font:inherit;
-    font-weight:700;
-    font-size:.92rem;
-    padding:8px 22px;
-    border-radius:999px;
-    color:var(--ink);
-    transition:background .2s,color .2s;
+    border0;
+    backgroundtransparent;
+    cursorpointer;
+    fontinherit;
+    font-weight700;
+    font-size.92rem;
+    padding8px 22px;
+    border-radius999px;
+    colorvar(--ink);
+    transitionbackground .2s,color .2s;
   }
 
   .demo-toggle button.active{
-    background:var(--cobalt);
-    color:#fff;
+    backgroundvar(--cobalt);
+    color#fff;
   }
 
   .gcard{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    max-width:580px;
-    padding:26px;
-    box-shadow:0 18px 40px -26px rgba(21,44,116,.30);
+    background#fff;
+    border1px solid var(--line);
+    border-radiusvar(--radius);
+    max-width580px;
+    padding26px;
+    box-shadow0 18px 40px -26px rgba(21,44,116,.30);
   }
 
   .gcard-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:16px;
-    border-bottom:1px solid var(--line);
-    padding-bottom:14px;
-    margin-bottom:14px;
+    displayflex;
+    justify-contentspace-between;
+    align-itemsflex-start;
+    gap16px;
+    border-bottom1px solid var(--line);
+    padding-bottom14px;
+    margin-bottom14px;
   }
 
   .gcard-name{
-    font-family:'Archivo',sans-serif;
-    font-weight:800;
-    font-size:1.22rem;
+    font-family'Archivo',sans-serif;
+    font-weight800;
+    font-size1.22rem;
   }
 
   .gcard-meta{
-    font-size:.88rem;
-    color:rgba(17,21,34,.65);
+    font-size.88rem;
+    colorrgba(17,21,34,.65);
   }
 
   .gcard-meta .stars{
-    color:var(--gold);
-    letter-spacing:1px;
+    colorvar(--gold);
+    letter-spacing1px;
   }
 
-  .gcard-pin{font-size:1.4rem}
+  .gcard-pin{font-size1.4rem}
 
   .gcard-list{
-    list-style:none;
-    display:none;
+    list-stylenone;
+    displaynone;
   }
 
-  .gcard-list.active{display:block}
+  .gcard-list.active{displayblock}
 
   .gcard-list li{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    padding:7px 0;
-    font-size:.96rem;
+    displayflex;
+    gap10px;
+    align-itemsflex-start;
+    padding7px 0;
+    font-size.96rem;
   }
 
-  .gcard-list .x{color:var(--iznik-red);font-weight:900}
-  .gcard-list .ok2{color:var(--turquoise);font-weight:900}
+  .gcard-list .x{colorvar(--iznik-red);font-weight900}
+  .gcard-list .ok2{colorvar(--turquoise);font-weight900}
 
   .demo-note{
-    margin-top:14px;
-    font-size:.82rem;
-    color:rgba(17,21,34,.52);
+    margin-top14px;
+    font-size.82rem;
+    colorrgba(17,21,34,.52);
   }
 
-  /* Warum */
+
+
+   DITIB-Datenprojekt 
+  #datenprojekt{
+    background
+      radial-gradient(circle at 10% 10%, rgba(23,163,152,.10), transparent 24rem),
+      radial-gradient(circle at 90% 80%, rgba(30,63,164,.10), transparent 28rem);
+  }
+
+  .ditib-showcase{
+    displaygrid;
+    grid-template-columnsminmax(0,.82fr) minmax(0,1.18fr);
+    gap24px;
+    align-itemsstretch;
+  }
+
+  .ditib-copy{
+    backgroundvar(--ink);
+    color#fff;
+    border-radius22px;
+    padding38px;
+    box-shadowvar(--shadow);
+    displayflex;
+    flex-directioncolumn;
+    justify-contentcenter;
+  }
+
+  .ditib-copy .eyebrow{
+    margin-bottom14px;
+    color#6ED8D0;
+  }
+
+  .ditib-copy h2{
+    color#fff;
+    margin-bottom16px;
+  }
+
+  .ditib-copy  p{
+    colorrgba(255,255,255,.76);
+  }
+
+  .ditib-facts{
+    displayflex;
+    align-itemscenter;
+    gap12px;
+    flex-wrapwrap;
+    margin26px 0 24px;
+  }
+
+  .ditib-count{
+    min-width170px;
+    padding16px 18px;
+    border-radius14px;
+    backgroundrgba(255,255,255,.08);
+    border1px solid rgba(255,255,255,.11);
+  }
+
+  .ditib-count strong{
+    displayblock;
+    font-family'Archivo',sans-serif;
+    font-size2.35rem;
+    line-height1;
+    color#6ED8D0;
+  }
+
+  .ditib-count span{
+    displayblock;
+    margin-top6px;
+    colorrgba(255,255,255,.72);
+    font-size.9rem;
+  }
+
+  .ditib-status{
+    displayinline-flex;
+    align-itemscenter;
+    gap9px;
+    padding10px 13px;
+    border-radius999px;
+    backgroundrgba(255,255,255,.07);
+    border1px solid rgba(255,255,255,.10);
+    colorrgba(255,255,255,.78);
+    font-size.86rem;
+    font-weight600;
+  }
+
+  .ditib-status-dot{
+    width9px;
+    height9px;
+    border-radius50%;
+    background#6ED8D0;
+    box-shadow0 0 0 5px rgba(110,216,208,.13);
+  }
+
+  .ditib-copy .btn{
+    align-selfflex-start;
+    backgroundvar(--turquoise);
+    color#fff;
+  }
+
+  .ditib-copy .btnhover{
+    background#12867E;
+    color#fff;
+  }
+
+  .ditib-note{
+    margin-top15px;
+    font-size.78rem;
+    colorrgba(255,255,255,.48) !important;
+  }
+
+  .ditib-map-card{
+    positionrelative;
+    min-height520px;
+    overflowhidden;
+    border-radius22px;
+    border1px solid var(--line);
+    background#d8eef0;
+    box-shadow0 22px 55px -34px rgba(21,44,116,.42);
+  }
+
+  .ditib-map-card iframe{
+    displayblock;
+    width100%;
+    height100%;
+    min-height520px;
+    border0;
+  }
+
+  @media(max-width900px){
+    .ditib-showcase{grid-template-columns1fr}
+    .ditib-map-card,
+    .ditib-map-card iframe{min-height440px}
+  }
+
+  @media(max-width560px){
+    .ditib-copy{padding28px 24px}
+    .ditib-map-card,
+    .ditib-map-card iframe{min-height360px}
+  }
+
+   Warum 
   .why{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px 40px;
-    max-width:900px;
+    displaygrid;
+    grid-template-columnsrepeat(2,1fr);
+    gap18px 40px;
+    max-width900px;
   }
 
-  @media(max-width:700px){
-    .why{grid-template-columns:1fr}
+  @media(max-width700px){
+    .why{grid-template-columns1fr}
   }
 
   .why-item{
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
+    displayflex;
+    gap14px;
+    align-itemsflex-start;
   }
 
   .why-item .dot{
-    flex:none;
-    width:26px;
-    height:26px;
-    border-radius:50%;
-    background:radial-gradient(circle at 66% 34%, transparent 50%, var(--cobalt) 52%);
-    margin-top:2px;
+    flexnone;
+    width26px;
+    height26px;
+    border-radius50%;
+    backgroundradial-gradient(circle at 66% 34%, transparent 50%, var(--cobalt) 52%);
+    margin-top2px;
   }
 
   .why-item strong{
-    display:block;
-    font-weight:700;
-    margin-bottom:2px;
+    displayblock;
+    font-weight700;
+    margin-bottom2px;
   }
 
   .why-item span{
-    font-size:.94rem;
-    color:var(--muted);
+    font-size.94rem;
+    colorvar(--muted);
   }
 
-  /* Ablauf */
+   Ablauf 
   .steps{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    counter-reset:step;
+    displaygrid;
+    grid-template-columnsrepeat(3,1fr);
+    gap20px;
+    counter-resetstep;
   }
 
-  @media(max-width:860px){
-    .steps{grid-template-columns:1fr}
+  @media(max-width860px){
+    .steps{grid-template-columns1fr}
   }
 
   .step{
-    counter-increment:step;
-    position:relative;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:26px;
+    counter-incrementstep;
+    positionrelative;
+    background#fff;
+    border1px solid var(--line);
+    border-radiusvar(--radius);
+    padding26px;
   }
 
-  .step::before{
-    content:"0" counter(step);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.8rem;
-    color:var(--iznik-red);
-    letter-spacing:.06em;
-    display:block;
-    margin-bottom:10px;
+  .stepbefore{
+    content0 counter(step);
+    font-family'IBM Plex Mono',monospace;
+    font-size.8rem;
+    colorvar(--iznik-red);
+    letter-spacing.06em;
+    displayblock;
+    margin-bottom10px;
   }
 
   .step h3{
-    font-family:'Archivo',sans-serif;
-    font-size:1.08rem;
-    font-weight:700;
-    margin-bottom:6px;
+    font-family'Archivo',sans-serif;
+    font-size1.08rem;
+    font-weight700;
+    margin-bottom6px;
   }
 
   .step p{
-    font-size:.94rem;
-    color:var(--muted);
+    font-size.94rem;
+    colorvar(--muted);
   }
 
-  /* FAQ */
+   FAQ 
   .faq{
-    display:grid;
-    gap:12px;
-    max-width:760px;
+    displaygrid;
+    gap12px;
+    max-width760px;
   }
 
   details{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:18px 20px;
+    background#fff;
+    border1px solid var(--line);
+    border-radiusvar(--radius);
+    padding18px 20px;
   }
 
   summary{
-    cursor:pointer;
-    font-weight:800;
-    color:var(--ink);
+    cursorpointer;
+    font-weight800;
+    colorvar(--ink);
   }
 
   details p{
-    margin-top:10px;
-    color:var(--muted);
+    margin-top10px;
+    colorvar(--muted);
   }
 
-  /* Kontakt */
-  #kontakt{border-bottom:none}
+   Kontakt 
+  #kontakt{border-bottomnone}
 
   .contact{
-    background:
+    background
       radial-gradient(circle at 18% 0%, rgba(23,163,152,.28), transparent 18rem),
       var(--cobalt);
-    border-radius:22px;
-    padding:58px 48px;
-    color:#fff;
-    text-align:center;
-    box-shadow:var(--shadow);
+    border-radius22px;
+    padding58px 48px;
+    color#fff;
+    text-aligncenter;
+    box-shadowvar(--shadow);
   }
 
-  @media(max-width:640px){
-    .contact{padding:42px 24px}
+  @media(max-width640px){
+    .contact{padding42px 24px}
   }
 
-  .contact h2{color:#fff}
+  .contact h2{color#fff}
 
   .contact p{
-    max-width:50ch;
-    margin:0 auto 28px;
-    color:rgba(255,255,255,.88);
+    max-width50ch;
+    margin0 auto 28px;
+    colorrgba(255,255,255,.88);
   }
 
   .contact .btn-primary{
-    background:#fff;
-    color:var(--cobalt);
+    background#fff;
+    colorvar(--cobalt);
   }
 
-  .contact .btn-primary:hover{
-    background:var(--paper);
-    color:var(--cobalt-deep);
+  .contact .btn-primaryhover{
+    backgroundvar(--paper);
+    colorvar(--cobalt-deep);
   }
 
   .contact .mail-mono{
-    display:block;
-    margin-top:18px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.9rem;
-    color:rgba(255,255,255,.80);
+    displayblock;
+    margin-top18px;
+    font-family'IBM Plex Mono',monospace;
+    font-size.9rem;
+    colorrgba(255,255,255,.80);
   }
 
   .socials{
-    margin-top:26px;
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
+    margin-top26px;
+    displayflex;
+    gap12px;
+    justify-contentcenter;
+    flex-wrapwrap;
   }
 
   .socials a{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:9px 16px;
-    border-radius:999px;
-    border:1.5px solid rgba(255,255,255,.35);
-    color:#fff;
-    text-decoration:none;
-    font-size:.9rem;
-    font-weight:600;
-    transition:background .2s,border-color .2s;
+    displayinline-flex;
+    align-itemscenter;
+    gap8px;
+    padding9px 16px;
+    border-radius999px;
+    border1.5px solid rgba(255,255,255,.35);
+    color#fff;
+    text-decorationnone;
+    font-size.9rem;
+    font-weight600;
+    transitionbackground .2s,border-color .2s;
   }
 
-  .socials a:hover{
-    background:rgba(255,255,255,.12);
-    border-color:#fff;
-    color:#fff;
+  .socials ahover{
+    backgroundrgba(255,255,255,.12);
+    border-color#fff;
+    color#fff;
   }
 
-  /* Footer */
+   Footer 
   footer{
-    padding:44px 0 60px;
-    font-size:.89rem;
-    color:rgba(17,21,34,.70);
+    padding44px 0 60px;
+    font-size.89rem;
+    colorrgba(17,21,34,.70);
   }
 
   .foot-grid{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:26px;
-    flex-wrap:wrap;
+    displayflex;
+    justify-contentspace-between;
+    align-itemscenter;
+    gap26px;
+    flex-wrapwrap;
   }
 
   .foot-social{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    flex-wrap:wrap;
+    displayflex;
+    gap10px;
+    align-itemscenter;
+    flex-wrapwrap;
   }
 
   .foot-social a{
-    color:var(--ink);
-    opacity:.68;
-    text-decoration:none;
-    border:1px solid var(--line);
-    padding:6px 10px;
-    border-radius:999px;
-    transition:opacity .2s,color .2s,border-color .2s;
+    colorvar(--ink);
+    opacity.68;
+    text-decorationnone;
+    border1px solid var(--line);
+    padding6px 10px;
+    border-radius999px;
+    transitionopacity .2s,color .2s,border-color .2s;
   }
 
-  .foot-social a:hover{
-    opacity:1;
-    color:var(--cobalt);
-    border-color:rgba(30,63,164,.32);
+  .foot-social ahover{
+    opacity1;
+    colorvar(--cobalt);
+    border-colorrgba(30,63,164,.32);
   }
 
   .foot-legal{
-    margin-top:22px;
+    margin-top22px;
   }
 
-  footer a{color:var(--cobalt)}
+  footer a{colorvar(--cobalt)}
 
-  /* Scroll-Reveal */
+   Scroll-Reveal 
   .reveal{
-    opacity:0;
-    transform:translateY(16px);
-    transition:opacity .6s ease,transform .6s ease;
+    opacity0;
+    transformtranslateY(16px);
+    transitionopacity .6s ease,transform .6s ease;
   }
 
   .reveal.in{
-    opacity:1;
-    transform:none;
+    opacity1;
+    transformnone;
   }
-</style>
-</head>
+style
+head
 
-<body>
-<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+body
+a class=skip-link href=#inhaltZum Inhalt springena
 
-<nav class="site-nav" aria-label="Hauptnavigation">
-  <div class="wrap nav-inner">
-    <a class="logo" href="#top" aria-label="AY-TEA Startseite">
-      <span class="moon" aria-hidden="true"></span>
+nav class=site-nav aria-label=Hauptnavigation
+  div class=wrap nav-inner
+    a class=logo href=#top aria-label=AY-TEA Startseite
+      span class=moon aria-hidden=truespan
       AY-TEA
-    </a>
+    a
 
-    <div class="nav-links" aria-label="Seitennavigation">
-      <a href="#leistungen" data-i18n="nav_services">Leistungen</a>
-      <a href="#ablauf" data-i18n="nav_process">Ablauf</a>
-      <a href="#kontakt" class="nav-cta" data-i18n="nav_cta">Projekt anfragen</a>
-    </div>
+    div class=nav-links aria-label=Seitennavigation
+      a href=#leistungen data-i18n=nav_servicesLeistungena
+      a href=#ablauf data-i18n=nav_processAblaufa
+      a href=#kontakt class=nav-cta data-i18n=nav_ctaProjekt anfragena
+    div
 
-    <div class="lang" role="group" aria-label="Sprache wählen">
-      <button type="button" data-lang="de" class="active" aria-pressed="true">DE</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
-    </div>
-  </div>
-</nav>
+    div class=lang role=group aria-label=Sprache wählen
+      button type=button data-lang=de class=active aria-pressed=trueDEbutton
+      button type=button data-lang=en aria-pressed=falseENbutton
+      button type=button data-lang=tr aria-pressed=falseTRbutton
+    div
+  div
+nav
 
-<header id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow" data-i18n="eyebrow">// IT-Dienstleistungen · 100 % remote</span>
-      <h1>
-        <span data-i18n="h1a">Digital sichtbar.</span><br>
-        <span class="blue" data-i18n="h1b">Sauber umgesetzt.</span>
-      </h1>
-      <p class="sub" data-i18n="sub">
-        AY-TEA bringt kleine Unternehmen online: optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.
-      </p>
+header id=top
+  div class=wrap hero-grid
+    div
+      span class=eyebrow data-i18n=eyebrow IT-Dienstleistungen · 100 % remotespan
+      h1
+        span data-i18n=h1aDigital sichtbar.spanbr
+        span class=blue data-i18n=h1bSauber umgesetzt.span
+      h1
+      p class=sub data-i18n=sub
+        AY-TEA bringt kleine Unternehmen online optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.
+      p
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#kontakt" data-i18n="cta1">Projekt anfragen</a>
-        <a class="btn btn-ghost" href="#leistungen" data-i18n="cta2">Leistungen ansehen</a>
-      </div>
+      div class=hero-actions
+        a class=btn btn-primary href=#kontakt data-i18n=cta1Projekt anfragena
+        a class=btn btn-ghost href=#leistungen data-i18n=cta2Leistungen ansehena
+      div
 
-      <div class="trust-row" aria-label="Vorteile">
-        <span class="trust-pill" data-i18n="pill1">Festpreis nach Erstgespräch</span>
-        <span class="trust-pill" data-i18n="pill2">DSGVO-bewusst</span>
-        <span class="trust-pill" data-i18n="pill3">Deutsch · Englisch · Türkisch</span>
-      </div>
-    </div>
+      div class=trust-row aria-label=Vorteile
+        span class=trust-pill data-i18n=pill1Festpreis nach Erstgesprächspan
+        span class=trust-pill data-i18n=pill2DSGVO-bewusstspan
+        span class=trust-pill data-i18n=pill3Deutsch · Englisch · Türkischspan
+      div
+    div
 
-    <div class="terminal" role="region" aria-label="Interaktives Terminal">
-      <div class="term-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="term-body" aria-live="polite">
-        <span class="term-line"><span class="prompt">$</span> ay-tea --start</span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t1">Google-Profil optimiert</span></span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t2">Onepager oft in ca. 7 Tagen möglich</span></span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t3">Routine automatisiert</span></span>
-        <span class="term-line term-inputline">
-          <span class="prompt">$</span>
-          <label class="sr-only" for="termInput" hidden>Terminal-Eingabe</label>
-          <input id="termInput" class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='tippe "help"'>
-        </span>
-      </div>
-    </div>
-  </div>
-</header>
+    div class=terminal role=region aria-label=Interaktives Terminal
+      div class=term-bar aria-hidden=truespanspanspanspanspanspandiv
+      div class=term-body aria-live=polite
+        span class=term-linespan class=prompt$span ay-tea --startspan
+        span class=term-linespan class=ok✓span span data-i18n=t1Google-Profil optimiertspanspan
+        span class=term-linespan class=ok✓span span data-i18n=t2Onepager oft in ca. 7 Tagen möglichspanspan
+        span class=term-linespan class=ok✓span span data-i18n=t3Routine automatisiertspanspan
+        span class=term-line term-inputline
+          span class=prompt$span
+          label class=sr-only for=termInput hiddenTerminal-Eingabelabel
+          input id=termInput class=term-input type=text autocomplete=off autocapitalize=off spellcheck=false placeholder='tippe help'
+        span
+      div
+    div
+  div
+header
 
-<div class="pattern-divider" aria-hidden="true"></div>
+div class=pattern-divider aria-hidden=truediv
 
-<main id="inhalt">
-  <section id="leistungen">
-    <div class="wrap">
-      <h2 data-i18n="s1_h">Leistungen</h2>
-      <p class="section-lead" data-i18n="s1_lead">
+main id=inhalt
+  section id=leistungen
+    div class=wrap
+      h2 data-i18n=s1_hLeistungenh2
+      p class=section-lead data-i18n=s1_lead
         Drei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.
-      </p>
+      p
 
-      <div class="cards">
-        <article class="card">
-          <span class="tag">local_seo</span>
-          <h3 data-i18n="c1_h">Google-Unternehmensprofil</h3>
-          <p data-i18n="c1_p">Audit & Optimierung deines Google-Profils: korrekte Daten, Kategorien, Beschreibung mit Suchbegriffen, Foto-Struktur und Bewertungs-Strategie — damit Kunden aus der Region dich leichter finden.</p>
-          <ul class="mini-list">
-            <li data-i18n="c1_l1">Profil-Audit</li>
-            <li data-i18n="c1_l2">Kategorien & Beschreibung</li>
-            <li data-i18n="c1_l3">Bewertungs- und Foto-Struktur</li>
-          </ul>
-        </article>
+      div class=cards
+        article class=card
+          span class=taglocal_seospan
+          h3 data-i18n=c1_hGoogle-Unternehmensprofilh3
+          p data-i18n=c1_pAudit & Optimierung deines Google-Profils korrekte Daten, Kategorien, Beschreibung mit Suchbegriffen, Foto-Struktur und Bewertungs-Strategie — damit Kunden aus der Region dich leichter finden.p
+          ul class=mini-list
+            li data-i18n=c1_l1Profil-Auditli
+            li data-i18n=c1_l2Kategorien & Beschreibungli
+            li data-i18n=c1_l3Bewertungs- und Foto-Strukturli
+          ul
+        article
 
-        <article class="card">
-          <span class="tag">webdev</span>
-          <h3 data-i18n="c2_h">Onepager-Websites</h3>
-          <p data-i18n="c2_p">Moderne, schnelle Website auf einer Seite: mobilfreundlich, sauber aufgebaut, mit Kontaktmöglichkeit per E-Mail oder Formular auf Wunsch und Basis-SEO. Auf Wunsch mehrsprachig — Deutsch, Englisch oder Türkisch.</p>
-          <ul class="mini-list">
-            <li data-i18n="c2_l1">Schnell & responsiv</li>
-            <li data-i18n="c2_l2">Basis-SEO & saubere Struktur</li>
-            <li data-i18n="c2_l3">Übergabe ohne Baukasten-Zwang</li>
-          </ul>
-        </article>
+        article class=card
+          span class=tagwebdevspan
+          h3 data-i18n=c2_hOnepager-Websitesh3
+          p data-i18n=c2_pModerne, schnelle Website auf einer Seite mobilfreundlich, sauber aufgebaut, mit Kontaktmöglichkeit per E-Mail oder Formular auf Wunsch und Basis-SEO. Auf Wunsch mehrsprachig — Deutsch, Englisch oder Türkisch.p
+          ul class=mini-list
+            li data-i18n=c2_l1Schnell & responsivli
+            li data-i18n=c2_l2Basis-SEO & saubere Strukturli
+            li data-i18n=c2_l3Übergabe ohne Baukasten-Zwangli
+          ul
+        article
 
-        <article class="card">
-          <span class="tag">automation</span>
-          <h3 data-i18n="c3_h">Automatisierung & Tools</h3>
-          <p data-i18n="c3_p">Wiederkehrende Aufgaben abgeben: individuelle Skripte, Datenauswertung, kleine Web-Tools und einfache Schnittstellen — maßgeschneidert statt Software von der Stange.</p>
-          <ul class="mini-list">
-            <li data-i18n="c3_l1">Skripte für Routinearbeit</li>
-            <li data-i18n="c3_l2">Daten aufbereiten & auswerten</li>
-            <li data-i18n="c3_l3">Kleine interne Web-Tools</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
+        article class=card
+          span class=tagautomationspan
+          h3 data-i18n=c3_hAutomatisierung & Toolsh3
+          p data-i18n=c3_pWiederkehrende Aufgaben abgeben individuelle Skripte, Datenauswertung, kleine Web-Tools und einfache Schnittstellen — maßgeschneidert statt Software von der Stange.p
+          ul class=mini-list
+            li data-i18n=c3_l1Skripte für Routinearbeitli
+            li data-i18n=c3_l2Daten aufbereiten & auswertenli
+            li data-i18n=c3_l3Kleine interne Web-Toolsli
+          ul
+        article
+      div
+    div
+  section
 
-  <section id="fuer-wen">
-    <div class="wrap">
-      <h2 data-i18n="aud_h">Für wen ist AY-TEA?</h2>
-      <p class="section-lead" data-i18n="aud_lead">
+  section id=fuer-wen
+    div class=wrap
+      h2 data-i18n=aud_hFür wen ist AY-TEAh2
+      p class=section-lead data-i18n=aud_lead
         Besonders sinnvoll für kleine Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.
-      </p>
+      p
 
-      <div class="audience">
-        <div class="audience-box">
-          <h3 data-i18n="aud1_h">Lokale Sichtbarkeit</h3>
-          <p data-i18n="aud1_p">Ideal für Cafés, Barbershops, Handwerk, Praxen, Vereine, Dienstleister und kleine Shops, die bei Google besser wirken und leichter gefunden werden wollen.</p>
-        </div>
-        <div class="audience-box">
-          <h3 data-i18n="aud2_h">Kleine digitale Prozesse</h3>
-          <p data-i18n="aud2_p">Gut für Aufgaben, die ständig Zeit kosten: Listen sortieren, Daten auswerten, einfache Formulare, kleine Tools oder wiederkehrende Abläufe.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      div class=audience
+        div class=audience-box
+          h3 data-i18n=aud1_hLokale Sichtbarkeith3
+          p data-i18n=aud1_pIdeal für Cafés, Barbershops, Handwerk, Praxen, Vereine, Dienstleister und kleine Shops, die bei Google besser wirken und leichter gefunden werden wollen.p
+        div
+        div class=audience-box
+          h3 data-i18n=aud2_hKleine digitale Prozesseh3
+          p data-i18n=aud2_pGut für Aufgaben, die ständig Zeit kosten Listen sortieren, Daten auswerten, einfache Formulare, kleine Tools oder wiederkehrende Abläufe.p
+        div
+      div
+    div
+  section
 
-  <section id="demo">
-    <div class="wrap">
-      <h2 data-i18n="d_h">Vorher / Nachher: ein Google-Profil im Vergleich</h2>
-      <p class="section-lead" data-i18n="d_lead">
-        Genau hier setzt AY-TEA an: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.
-      </p>
+  section id=demo
+    div class=wrap
+      h2 data-i18n=d_hVorher  Nachher ein Google-Profil im Vergleichh2
+      p class=section-lead data-i18n=d_lead
+        Genau hier setzt AY-TEA an Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.
+      p
 
-      <div class="demo-toggle" role="group" aria-label="Vorher / Nachher">
-        <button type="button" class="active" data-state="before" data-i18n="d_before" aria-pressed="true">Vorher</button>
-        <button type="button" data-state="after" data-i18n="d_after" aria-pressed="false">Nachher</button>
-      </div>
+      div class=demo-toggle role=group aria-label=Vorher  Nachher
+        button type=button class=active data-state=before data-i18n=d_before aria-pressed=trueVorherbutton
+        button type=button data-state=after data-i18n=d_after aria-pressed=falseNachherbutton
+      div
 
-      <div class="gcard">
-        <div class="gcard-head">
-          <div>
-            <div class="gcard-name">Café Luna</div>
-            <div class="gcard-meta"><span class="stars">★★★★☆</span> 4,3 · Café · Ulm</div>
-          </div>
-          <span class="gcard-pin" aria-hidden="true">📍</span>
-        </div>
+      div class=gcard
+        div class=gcard-head
+          div
+            div class=gcard-nameCafé Lunadiv
+            div class=gcard-metaspan class=stars★★★★☆span 4,3 · Café · Ulmdiv
+          div
+          span class=gcard-pin aria-hidden=true📍span
+        div
 
-        <ul class="gcard-list gcard-before active">
-          <li><span class="x">✗</span> <span data-i18n="db1">Nur 2 Fotos, keine Innenaufnahmen</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db2">Öffnungszeiten fehlen oder sind falsch</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db3">Keine Website verlinkt</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db4">Beschreibung leer</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db5">Bewertungen bleiben unbeantwortet</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db6">Ungenaue Kategorie: nur „Café“</span></li>
-        </ul>
+        ul class=gcard-list gcard-before active
+          lispan class=x✗span span data-i18n=db1Nur 2 Fotos, keine Innenaufnahmenspanli
+          lispan class=x✗span span data-i18n=db2Öffnungszeiten fehlen oder sind falschspanli
+          lispan class=x✗span span data-i18n=db3Keine Website verlinktspanli
+          lispan class=x✗span span data-i18n=db4Beschreibung leerspanli
+          lispan class=x✗span span data-i18n=db5Bewertungen bleiben unbeantwortetspanli
+          lispan class=x✗span span data-i18n=db6Ungenaue Kategorie nur „Café“spanli
+        ul
 
-        <ul class="gcard-list gcard-after">
-          <li><span class="ok2">✓</span> <span data-i18n="da1">Mehr relevante Fotos</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da2">Öffnungszeiten aktuell, Feiertage gepflegt</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da3">Website & Reservierungslink verknüpft</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da4">Beschreibung mit relevanten Suchbegriffen</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da5">Bewertungen werden professionell beantwortet</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da6">Präzisere Kategorien: Café · Frühstück · Brunch</span></li>
-        </ul>
-      </div>
+        ul class=gcard-list gcard-after
+          lispan class=ok2✓span span data-i18n=da1Mehr relevante Fotosspanli
+          lispan class=ok2✓span span data-i18n=da2Öffnungszeiten aktuell, Feiertage gepflegtspanli
+          lispan class=ok2✓span span data-i18n=da3Website & Reservierungslink verknüpftspanli
+          lispan class=ok2✓span span data-i18n=da4Beschreibung mit relevanten Suchbegriffenspanli
+          lispan class=ok2✓span span data-i18n=da5Bewertungen werden professionell beantwortetspanli
+          lispan class=ok2✓span span data-i18n=da6Präzisere Kategorien Café · Frühstück · Brunchspanli
+        ul
+      div
 
-      <p class="demo-note" data-i18n="d_note">Fiktives Beispielprofil zur Veranschaulichung. Ergebnisse können je nach Unternehmen, Wettbewerb und Ausgangslage variieren.</p>
-    </div>
-  </section>
+      p class=demo-note data-i18n=d_noteFiktives Beispielprofil zur Veranschaulichung. Ergebnisse können je nach Unternehmen, Wettbewerb und Ausgangslage variieren.p
+    div
+  section
 
-  <section id="warum">
-    <div class="wrap">
-      <h2 data-i18n="s2_h">Warum AY-TEA?</h2>
-      <p class="section-lead" data-i18n="s2_lead">Kurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.</p>
 
-      <div class="why">
-        <div class="why-item">
-          <span class="dot" aria-hidden="true"></span>
-          <div>
-            <strong data-i18n="w1_h">Informatik-Hintergrund</strong>
-            <span data-i18n="w1_p">Umsetzung mit sauberem Code statt Baukasten-Flickwerk — schnell, wartbar und erweiterbar.</span>
-          </div>
-        </div>
 
-        <div class="why-item">
-          <span class="dot" aria-hidden="true"></span>
-          <div>
-            <strong data-i18n="w2_h">Ein Ansprechpartner, direkte Wege</strong>
-            <span data-i18n="w2_p">Keine Ticketsysteme, keine Warteschleifen: Du schreibst direkt und bekommst eine klare Antwort.</span>
-          </div>
-        </div>
+  section id=datenprojekt
+    div class=wrap
+      div class=ditib-showcase
+        div class=ditib-copy
+          span class=eyebrow data-i18n=map_eyebrow eigenes Datenprojektspan
+          h2 data-i18n=map_hDITIB-Standorte in Deutschland auf einer Karteh2
+          p data-i18n=map_p
+            Für diese eigene Übersicht wurden 811 Datensätze zu DITIB-Moscheen und Gemeinden in Deutschland manuell gesammelt und in einer interaktiven My-Maps-Karte gebündelt.
+          p
 
-        <div class="why-item">
-          <span class="dot" aria-hidden="true"></span>
-          <div>
-            <strong data-i18n="w3_h">Festpreise, keine Überraschungen</strong>
-            <span data-i18n="w3_p">Klares Angebot vor Projektstart — mit Umfang, Preis und Termin.</span>
-          </div>
-        </div>
+          div class=ditib-facts
+            div class=ditib-count
+              strong811strong
+              span data-i18n=map_staterfasste Datensätzespan
+            div
+            div class=ditib-status
+              span class=ditib-status-dot aria-hidden=truespan
+              span data-i18n=map_liveDirekt auf dieser Seite interaktivspan
+            div
+          div
 
-        <div class="why-item">
-          <span class="dot" aria-hidden="true"></span>
-          <div>
-            <strong data-i18n="w4_h">100 % remote & erreichbar</strong>
-            <span data-i18n="w4_p">Kommunikation per E-Mail oder Video-Call auf Wunsch. Ergebnisse bekommst du digital und sauber übergeben.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          a class=btn href=httpswww.google.commapsdviewermid=10zcKGRWegSDAKt9Gyag8XhbdKTyAJ-Y target=_blank rel=noopener noreferrer data-i18n=map_btn
+            Karte in neuem Tab öffnen
+          a
+          p class=ditib-note data-i18n=map_noteStand Juli 2026 · Eigene Datensammlung · Angaben ohne Gewährp
+        div
 
-  <section id="ablauf">
-    <div class="wrap">
-      <h2 data-i18n="s3_h">So läuft’s ab</h2>
-      <p class="section-lead" data-i18n="s3_lead">Vom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.</p>
+        div class=ditib-map-card
+          iframe
+            src=httpswww.google.commapsdu1embedmid=10zcKGRWegSDAKt9Gyag8XhbdKTyAJ-Y&ehbc=2E312F
+            title=Interaktive Karte der erfassten DITIB-Standorte in Deutschland
+            width=640
+            height=480
+            loading=lazy
+            allowfullscreen
+            referrerpolicy=no-referrer-when-downgrade
+          iframe
+        div
+      div
+    div
+  section
 
-      <div class="steps">
-        <article class="step">
-          <h3 data-i18n="st1_h">Kurz anfragen</h3>
-          <p data-i18n="st1_p">Du schreibst eine formlose E-Mail: Was brauchst du, bis wann, und für welches Unternehmen?</p>
-        </article>
+  section id=warum
+    div class=wrap
+      h2 data-i18n=s2_hWarum AY-TEAh2
+      p class=section-lead data-i18n=s2_leadKurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.p
 
-        <article class="step">
-          <h3 data-i18n="st2_h">Festpreis-Angebot</h3>
-          <p data-i18n="st2_p">Du bekommst ein klares Angebot mit Umfang, Preis und Termin. Erst wenn du zustimmst, geht’s los.</p>
-        </article>
+      div class=why
+        div class=why-item
+          span class=dot aria-hidden=truespan
+          div
+            strong data-i18n=w1_hInformatik-Hintergrundstrong
+            span data-i18n=w1_pUmsetzung mit sauberem Code statt Baukasten-Flickwerk — schnell, wartbar und erweiterbar.span
+          div
+        div
 
-        <article class="step">
-          <h3 data-i18n="st3_h">Umsetzung & Übergabe</h3>
-          <p data-i18n="st3_p">Lieferung zum vereinbarten Termin, eine Korrekturrunde inklusive. Danach bekommst du alles sauber übergeben.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+        div class=why-item
+          span class=dot aria-hidden=truespan
+          div
+            strong data-i18n=w2_hEin Ansprechpartner, direkte Wegestrong
+            span data-i18n=w2_pKeine Ticketsysteme, keine Warteschleifen Du schreibst direkt und bekommst eine klare Antwort.span
+          div
+        div
 
-  <section id="faq">
-    <div class="wrap">
-      <h2 data-i18n="faq_h">Häufige Fragen</h2>
-      <p class="section-lead" data-i18n="faq_lead">Kurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.</p>
+        div class=why-item
+          span class=dot aria-hidden=truespan
+          div
+            strong data-i18n=w3_hFestpreise, keine Überraschungenstrong
+            span data-i18n=w3_pKlares Angebot vor Projektstart — mit Umfang, Preis und Termin.span
+          div
+        div
 
-      <div class="faq">
-        <details>
-          <summary data-i18n="faq1_q">Arbeitest du nur in Ulm und Umgebung?</summary>
-          <p data-i18n="faq1_a">Nein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.</p>
-        </details>
+        div class=why-item
+          span class=dot aria-hidden=truespan
+          div
+            strong data-i18n=w4_h100 % remote & erreichbarstrong
+            span data-i18n=w4_pKommunikation per E-Mail oder Video-Call auf Wunsch. Ergebnisse bekommst du digital und sauber übergeben.span
+          div
+        div
+      div
+    div
+  section
 
-        <details>
-          <summary data-i18n="faq2_q">Gibt es feste Paketpreise?</summary>
-          <p data-i18n="faq2_a">Der Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.</p>
-        </details>
+  section id=ablauf
+    div class=wrap
+      h2 data-i18n=s3_hSo läuft’s abh2
+      p class=section-lead data-i18n=s3_leadVom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.p
 
-        <details>
-          <summary data-i18n="faq3_q">Machst du auch mehrsprachige Websites?</summary>
-          <p data-i18n="faq3_a">Ja. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+      div class=steps
+        article class=step
+          h3 data-i18n=st1_hKurz anfragenh3
+          p data-i18n=st1_pDu schreibst eine formlose E-Mail Was brauchst du, bis wann, und für welches Unternehmenp
+        article
 
-  <section id="kontakt">
-    <div class="wrap">
-      <div class="contact">
-        <h2 data-i18n="k_h">Projekt im Kopf?</h2>
-        <p data-i18n="k_p">Schreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.</p>
+        article class=step
+          h3 data-i18n=st2_hFestpreis-Angeboth3
+          p data-i18n=st2_pDu bekommst ein klares Angebot mit Umfang, Preis und Termin. Erst wenn du zustimmst, geht’s los.p
+        article
 
-        <a class="btn btn-primary" href="mailto:info@ay-tea.de?subject=Projektanfrage%20AY-TEA" data-i18n="k_btn">E-Mail schreiben</a>
-        <span class="mail-mono">info@ay-tea.de</span>
+        article class=step
+          h3 data-i18n=st3_hUmsetzung & Übergabeh3
+          p data-i18n=st3_pLieferung zum vereinbarten Termin, eine Korrekturrunde inklusive. Danach bekommst du alles sauber übergeben.p
+        article
+      div
+    div
+  section
 
-        <div class="socials" aria-label="Social Media">
-          <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer" aria-label="Instagram @ayteahq">
-            <span aria-hidden="true">Instagram</span>
-            <span>@ayteahq</span>
-          </a>
-          <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer" aria-label="TikTok @ayteahq">
-            <span aria-hidden="true">TikTok</span>
-            <span>@ayteahq</span>
-          </a>
-          <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer" aria-label="GitHub ayteahq">
-            <span aria-hidden="true">GitHub</span>
-            <span>ayteahq</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+  section id=faq
+    div class=wrap
+      h2 data-i18n=faq_hHäufige Fragenh2
+      p class=section-lead data-i18n=faq_leadKurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.p
 
-<div class="pattern-divider" aria-hidden="true"></div>
+      div class=faq
+        details
+          summary data-i18n=faq1_qArbeitest du nur in Ulm und Umgebungsummary
+          p data-i18n=faq1_aNein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.p
+        details
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <span>© 2026 AY-TEA</span>
-      <span data-i18n="f_tag">IT-Dienstleistungen · Websites · Google-Profile · Automatisierung</span>
-      <div class="foot-social" aria-label="Footer Links">
-        <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
+        details
+          summary data-i18n=faq2_qGibt es feste Paketpreisesummary
+          p data-i18n=faq2_aDer Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.p
+        details
 
-    <div class="foot-legal">
-      <a href="impressum.html">Impressum</a> · <a href="impressum.html#datenschutz">Datenschutz</a>
-    </div>
-  </div>
-</footer>
+        details
+          summary data-i18n=faq3_qMachst du auch mehrsprachige Websitessummary
+          p data-i18n=faq3_aJa. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.p
+        details
+      div
+    div
+  section
 
-<script>
+  section id=kontakt
+    div class=wrap
+      div class=contact
+        h2 data-i18n=k_hProjekt im Kopfh2
+        p data-i18n=k_pSchreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.p
+
+        a class=btn btn-primary href=mailtoinfo@ay-tea.desubject=Projektanfrage%20AY-TEA data-i18n=k_btnE-Mail schreibena
+        span class=mail-monoinfo@ay-tea.despan
+
+        div class=socials aria-label=Social Media
+          a href=httpsinstagram.comayteahq target=_blank rel=noopener noreferrer aria-label=Instagram @ayteahq
+            span aria-hidden=trueInstagramspan
+            span@ayteahqspan
+          a
+          a href=httpswww.tiktok.com@ayteahq target=_blank rel=noopener noreferrer aria-label=TikTok @ayteahq
+            span aria-hidden=trueTikTokspan
+            span@ayteahqspan
+          a
+          a href=httpsgithub.comayteahq target=_blank rel=noopener noreferrer aria-label=GitHub ayteahq
+            span aria-hidden=trueGitHubspan
+            spanayteahqspan
+          a
+        div
+      div
+    div
+  section
+main
+
+div class=pattern-divider aria-hidden=truediv
+
+footer
+  div class=wrap
+    div class=foot-grid
+      span© 2026 AY-TEAspan
+      span data-i18n=f_tagIT-Dienstleistungen · Websites · Google-Profile · Automatisierungspan
+      div class=foot-social aria-label=Footer Links
+        a href=httpsinstagram.comayteahq target=_blank rel=noopener noreferrerInstagrama
+        a href=httpswww.tiktok.com@ayteahq target=_blank rel=noopener noreferrerTikToka
+        a href=httpsgithub.comayteahq target=_blank rel=noopener noreferrerGitHuba
+      div
+    div
+
+    div class=foot-legal
+      a href=impressum.htmlImpressuma · a href=impressum.html#datenschutzDatenschutza
+    div
+  div
+footer
+
+script
 const T = {
-  de: {
-    nav_services:"Leistungen", nav_process:"Ablauf", nav_cta:"Projekt anfragen",
-    eyebrow:"// IT-Dienstleistungen · 100 % remote",
-    h1a:"Digital sichtbar.", h1b:"Sauber umgesetzt.",
-    sub:"AY-TEA bringt kleine Unternehmen online: optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.",
-    cta1:"Projekt anfragen", cta2:"Leistungen ansehen",
-    pill1:"Festpreis nach Erstgespräch", pill2:"DSGVO-bewusst", pill3:"Deutsch · Englisch · Türkisch",
-    t1:"Google-Profil optimiert", t2:"Onepager oft in ca. 7 Tagen möglich", t3:"Routine automatisiert",
-    s1_h:"Leistungen",
-    s1_lead:"Drei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.",
-    c1_h:"Google-Unternehmensprofil",
-    c1_p:"Audit & Optimierung deines Google-Profils: korrekte Daten, Kategorien, Beschreibung mit Suchbegriffen, Foto-Struktur und Bewertungs-Strategie — damit Kunden aus der Region dich leichter finden.",
-    c1_l1:"Profil-Audit", c1_l2:"Kategorien & Beschreibung", c1_l3:"Bewertungs- und Foto-Struktur",
-    c2_h:"Onepager-Websites",
-    c2_p:"Moderne, schnelle Website auf einer Seite: mobilfreundlich, sauber aufgebaut, mit Kontaktmöglichkeit per E-Mail oder Formular auf Wunsch und Basis-SEO. Auf Wunsch mehrsprachig — Deutsch, Englisch oder Türkisch.",
-    c2_l1:"Schnell & responsiv", c2_l2:"Basis-SEO & saubere Struktur", c2_l3:"Übergabe ohne Baukasten-Zwang",
-    c3_h:"Automatisierung & Tools",
-    c3_p:"Wiederkehrende Aufgaben abgeben: individuelle Skripte, Datenauswertung, kleine Web-Tools und einfache Schnittstellen — maßgeschneidert statt Software von der Stange.",
-    c3_l1:"Skripte für Routinearbeit", c3_l2:"Daten aufbereiten & auswerten", c3_l3:"Kleine interne Web-Tools",
-    aud_h:"Für wen ist AY-TEA?",
-    aud_lead:"Besonders sinnvoll für kleine Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.",
-    aud1_h:"Lokale Sichtbarkeit",
-    aud1_p:"Ideal für Cafés, Barbershops, Handwerk, Praxen, Vereine, Dienstleister und kleine Shops, die bei Google besser wirken und leichter gefunden werden wollen.",
-    aud2_h:"Kleine digitale Prozesse",
-    aud2_p:"Gut für Aufgaben, die ständig Zeit kosten: Listen sortieren, Daten auswerten, einfache Formulare, kleine Tools oder wiederkehrende Abläufe.",
-    d_h:"Vorher / Nachher: ein Google-Profil im Vergleich",
-    d_lead:"Genau hier setzt AY-TEA an: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.",
-    d_before:"Vorher", d_after:"Nachher",
-    db1:"Nur 2 Fotos, keine Innenaufnahmen",
-    db2:"Öffnungszeiten fehlen oder sind falsch",
-    db3:"Keine Website verlinkt",
-    db4:"Beschreibung leer",
-    db5:"Bewertungen bleiben unbeantwortet",
-    db6:"Ungenaue Kategorie: nur „Café“",
-    da1:"Mehr relevante Fotos",
-    da2:"Öffnungszeiten aktuell, Feiertage gepflegt",
-    da3:"Website & Reservierungslink verknüpft",
-    da4:"Beschreibung mit relevanten Suchbegriffen",
-    da5:"Bewertungen werden professionell beantwortet",
-    da6:"Präzisere Kategorien: Café · Frühstück · Brunch",
-    d_note:"Fiktives Beispielprofil zur Veranschaulichung. Ergebnisse können je nach Unternehmen, Wettbewerb und Ausgangslage variieren.",
-    s2_h:"Warum AY-TEA?",
-    s2_lead:"Kurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.",
-    w1_h:"Informatik-Hintergrund",
-    w1_p:"Umsetzung mit sauberem Code statt Baukasten-Flickwerk — schnell, wartbar und erweiterbar.",
-    w2_h:"Ein Ansprechpartner, direkte Wege",
-    w2_p:"Keine Ticketsysteme, keine Warteschleifen: Du schreibst direkt und bekommst eine klare Antwort.",
-    w3_h:"Festpreise, keine Überraschungen",
-    w3_p:"Klares Angebot vor Projektstart — mit Umfang, Preis und Termin.",
-    w4_h:"100 % remote & erreichbar",
-    w4_p:"Kommunikation per E-Mail oder Video-Call auf Wunsch. Ergebnisse bekommst du digital und sauber übergeben.",
-    s3_h:"So läuft’s ab",
-    s3_lead:"Vom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.",
-    st1_h:"Kurz anfragen",
-    st1_p:"Du schreibst eine formlose E-Mail: Was brauchst du, bis wann, und für welches Unternehmen?",
-    st2_h:"Festpreis-Angebot",
-    st2_p:"Du bekommst ein klares Angebot mit Umfang, Preis und Termin. Erst wenn du zustimmst, geht’s los.",
-    st3_h:"Umsetzung & Übergabe",
-    st3_p:"Lieferung zum vereinbarten Termin, eine Korrekturrunde inklusive. Danach bekommst du alles sauber übergeben.",
-    faq_h:"Häufige Fragen",
-    faq_lead:"Kurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.",
-    faq1_q:"Arbeitest du nur in Ulm und Umgebung?",
-    faq1_a:"Nein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.",
-    faq2_q:"Gibt es feste Paketpreise?",
-    faq2_a:"Der Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.",
-    faq3_q:"Machst du auch mehrsprachige Websites?",
-    faq3_a:"Ja. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.",
-    k_h:"Projekt im Kopf?",
-    k_p:"Schreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.",
-    k_btn:"E-Mail schreiben",
-    f_tag:"IT-Dienstleistungen · Websites · Google-Profile · Automatisierung"
+  de {
+    nav_servicesLeistungen, nav_processAblauf, nav_ctaProjekt anfragen,
+    eyebrow IT-Dienstleistungen · 100 % remote,
+    h1aDigital sichtbar., h1bSauber umgesetzt.,
+    subAY-TEA bringt kleine Unternehmen online optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.,
+    cta1Projekt anfragen, cta2Leistungen ansehen,
+    pill1Festpreis nach Erstgespräch, pill2DSGVO-bewusst, pill3Deutsch · Englisch · Türkisch,
+    t1Google-Profil optimiert, t2Onepager oft in ca. 7 Tagen möglich, t3Routine automatisiert,
+    s1_hLeistungen,
+    s1_leadDrei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.,
+    c1_hGoogle-Unternehmensprofil,
+    c1_pAudit & Optimierung deines Google-Profils korrekte Daten, Kategorien, Beschreibung mit Suchbegriffen, Foto-Struktur und Bewertungs-Strategie — damit Kunden aus der Region dich leichter finden.,
+    c1_l1Profil-Audit, c1_l2Kategorien & Beschreibung, c1_l3Bewertungs- und Foto-Struktur,
+    c2_hOnepager-Websites,
+    c2_pModerne, schnelle Website auf einer Seite mobilfreundlich, sauber aufgebaut, mit Kontaktmöglichkeit per E-Mail oder Formular auf Wunsch und Basis-SEO. Auf Wunsch mehrsprachig — Deutsch, Englisch oder Türkisch.,
+    c2_l1Schnell & responsiv, c2_l2Basis-SEO & saubere Struktur, c2_l3Übergabe ohne Baukasten-Zwang,
+    c3_hAutomatisierung & Tools,
+    c3_pWiederkehrende Aufgaben abgeben individuelle Skripte, Datenauswertung, kleine Web-Tools und einfache Schnittstellen — maßgeschneidert statt Software von der Stange.,
+    c3_l1Skripte für Routinearbeit, c3_l2Daten aufbereiten & auswerten, c3_l3Kleine interne Web-Tools,
+    aud_hFür wen ist AY-TEA,
+    aud_leadBesonders sinnvoll für kleine Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.,
+    aud1_hLokale Sichtbarkeit,
+    aud1_pIdeal für Cafés, Barbershops, Handwerk, Praxen, Vereine, Dienstleister und kleine Shops, die bei Google besser wirken und leichter gefunden werden wollen.,
+    aud2_hKleine digitale Prozesse,
+    aud2_pGut für Aufgaben, die ständig Zeit kosten Listen sortieren, Daten auswerten, einfache Formulare, kleine Tools oder wiederkehrende Abläufe.,
+    d_hVorher  Nachher ein Google-Profil im Vergleich,
+    d_leadGenau hier setzt AY-TEA an Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.,
+    d_beforeVorher, d_afterNachher,
+    db1Nur 2 Fotos, keine Innenaufnahmen,
+    db2Öffnungszeiten fehlen oder sind falsch,
+    db3Keine Website verlinkt,
+    db4Beschreibung leer,
+    db5Bewertungen bleiben unbeantwortet,
+    db6Ungenaue Kategorie nur „Café“,
+    da1Mehr relevante Fotos,
+    da2Öffnungszeiten aktuell, Feiertage gepflegt,
+    da3Website & Reservierungslink verknüpft,
+    da4Beschreibung mit relevanten Suchbegriffen,
+    da5Bewertungen werden professionell beantwortet,
+    da6Präzisere Kategorien Café · Frühstück · Brunch,
+    d_noteFiktives Beispielprofil zur Veranschaulichung. Ergebnisse können je nach Unternehmen, Wettbewerb und Ausgangslage variieren.,
+    map_eyebrow eigenes Datenprojekt,
+    map_hDITIB-Standorte in Deutschland auf einer Karte,
+    map_pFür diese eigene Übersicht wurden 811 Datensätze zu DITIB-Moscheen und Gemeinden in Deutschland manuell gesammelt und in einer interaktiven My-Maps-Karte gebündelt.,
+    map_staterfasste Datensätze,
+    map_liveDirekt auf dieser Seite interaktiv,
+    map_btnKarte in neuem Tab öffnen,
+    map_noteStand Juli 2026 · Eigene Datensammlung · Angaben ohne Gewähr,
+    map_openKarte ansehen ↗,
+    map_externalÖffnet Google Maps in einem neuen Tab,
+    s2_hWarum AY-TEA,
+    s2_leadKurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.,
+    w1_hInformatik-Hintergrund,
+    w1_pUmsetzung mit sauberem Code statt Baukasten-Flickwerk — schnell, wartbar und erweiterbar.,
+    w2_hEin Ansprechpartner, direkte Wege,
+    w2_pKeine Ticketsysteme, keine Warteschleifen Du schreibst direkt und bekommst eine klare Antwort.,
+    w3_hFestpreise, keine Überraschungen,
+    w3_pKlares Angebot vor Projektstart — mit Umfang, Preis und Termin.,
+    w4_h100 % remote & erreichbar,
+    w4_pKommunikation per E-Mail oder Video-Call auf Wunsch. Ergebnisse bekommst du digital und sauber übergeben.,
+    s3_hSo läuft’s ab,
+    s3_leadVom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.,
+    st1_hKurz anfragen,
+    st1_pDu schreibst eine formlose E-Mail Was brauchst du, bis wann, und für welches Unternehmen,
+    st2_hFestpreis-Angebot,
+    st2_pDu bekommst ein klares Angebot mit Umfang, Preis und Termin. Erst wenn du zustimmst, geht’s los.,
+    st3_hUmsetzung & Übergabe,
+    st3_pLieferung zum vereinbarten Termin, eine Korrekturrunde inklusive. Danach bekommst du alles sauber übergeben.,
+    faq_hHäufige Fragen,
+    faq_leadKurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.,
+    faq1_qArbeitest du nur in Ulm und Umgebung,
+    faq1_aNein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.,
+    faq2_qGibt es feste Paketpreise,
+    faq2_aDer Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.,
+    faq3_qMachst du auch mehrsprachige Websites,
+    faq3_aJa. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.,
+    k_hProjekt im Kopf,
+    k_pSchreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.,
+    k_btnE-Mail schreiben,
+    f_tagIT-Dienstleistungen · Websites · Google-Profile · Automatisierung
   },
 
-  en: {
-    nav_services:"Services", nav_process:"Process", nav_cta:"Start a project",
-    eyebrow:"// IT services · 100% remote",
-    h1a:"Digitally visible.", h1b:"Properly built.",
-    sub:"AY-TEA gets small businesses online: optimized Google Business Profiles, fast one-page websites and automations that take routine work off your plate — technically clean, fairly priced.",
-    cta1:"Start a project", cta2:"View services",
-    pill1:"Fixed quote after intro", pill2:"GDPR-aware", pill3:"German · English · Turkish",
-    t1:"Google profile optimized", t2:"One-pagers often possible in about 7 days", t3:"Routine automated",
-    s1_h:"Services",
-    s1_lead:"Three clearly scoped services — no agency overhead. After a short intro conversation, you receive a transparent fixed quote.",
-    c1_h:"Google Business Profile",
-    c1_p:"Audit & optimization of your Google profile: correct details, categories, keyword-focused description, photo structure and review strategy — so local customers can find you more easily.",
-    c1_l1:"Profile audit", c1_l2:"Categories & description", c1_l3:"Review and photo structure",
-    c2_h:"One-page websites",
-    c2_p:"A modern, fast single-page website: mobile-friendly, cleanly structured, with email contact or a form on request and basic SEO. Multilingual on request — German, English or Turkish.",
-    c2_l1:"Fast & responsive", c2_l2:"Basic SEO & clean structure", c2_l3:"Handover without builder lock-in",
-    c3_h:"Automation & tools",
-    c3_p:"Hand off repetitive tasks: custom scripts, data processing, small web tools and simple integrations — tailored instead of off-the-shelf.",
-    c3_l1:"Scripts for routine work", c3_l2:"Prepare & analyze data", c3_l3:"Small internal web tools",
-    aud_h:"Who is AY-TEA for?",
-    aud_lead:"Especially useful for small businesses, freelancers and local providers who want a more professional online presence without needing a large agency.",
-    aud1_h:"Local visibility",
-    aud1_p:"Ideal for cafés, barbershops, trades, practices, clubs, service providers and small shops that want to look better on Google and be easier to find.",
-    aud2_h:"Small digital processes",
-    aud2_p:"Great for tasks that constantly cost time: sorting lists, analyzing data, simple forms, small tools or recurring workflows.",
-    d_h:"Before / after: one Google profile compared",
-    d_lead:"This is where AY-TEA helps: turning a neglected listing into a profile that customers understand faster and trust more.",
-    d_before:"Before", d_after:"After",
-    db1:"Only 2 photos, no interior shots",
-    db2:"Opening hours missing or wrong",
-    db3:"No website linked",
-    db4:"Empty description",
-    db5:"Reviews left unanswered",
-    db6:"Vague category: just “Café”",
-    da1:"More relevant photos",
-    da2:"Hours up to date, holidays included",
-    da3:"Website & booking link connected",
-    da4:"Description with relevant keywords",
-    da5:"Reviews are answered professionally",
-    da6:"More precise categories: café · breakfast · brunch",
-    d_note:"Fictional example profile for illustration. Results can vary depending on company, competition and starting point.",
-    s2_h:"Why AY-TEA?",
-    s2_lead:"Short paths, honest pricing and technical understanding — without unnecessary complexity.",
-    w1_h:"Computer science background",
-    w1_p:"Built with clean code instead of page-builder patchwork — fast, maintainable and extensible.",
-    w2_h:"One point of contact",
-    w2_p:"No ticket systems, no queues: you write directly and get a clear answer.",
-    w3_h:"Fixed prices, no surprises",
-    w3_p:"A clear quote before the project starts — with scope, price and deadline.",
-    w4_h:"100% remote & reachable",
-    w4_p:"Communication by email or video call on request. Results are delivered digitally and cleanly.",
-    s3_h:"How it works",
-    s3_lead:"From first contact to finished result — clear, simple and without unnecessary meetings.",
-    st1_h:"Send a short request",
-    st1_p:"You send an informal email: what do you need, by when, and for which business?",
-    st2_h:"Fixed quote",
-    st2_p:"You receive a clear offer with scope, price and deadline. Work starts only when you confirm.",
-    st3_h:"Build & handover",
-    st3_p:"Delivery on the agreed date, one revision round included. After that, everything is handed over cleanly.",
-    faq_h:"Frequently asked questions",
-    faq_lead:"Short answers so you can quickly decide whether AY-TEA fits your project.",
-    faq1_q:"Do you only work in Ulm and nearby?",
-    faq1_a:"No. AY-TEA works 100% remotely. Local projects from Ulm, Neu-Ulm, Günzburg and the surrounding area fit well, but inquiries from all over Germany are possible.",
-    faq2_q:"Are there fixed package prices?",
-    faq2_a:"The price depends on the scope. After a short intro conversation, you receive a fixed quote so you know the cost in advance.",
-    faq3_q:"Do you build multilingual websites?",
-    faq3_a:"Yes. German, English and Turkish are possible. For other languages, a suitable solution can be discussed.",
-    k_h:"Got a project in mind?",
-    k_p:"Write two or three sentences about your idea — you’ll get an honest assessment and, if the scope fits, a fixed quote.",
-    k_btn:"Send an email",
-    f_tag:"IT services · Websites · Google profiles · Automation"
+  en {
+    nav_servicesServices, nav_processProcess, nav_ctaStart a project,
+    eyebrow IT services · 100% remote,
+    h1aDigitally visible., h1bProperly built.,
+    subAY-TEA gets small businesses online optimized Google Business Profiles, fast one-page websites and automations that take routine work off your plate — technically clean, fairly priced.,
+    cta1Start a project, cta2View services,
+    pill1Fixed quote after intro, pill2GDPR-aware, pill3German · English · Turkish,
+    t1Google profile optimized, t2One-pagers often possible in about 7 days, t3Routine automated,
+    s1_hServices,
+    s1_leadThree clearly scoped services — no agency overhead. After a short intro conversation, you receive a transparent fixed quote.,
+    c1_hGoogle Business Profile,
+    c1_pAudit & optimization of your Google profile correct details, categories, keyword-focused description, photo structure and review strategy — so local customers can find you more easily.,
+    c1_l1Profile audit, c1_l2Categories & description, c1_l3Review and photo structure,
+    c2_hOne-page websites,
+    c2_pA modern, fast single-page website mobile-friendly, cleanly structured, with email contact or a form on request and basic SEO. Multilingual on request — German, English or Turkish.,
+    c2_l1Fast & responsive, c2_l2Basic SEO & clean structure, c2_l3Handover without builder lock-in,
+    c3_hAutomation & tools,
+    c3_pHand off repetitive tasks custom scripts, data processing, small web tools and simple integrations — tailored instead of off-the-shelf.,
+    c3_l1Scripts for routine work, c3_l2Prepare & analyze data, c3_l3Small internal web tools,
+    aud_hWho is AY-TEA for,
+    aud_leadEspecially useful for small businesses, freelancers and local providers who want a more professional online presence without needing a large agency.,
+    aud1_hLocal visibility,
+    aud1_pIdeal for cafés, barbershops, trades, practices, clubs, service providers and small shops that want to look better on Google and be easier to find.,
+    aud2_hSmall digital processes,
+    aud2_pGreat for tasks that constantly cost time sorting lists, analyzing data, simple forms, small tools or recurring workflows.,
+    d_hBefore  after one Google profile compared,
+    d_leadThis is where AY-TEA helps turning a neglected listing into a profile that customers understand faster and trust more.,
+    d_beforeBefore, d_afterAfter,
+    db1Only 2 photos, no interior shots,
+    db2Opening hours missing or wrong,
+    db3No website linked,
+    db4Empty description,
+    db5Reviews left unanswered,
+    db6Vague category just “Café”,
+    da1More relevant photos,
+    da2Hours up to date, holidays included,
+    da3Website & booking link connected,
+    da4Description with relevant keywords,
+    da5Reviews are answered professionally,
+    da6More precise categories café · breakfast · brunch,
+    d_noteFictional example profile for illustration. Results can vary depending on company, competition and starting point.,
+    map_eyebrow independent data project,
+    map_hDITIB locations across Germany on one map,
+    map_pFor this independent overview, 811 records of DITIB mosques and communities across Germany were collected manually and combined in an interactive My Maps map.,
+    map_statcollected records,
+    map_liveInteractive directly on this page,
+    map_btnOpen map in a new tab,
+    map_noteAs of July 2026 · Independent data collection · No guarantee of completeness,
+    map_openView map ↗,
+    map_externalOpens Google Maps in a new tab,
+    s2_hWhy AY-TEA,
+    s2_leadShort paths, honest pricing and technical understanding — without unnecessary complexity.,
+    w1_hComputer science background,
+    w1_pBuilt with clean code instead of page-builder patchwork — fast, maintainable and extensible.,
+    w2_hOne point of contact,
+    w2_pNo ticket systems, no queues you write directly and get a clear answer.,
+    w3_hFixed prices, no surprises,
+    w3_pA clear quote before the project starts — with scope, price and deadline.,
+    w4_h100% remote & reachable,
+    w4_pCommunication by email or video call on request. Results are delivered digitally and cleanly.,
+    s3_hHow it works,
+    s3_leadFrom first contact to finished result — clear, simple and without unnecessary meetings.,
+    st1_hSend a short request,
+    st1_pYou send an informal email what do you need, by when, and for which business,
+    st2_hFixed quote,
+    st2_pYou receive a clear offer with scope, price and deadline. Work starts only when you confirm.,
+    st3_hBuild & handover,
+    st3_pDelivery on the agreed date, one revision round included. After that, everything is handed over cleanly.,
+    faq_hFrequently asked questions,
+    faq_leadShort answers so you can quickly decide whether AY-TEA fits your project.,
+    faq1_qDo you only work in Ulm and nearby,
+    faq1_aNo. AY-TEA works 100% remotely. Local projects from Ulm, Neu-Ulm, Günzburg and the surrounding area fit well, but inquiries from all over Germany are possible.,
+    faq2_qAre there fixed package prices,
+    faq2_aThe price depends on the scope. After a short intro conversation, you receive a fixed quote so you know the cost in advance.,
+    faq3_qDo you build multilingual websites,
+    faq3_aYes. German, English and Turkish are possible. For other languages, a suitable solution can be discussed.,
+    k_hGot a project in mind,
+    k_pWrite two or three sentences about your idea — you’ll get an honest assessment and, if the scope fits, a fixed quote.,
+    k_btnSend an email,
+    f_tagIT services · Websites · Google profiles · Automation
   },
 
-  tr: {
-    nav_services:"Hizmetler", nav_process:"Süreç", nav_cta:"Proje talep et",
-    eyebrow:"// BT hizmetleri · %100 uzaktan",
-    h1a:"Dijitalde görünür.", h1b:"Temiz uygulanmış.",
-    sub:"AY-TEA küçük işletmeleri internete taşır: optimize edilmiş Google İşletme Profilleri, hızlı tek sayfalık web siteleri ve rutin işleri azaltan otomasyonlar — teknik olarak temiz, adil fiyatlı.",
-    cta1:"Proje talep et", cta2:"Hizmetleri gör",
-    pill1:"Ön görüşme sonrası sabit fiyat", pill2:"GDPR bilinçli", pill3:"Almanca · İngilizce · Türkçe",
-    t1:"Google profili optimize edildi", t2:"Onepager genelde yaklaşık 7 günde mümkün", t3:"Rutin işler otomatikleşti",
-    s1_h:"Hizmetler",
-    s1_lead:"Net kapsamlı üç hizmet — ajans maliyeti yok. Kısa bir ön görüşmeden sonra şeffaf sabit fiyat teklifi alırsınız.",
-    c1_h:"Google İşletme Profili",
-    c1_p:"Google profilinizin denetimi ve optimizasyonu: doğru bilgiler, kategoriler, anahtar kelimeli açıklama, fotoğraf düzeni ve yorum stratejisi — bölgenizdeki müşteriler sizi daha kolay bulsun.",
-    c1_l1:"Profil denetimi", c1_l2:"Kategoriler & açıklama", c1_l3:"Yorum ve fotoğraf düzeni",
-    c2_h:"Tek sayfalık web siteleri",
-    c2_p:"Modern ve hızlı tek sayfalık web sitesi: mobil uyumlu, temiz yapılı, e-posta ile iletişim veya isteğe bağlı form ve temel SEO ile. İsteğe bağlı çok dilli — Almanca, İngilizce veya Türkçe.",
-    c2_l1:"Hızlı & mobil uyumlu", c2_l2:"Temel SEO & temiz yapı", c2_l3:"Baukasten bağımlılığı olmadan teslim",
-    c3_h:"Otomasyon & araçlar",
-    c3_p:"Tekrarlayan işleri devredin: özel scriptler, veri işleme, küçük web araçları ve basit entegrasyonlar — hazır yazılım yerine size özel.",
-    c3_l1:"Rutin işler için scriptler", c3_l2:"Veri hazırlama & analiz", c3_l3:"Küçük dahili web araçları",
-    aud_h:"AY-TEA kimler için?",
-    aud_lead:"Profesyonel bir online görünüm isteyen ama büyük ajansa ihtiyaç duymayan küçük işletmeler, serbest çalışanlar ve yerel hizmet sağlayıcılar için uygundur.",
-    aud1_h:"Yerel görünürlük",
-    aud1_p:"Google’da daha iyi görünmek ve daha kolay bulunmak isteyen kafeler, berberler, zanaatkârlar, muayenehaneler, dernekler, hizmet sağlayıcılar ve küçük mağazalar için ideal.",
-    aud2_h:"Küçük dijital süreçler",
-    aud2_p:"Sürekli zaman alan işler için iyi: liste düzenleme, veri analizi, basit formlar, küçük araçlar veya tekrarlayan süreçler.",
-    d_h:"Öncesi / Sonrası: bir Google profili karşılaştırması",
-    d_lead:"AY-TEA burada devreye girer: ihmal edilmiş bir kaydı müşterinin daha hızlı anladığı ve güvendiği bir profile dönüştürür.",
-    d_before:"Öncesi", d_after:"Sonrası",
-    db1:"Sadece 2 fotoğraf, iç mekân yok",
-    db2:"Çalışma saatleri eksik veya yanlış",
-    db3:"Web sitesi bağlı değil",
-    db4:"Açıklama boş",
-    db5:"Yorumlar yanıtsız",
-    db6:"Belirsiz kategori: sadece “Kafe”",
-    da1:"Daha fazla ilgili fotoğraf",
-    da2:"Saatler güncel, tatiller dahil",
-    da3:"Web sitesi & rezervasyon bağlantısı",
-    da4:"Doğru anahtar kelimelerle açıklama",
-    da5:"Yorumlar profesyonel şekilde yanıtlanır",
-    da6:"Daha net kategoriler: kafe · kahvaltı · brunch",
-    d_note:"Açıklama amaçlı kurgusal profil. Sonuçlar işletmeye, rekabete ve başlangıç durumuna göre değişebilir.",
-    s2_h:"Neden AY-TEA?",
-    s2_lead:"Kısa iletişim yolları, dürüst fiyatlar ve teknik anlayış — gereksiz karmaşıklık olmadan.",
-    w1_h:"Bilgisayar bilimi altyapısı",
-    w1_p:"Hazır şablon yamaları yerine temiz kod — hızlı, bakımı kolay ve genişletilebilir.",
-    w2_h:"Tek muhatap, doğrudan iletişim",
-    w2_p:"Ticket sistemi yok, bekleme yok: direkt yazarsınız ve net cevap alırsınız.",
-    w3_h:"Sabit fiyat, sürpriz yok",
-    w3_p:"Proje başlamadan net teklif — kapsam, fiyat ve teslim tarihi ile.",
-    w4_h:"%100 uzaktan & ulaşılabilir",
-    w4_p:"E-posta veya isteğe bağlı video görüşme ile iletişim. Sonuçlar dijital ve temiz şekilde teslim edilir.",
-    s3_h:"Nasıl çalışır?",
-    s3_lead:"İlk temastan bitmiş sonuca — net, basit ve gereksiz toplantılar olmadan.",
-    st1_h:"Kısa bir talep gönderin",
-    st1_p:"Kısa bir e-posta yazın: neye, ne zamana kadar ve hangi işletme için ihtiyacınız var?",
-    st2_h:"Sabit fiyat teklifi",
-    st2_p:"Kapsam, fiyat ve teslim tarihi içeren net bir teklif alırsınız. Siz onaylamadan iş başlamaz.",
-    st3_h:"Uygulama & teslim",
-    st3_p:"Kararlaştırılan tarihte teslim, bir revizyon turu dahil. Sonrasında her şey temiz şekilde size teslim edilir.",
-    faq_h:"Sık sorulan sorular",
-    faq_lead:"AY-TEA’nın projenize uygun olup olmadığını hızlıca anlamanız için kısa cevaplar.",
-    faq1_q:"Sadece Ulm ve çevresinde mi çalışıyorsun?",
-    faq1_a:"Hayır. AY-TEA %100 uzaktan çalışır. Ulm, Neu-Ulm, Günzburg ve çevresinden yerel projeler çok uygundur, ama Almanya genelinden talepler mümkündür.",
-    faq2_q:"Sabit paket fiyatları var mı?",
-    faq2_a:"Fiyat kapsamına göre değişir. Kısa bir ön görüşmeden sonra maliyeti önceden bilmeniz için sabit fiyat teklifi alırsınız.",
-    faq3_q:"Çok dilli web sitesi yapıyor musun?",
-    faq3_a:"Evet. Almanca, İngilizce ve Türkçe mümkündür. Diğer diller için uygun çözüm konuşulabilir.",
-    k_h:"Aklında bir proje mi var?",
-    k_p:"Projenizi iki üç cümleyle anlatın — dürüst bir değerlendirme ve kapsam uygunsa sabit fiyat teklifi alırsınız.",
-    k_btn:"E-posta gönder",
-    f_tag:"BT hizmetleri · Web siteleri · Google profilleri · Otomasyon"
+  tr {
+    nav_servicesHizmetler, nav_processSüreç, nav_ctaProje talep et,
+    eyebrow BT hizmetleri · %100 uzaktan,
+    h1aDijitalde görünür., h1bTemiz uygulanmış.,
+    subAY-TEA küçük işletmeleri internete taşır optimize edilmiş Google İşletme Profilleri, hızlı tek sayfalık web siteleri ve rutin işleri azaltan otomasyonlar — teknik olarak temiz, adil fiyatlı.,
+    cta1Proje talep et, cta2Hizmetleri gör,
+    pill1Ön görüşme sonrası sabit fiyat, pill2GDPR bilinçli, pill3Almanca · İngilizce · Türkçe,
+    t1Google profili optimize edildi, t2Onepager genelde yaklaşık 7 günde mümkün, t3Rutin işler otomatikleşti,
+    s1_hHizmetler,
+    s1_leadNet kapsamlı üç hizmet — ajans maliyeti yok. Kısa bir ön görüşmeden sonra şeffaf sabit fiyat teklifi alırsınız.,
+    c1_hGoogle İşletme Profili,
+    c1_pGoogle profilinizin denetimi ve optimizasyonu doğru bilgiler, kategoriler, anahtar kelimeli açıklama, fotoğraf düzeni ve yorum stratejisi — bölgenizdeki müşteriler sizi daha kolay bulsun.,
+    c1_l1Profil denetimi, c1_l2Kategoriler & açıklama, c1_l3Yorum ve fotoğraf düzeni,
+    c2_hTek sayfalık web siteleri,
+    c2_pModern ve hızlı tek sayfalık web sitesi mobil uyumlu, temiz yapılı, e-posta ile iletişim veya isteğe bağlı form ve temel SEO ile. İsteğe bağlı çok dilli — Almanca, İngilizce veya Türkçe.,
+    c2_l1Hızlı & mobil uyumlu, c2_l2Temel SEO & temiz yapı, c2_l3Baukasten bağımlılığı olmadan teslim,
+    c3_hOtomasyon & araçlar,
+    c3_pTekrarlayan işleri devredin özel scriptler, veri işleme, küçük web araçları ve basit entegrasyonlar — hazır yazılım yerine size özel.,
+    c3_l1Rutin işler için scriptler, c3_l2Veri hazırlama & analiz, c3_l3Küçük dahili web araçları,
+    aud_hAY-TEA kimler için,
+    aud_leadProfesyonel bir online görünüm isteyen ama büyük ajansa ihtiyaç duymayan küçük işletmeler, serbest çalışanlar ve yerel hizmet sağlayıcılar için uygundur.,
+    aud1_hYerel görünürlük,
+    aud1_pGoogle’da daha iyi görünmek ve daha kolay bulunmak isteyen kafeler, berberler, zanaatkârlar, muayenehaneler, dernekler, hizmet sağlayıcılar ve küçük mağazalar için ideal.,
+    aud2_hKüçük dijital süreçler,
+    aud2_pSürekli zaman alan işler için iyi liste düzenleme, veri analizi, basit formlar, küçük araçlar veya tekrarlayan süreçler.,
+    d_hÖncesi  Sonrası bir Google profili karşılaştırması,
+    d_leadAY-TEA burada devreye girer ihmal edilmiş bir kaydı müşterinin daha hızlı anladığı ve güvendiği bir profile dönüştürür.,
+    d_beforeÖncesi, d_afterSonrası,
+    db1Sadece 2 fotoğraf, iç mekân yok,
+    db2Çalışma saatleri eksik veya yanlış,
+    db3Web sitesi bağlı değil,
+    db4Açıklama boş,
+    db5Yorumlar yanıtsız,
+    db6Belirsiz kategori sadece “Kafe”,
+    da1Daha fazla ilgili fotoğraf,
+    da2Saatler güncel, tatiller dahil,
+    da3Web sitesi & rezervasyon bağlantısı,
+    da4Doğru anahtar kelimelerle açıklama,
+    da5Yorumlar profesyonel şekilde yanıtlanır,
+    da6Daha net kategoriler kafe · kahvaltı · brunch,
+    d_noteAçıklama amaçlı kurgusal profil. Sonuçlar işletmeye, rekabete ve başlangıç durumuna göre değişebilir.,
+    map_eyebrow bağımsız veri projesi,
+    map_hAlmanya’daki DITIB noktaları tek haritada,
+    map_pBu bağımsız genel bakış için Almanya’daki DITIB camileri ve derneklerine ait 811 veri kaydı manuel olarak toplandı ve etkileşimli bir My Maps haritasında birleştirildi.,
+    map_stattoplanan veri kaydı,
+    map_liveDoğrudan bu sayfada etkileşimli,
+    map_btnHaritayı yeni sekmede aç,
+    map_noteTemmuz 2026 itibarıyla · Bağımsız veri derlemesi · Eksiksizlik garantisi yoktur,
+    map_openHaritayı görüntüle ↗,
+    map_externalGoogle Maps yeni sekmede açılır,
+    s2_hNeden AY-TEA,
+    s2_leadKısa iletişim yolları, dürüst fiyatlar ve teknik anlayış — gereksiz karmaşıklık olmadan.,
+    w1_hBilgisayar bilimi altyapısı,
+    w1_pHazır şablon yamaları yerine temiz kod — hızlı, bakımı kolay ve genişletilebilir.,
+    w2_hTek muhatap, doğrudan iletişim,
+    w2_pTicket sistemi yok, bekleme yok direkt yazarsınız ve net cevap alırsınız.,
+    w3_hSabit fiyat, sürpriz yok,
+    w3_pProje başlamadan net teklif — kapsam, fiyat ve teslim tarihi ile.,
+    w4_h%100 uzaktan & ulaşılabilir,
+    w4_pE-posta veya isteğe bağlı video görüşme ile iletişim. Sonuçlar dijital ve temiz şekilde teslim edilir.,
+    s3_hNasıl çalışır,
+    s3_leadİlk temastan bitmiş sonuca — net, basit ve gereksiz toplantılar olmadan.,
+    st1_hKısa bir talep gönderin,
+    st1_pKısa bir e-posta yazın neye, ne zamana kadar ve hangi işletme için ihtiyacınız var,
+    st2_hSabit fiyat teklifi,
+    st2_pKapsam, fiyat ve teslim tarihi içeren net bir teklif alırsınız. Siz onaylamadan iş başlamaz.,
+    st3_hUygulama & teslim,
+    st3_pKararlaştırılan tarihte teslim, bir revizyon turu dahil. Sonrasında her şey temiz şekilde size teslim edilir.,
+    faq_hSık sorulan sorular,
+    faq_leadAY-TEA’nın projenize uygun olup olmadığını hızlıca anlamanız için kısa cevaplar.,
+    faq1_qSadece Ulm ve çevresinde mi çalışıyorsun,
+    faq1_aHayır. AY-TEA %100 uzaktan çalışır. Ulm, Neu-Ulm, Günzburg ve çevresinden yerel projeler çok uygundur, ama Almanya genelinden talepler mümkündür.,
+    faq2_qSabit paket fiyatları var mı,
+    faq2_aFiyat kapsamına göre değişir. Kısa bir ön görüşmeden sonra maliyeti önceden bilmeniz için sabit fiyat teklifi alırsınız.,
+    faq3_qÇok dilli web sitesi yapıyor musun,
+    faq3_aEvet. Almanca, İngilizce ve Türkçe mümkündür. Diğer diller için uygun çözüm konuşulabilir.,
+    k_hAklında bir proje mi var,
+    k_pProjenizi iki üç cümleyle anlatın — dürüst bir değerlendirme ve kapsam uygunsa sabit fiyat teklifi alırsınız.,
+    k_btnE-posta gönder,
+    f_tagBT hizmetleri · Web siteleri · Google profilleri · Otomasyon
   }
 };
 
 const META = {
-  de: {
-    title:"AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung",
-    description:"AY-TEA unterstützt kleine Unternehmen mit modernen Onepager-Websites, Google-Unternehmensprofilen und Automatisierung. Remote, fair und technisch sauber."
+  de {
+    titleAY-TEA — Websites, Google-Unternehmensprofile & Automatisierung,
+    descriptionAY-TEA unterstützt kleine Unternehmen mit modernen Onepager-Websites, Google-Unternehmensprofilen und Automatisierung. Remote, fair und technisch sauber.
   },
-  en: {
-    title:"AY-TEA — Websites, Google Business Profiles & Automation",
-    description:"AY-TEA helps small businesses with modern one-page websites, Google Business Profiles and automation. Remote, fair and technically clean."
+  en {
+    titleAY-TEA — Websites, Google Business Profiles & Automation,
+    descriptionAY-TEA helps small businesses with modern one-page websites, Google Business Profiles and automation. Remote, fair and technically clean.
   },
-  tr: {
-    title:"AY-TEA — Web Siteleri, Google İşletme Profilleri & Otomasyon",
-    description:"AY-TEA küçük işletmelere modern tek sayfalık web siteleri, Google İşletme Profilleri ve otomasyon konusunda yardımcı olur."
+  tr {
+    titleAY-TEA — Web Siteleri, Google İşletme Profilleri & Otomasyon,
+    descriptionAY-TEA küçük işletmelere modern tek sayfalık web siteleri, Google İşletme Profilleri ve otomasyon konusunda yardımcı olur.
   }
 };
 
 const TERM = {
-  de:{
-    ph:'tippe "help"',
-    help:'Befehle: services · contact · socials · moon · history · clear',
-    services:'Google-Profile · Onepager-Websites · Automatisierung & Tools',
-    contact:'info@ay-tea.de — kurze Projektanfrage genügt',
-    socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 „Ay“ ist Türkisch für Mond. AY-TEA klingt wie IT. Jetzt weißt du es.',
-    hist:'🏛️ Eines der ersten Kaffeehäuser der Welt eröffnete 1554 in Istanbul — gute Ideen brauchen seit jeher gute Getränke. ☕',
-    unknown:'Unbekannter Befehl — probier "help"'
+  de{
+    ph'tippe help',
+    help'Befehle services · contact · socials · moon · history · clear',
+    services'Google-Profile · Onepager-Websites · Automatisierung & Tools',
+    contact'info@ay-tea.de — kurze Projektanfrage genügt',
+    socials'Instagram & TikTok @ayteahq · GitHub ayteahq',
+    moon'🌙 „Ay“ ist Türkisch für Mond. AY-TEA klingt wie IT. Jetzt weißt du es.',
+    hist'🏛️ Eines der ersten Kaffeehäuser der Welt eröffnete 1554 in Istanbul — gute Ideen brauchen seit jeher gute Getränke. ☕',
+    unknown'Unbekannter Befehl — probier help'
   },
-  en:{
-    ph:'type "help"',
-    help:'Commands: services · contact · socials · moon · history · clear',
-    services:'Google profiles · one-page websites · automation & tools',
-    contact:'info@ay-tea.de — a short project request is enough',
-    socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 "Ay" is Turkish for moon. AY-TEA sounds like IT. Now you know.',
-    hist:'🏛️ One of the first coffee houses in the world opened in Istanbul in 1554 — good ideas have always needed good drinks. ☕',
-    unknown:'Unknown command — try "help"'
+  en{
+    ph'type help',
+    help'Commands services · contact · socials · moon · history · clear',
+    services'Google profiles · one-page websites · automation & tools',
+    contact'info@ay-tea.de — a short project request is enough',
+    socials'Instagram & TikTok @ayteahq · GitHub ayteahq',
+    moon'🌙 Ay is Turkish for moon. AY-TEA sounds like IT. Now you know.',
+    hist'🏛️ One of the first coffee houses in the world opened in Istanbul in 1554 — good ideas have always needed good drinks. ☕',
+    unknown'Unknown command — try help'
   },
-  tr:{
-    ph:'"help" yaz',
-    help:'Komutlar: services · contact · socials · moon · history · clear',
-    services:'Google profilleri · tek sayfalık siteler · otomasyon & araçlar',
-    contact:'info@ay-tea.de — kısa bir proje talebi yeterli',
-    socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 "Ay" zaten biliyorsun. AY-TEA kulağa IT gibi gelir. Şimdi tamam.',
-    hist:"🏛️ Dünyanın ilk kahvehanelerinden biri 1554'te İstanbul'da açıldı — iyi fikirler her zaman iyi içecek ister. ☕",
-    unknown:'Bilinmeyen komut — "help" dene'
+  tr{
+    ph'help yaz',
+    help'Komutlar services · contact · socials · moon · history · clear',
+    services'Google profilleri · tek sayfalık siteler · otomasyon & araçlar',
+    contact'info@ay-tea.de — kısa bir proje talebi yeterli',
+    socials'Instagram & TikTok @ayteahq · GitHub ayteahq',
+    moon'🌙 Ay zaten biliyorsun. AY-TEA kulağa IT gibi gelir. Şimdi tamam.',
+    hist🏛️ Dünyanın ilk kahvehanelerinden biri 1554'te İstanbul'da açıldı — iyi fikirler her zaman iyi içecek ister. ☕,
+    unknown'Bilinmeyen komut — help dene'
   }
 };
 
-let currentLang = localStorage.getItem('aytea-lang') || 'de';
+let currentLang = localStorage.getItem('aytea-lang')  'de';
 
 function setMeta(lang){
   document.title = META[lang].title;
-  const desc = document.querySelector('meta[name="description"]');
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  const desc = document.querySelector('meta[name=description]');
+  const ogTitle = document.querySelector('meta[property=ogtitle]');
+  const ogDesc = document.querySelector('meta[property=ogdescription]');
+  const ogLocale = document.querySelector('meta[property=oglocale]');
 
   if(desc) desc.setAttribute('content', META[lang].description);
   if(ogTitle) ogTitle.setAttribute('content', META[lang].title);
   if(ogDesc) ogDesc.setAttribute('content', META[lang].description);
-  if(ogLocale) ogLocale.setAttribute('content', lang === 'de' ? 'de_DE' : lang === 'tr' ? 'tr_TR' : 'en_US');
+  if(ogLocale) ogLocale.setAttribute('content', lang === 'de'  'de_DE'  lang === 'tr'  'tr_TR'  'en_US');
 }
 
 function setLang(lang){
-  currentLang = T[lang] ? lang : 'de';
+  currentLang = T[lang]  lang  'de';
   document.documentElement.lang = currentLang;
   localStorage.setItem('aytea-lang', currentLang);
 
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
+  document.querySelectorAll('[data-i18n]').forEach(el={
     const key = el.getAttribute('data-i18n');
     if(T[currentLang][key]) el.textContent = T[currentLang][key];
   });
 
-  document.querySelectorAll('.lang button').forEach(b=>{
+  document.querySelectorAll('.lang button').forEach(b={
     const active = b.dataset.lang === currentLang;
     b.classList.toggle('active', active);
-    b.setAttribute('aria-pressed', active ? 'true' : 'false');
+    b.setAttribute('aria-pressed', active  'true'  'false');
   });
 
   const ti = document.getElementById('termInput');
@@ -1452,18 +1663,18 @@ function setLang(lang){
   setMeta(currentLang);
 }
 
-document.querySelectorAll('.lang button').forEach(button=>{
-  button.addEventListener('click', ()=>setLang(button.dataset.lang));
+document.querySelectorAll('.lang button').forEach(button={
+  button.addEventListener('click', ()=setLang(button.dataset.lang));
 });
 
-/* ——— Interaktives Terminal ——— */
+ ——— Interaktives Terminal ——— 
 const termInput = document.getElementById('termInput');
 const inputLine = document.querySelector('.term-inputline');
 const termBody = document.querySelector('.term-body');
 const terminal = document.querySelector('.terminal');
 
 if(terminal && termInput){
-  terminal.addEventListener('click', ()=>termInput.focus());
+  terminal.addEventListener('click', ()=termInput.focus());
 }
 
 function termAddText(prefix, text, className){
@@ -1490,7 +1701,7 @@ function termAddText(prefix, text, className){
 }
 
 if(termInput){
-  termInput.addEventListener('keydown', event=>{
+  termInput.addEventListener('keydown', event={
     if(event.key !== 'Enter') return;
 
     const raw = termInput.value.trim();
@@ -1502,8 +1713,8 @@ if(termInput){
     const command = raw.toLowerCase();
     const t = TERM[currentLang];
 
-    if(command === 'clear' || command === 'cls'){
-      termBody.querySelectorAll('.term-line').forEach(line=>{
+    if(command === 'clear'  command === 'cls'){
+      termBody.querySelectorAll('.term-line').forEach(line={
         if(line !== inputLine) line.remove();
       });
       return;
@@ -1511,7 +1722,7 @@ if(termInput){
 
     let output = t.unknown;
 
-    if(['help','hilfe','yardım','yardim','?'].includes(command)) output = t.help;
+    if(['help','hilfe','yardım','yardim',''].includes(command)) output = t.help;
     else if(['services','leistungen','hizmetler'].includes(command)) output = t.services;
     else if(['contact','kontakt','iletişim','iletisim','mail','email'].includes(command)) output = t.contact;
     else if(['socials','social','insta','instagram','tiktok','github'].includes(command)) output = t.socials;
@@ -1523,13 +1734,13 @@ if(termInput){
   });
 }
 
-/* ——— Vorher/Nachher-Demo ——— */
-document.querySelectorAll('.demo-toggle button').forEach(button=>{
-  button.addEventListener('click', ()=>{
-    document.querySelectorAll('.demo-toggle button').forEach(other=>{
+ ——— VorherNachher-Demo ——— 
+document.querySelectorAll('.demo-toggle button').forEach(button={
+  button.addEventListener('click', ()={
+    document.querySelectorAll('.demo-toggle button').forEach(other={
       const active = other === button;
       other.classList.toggle('active', active);
-      other.setAttribute('aria-pressed', active ? 'true' : 'false');
+      other.setAttribute('aria-pressed', active  'true'  'false');
     });
 
     const after = button.dataset.state === 'after';
@@ -1538,28 +1749,28 @@ document.querySelectorAll('.demo-toggle button').forEach(button=>{
   });
 });
 
-/* ——— Scroll-Reveal ——— */
+ ——— Scroll-Reveal ——— 
 if('IntersectionObserver' in window){
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
+  const io = new IntersectionObserver(entries={
+    entries.forEach(entry={
       if(entry.isIntersecting){
         entry.target.classList.add('in');
         io.unobserve(entry.target);
       }
     });
-  }, {threshold:.15});
+  }, {threshold.15});
 
-  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard,.audience-box,details').forEach(el=>{
+  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard,.audience-box,details,.ditib-copy,.ditib-map-card').forEach(el={
     el.classList.add('reveal');
     io.observe(el);
   });
 } else {
-  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  document.querySelectorAll('.reveal').forEach(el=el.classList.add('in'));
 }
 
 setLang(currentLang);
-</script>
+script
 
-<script data-goatcounter="https://ay-tea.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</body>
-</html>
+script data-goatcounter=httpsay-tea.goatcounter.comcount async src=httpsgc.zgo.atcount.jsscript
+body
+html
