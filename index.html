@@ -7,7 +7,7 @@
 <title>AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung</title>
 <meta name="description" content="AY-TEA unterstützt kleine Unternehmen mit modernen Onepager-Websites, Google-Unternehmensprofilen und Automatisierung. Remote, fair und technisch sauber.">
 <link rel="canonical" href="https://ay-tea.de/">
-<meta name="theme-color" content="#1E3FA4">
+<meta name="theme-color" content="#0E1220">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="AY-TEA — Websites, Google-Unternehmensprofile & Automatisierung">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111522'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%23111522'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E1220'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%230E1220'/%3E%3C/svg%3E">
 
 <script type="application/ld+json">
 {
@@ -41,7 +41,10 @@
     "itemListElement": [
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google-Unternehmensprofil Optimierung"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Onepager-Website"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatisierung und kleine Web-Tools"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatisierung und kleine Web-Tools"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Java-Anwendungen und Backend-Entwicklung"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Schnittstellen und Systemintegration"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Datenauswertung und Reporting"}}
     ]
   }
 }
@@ -61,43 +64,48 @@
 
 <style>
   :root{
-    --ink:#111522;
-    --paper:#F7F5EF;
-    --card:#FFFFFF;
+    --ink:#0E1220;
+    --ink-2:#161B2C;
+    --porcelain:#F3F4F1;
+    --porcelain-2:#EAECE7;
+    --white:#FFFFFF;
     --cobalt:#1E3FA4;
     --cobalt-deep:#152C74;
     --turquoise:#17A398;
-    --iznik-red:#C6402F;
+    --bole:#C6402F;
     --gold:#E8A33D;
-    --line:rgba(17,21,34,.14);
-    --muted:rgba(17,21,34,.72);
-    --soft:rgba(30,63,164,.08);
-    --radius:16px;
-    --max:1080px;
-    --shadow:0 22px 60px -36px rgba(21,44,116,.45);
+
+    --joint:rgba(14,18,32,.14);
+    --joint-soft:rgba(14,18,32,.08);
+    --muted:rgba(14,18,32,.68);
+    --muted-2:rgba(14,18,32,.55);
+
+    --max:1120px;
+    --gut:26px;
+    --r:3px;
+
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --display:'Archivo',system-ui,sans-serif;
+    --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+    /* Iznik-Kachel, gedämpft (Grundschicht) */
+    --tile-mute:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='%230E1220' stroke-opacity='.085'%3E%3Crect x='.5' y='.5' width='43' height='43'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z'/%3E%3C/g%3E%3Ccircle cx='22' cy='22' r='1.4' fill='%230E1220' fill-opacity='.10'/%3E%3C/svg%3E");
+
+    /* Iznik-Kachel, glasiert (Farbschicht) */
+    --tile-glaze:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect x='.5' y='.5' width='43' height='43' fill='none' stroke='%231E3FA4' stroke-opacity='.34'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z' fill='none' stroke='%2317A398' stroke-opacity='.62'/%3E%3Ccircle cx='22' cy='22' r='1.9' fill='%23C6402F' fill-opacity='.7'/%3E%3C/svg%3E");
+
+    /* Kachel auf dunklem Grund */
+    --tile-dark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect x='.5' y='.5' width='43' height='43' fill='none' stroke='%23FFFFFF' stroke-opacity='.10'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z' fill='none' stroke='%2317A398' stroke-opacity='.34'/%3E%3Ccircle cx='22' cy='22' r='1.7' fill='%23E8A33D' fill-opacity='.42'/%3E%3C/svg%3E");
   }
 
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    *,*::before,*::after{
-      animation-duration:.01ms !important;
-      animation-iteration-count:1 !important;
-      scroll-behavior:auto !important;
-      transition-duration:.01ms !important;
-    }
-  }
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 
   body{
-    font-family:'Instrument Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    background:
-      radial-gradient(circle at 10% 0%, rgba(30,63,164,.10), transparent 34rem),
-      radial-gradient(circle at 92% 8%, rgba(23,163,152,.10), transparent 30rem),
-      var(--paper);
+    font-family:var(--body);
+    background:var(--porcelain);
     color:var(--ink);
-    line-height:1.6;
+    line-height:1.62;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
@@ -107,733 +115,580 @@
   a{color:var(--cobalt);text-underline-offset:3px}
   a:hover{color:var(--cobalt-deep)}
 
+  :focus-visible{
+    outline:2px solid var(--cobalt);
+    outline-offset:3px;
+  }
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
   .skip-link{
-    position:absolute;
-    top:-48px;
-    left:16px;
-    z-index:999;
-    background:var(--ink);
-    color:#fff;
-    padding:10px 14px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
+    position:absolute;top:-60px;left:16px;z-index:999;
+    background:var(--ink);color:#fff;padding:10px 16px;
+    text-decoration:none;font-weight:700;font-size:.9rem;
   }
-  .skip-link:focus{top:16px}
+  .skip-link:focus{top:12px}
 
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-
-  /* ——— Nav ——— */
-  .site-nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(247,245,239,.88);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-
-  .nav-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    min-height:66px;
-    gap:16px;
-  }
-
-  .logo{
-    font-family:'Archivo',sans-serif;
-    font-weight:900;
-    font-size:1.25rem;
-    letter-spacing:.01em;
-    color:var(--cobalt);
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    gap:.4em;
-    white-space:nowrap;
-  }
-
-  .logo .moon{
-    width:.66em;
-    height:.66em;
-    border-radius:50%;
-    background:radial-gradient(circle at 68% 35%, transparent 52%, var(--turquoise) 54%);
-    display:inline-block;
-    flex:none;
-  }
-
-  .nav-links{
-    display:flex;
-    gap:24px;
-    align-items:center;
-  }
-
-  .nav-links a{
-    text-decoration:none;
-    color:var(--ink);
-    font-size:.93rem;
-    font-weight:600;
-  }
-
-  .nav-links a:hover{color:var(--cobalt)}
-
-  .nav-cta{
-    background:var(--cobalt);
-    color:#fff !important;
-    padding:9px 18px;
-    border-radius:999px;
-    transition:background .2s, transform .15s;
-  }
-
-  .nav-cta:hover{background:var(--cobalt-deep)}
-  .nav-cta:active{transform:scale(.98)}
-
-  .lang{
-    display:flex;
-    gap:4px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:3px;
-    background:rgba(255,255,255,.45);
-  }
-
-  .lang button{
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.78rem;
-    padding:5px 10px;
-    border-radius:999px;
-    color:var(--ink);
-  }
-
-  .lang button.active{
-    background:var(--cobalt);
-    color:#fff;
-  }
-
-  @media(max-width:760px){
-    .nav-links a:not(.nav-cta){display:none}
-  }
-
-  @media(max-width:560px){
-    .nav-inner{gap:10px}
-    .nav-cta{display:none}
-    .wrap{padding:0 18px}
-  }
-
-  /* ——— Hero ——— */
-  header{
-    padding:88px 0 34px;
-    border-bottom:1px solid var(--line);
-  }
-
-  .hero-grid{
-    display:grid;
-    grid-template-columns:minmax(0, 1.13fr) minmax(320px, .87fr);
-    gap:56px;
-    align-items:center;
-  }
-
-  @media(max-width:880px){
-    .hero-grid{grid-template-columns:1fr;gap:42px}
-  }
-
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.82rem;
-    color:var(--turquoise);
-    letter-spacing:.04em;
-    margin-bottom:20px;
-    display:block;
-  }
-
+  /* ————— Typo-Skala ————— */
   h1{
-    font-family:'Archivo',sans-serif;
+    font-family:var(--display);
     font-weight:900;
-    font-size:clamp(2.55rem,7vw,4.7rem);
-    line-height:1.02;
-    letter-spacing:-.025em;
-    color:var(--ink);
-    max-width:14ch;
-  }
-
-  h1 .blue{color:var(--cobalt)}
-
-  .sub{
-    margin-top:22px;
-    font-size:1.13rem;
-    max-width:55ch;
-    color:rgba(17,21,34,.80);
-  }
-
-  .hero-actions{
-    margin-top:32px;
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-weight:700;
-    padding:13px 26px;
-    border-radius:999px;
-    font-size:.98rem;
-    transition:transform .15s, background .2s, border-color .2s, color .2s;
-  }
-
-  .btn:active{transform:scale(.97)}
-  .btn-primary{background:var(--cobalt);color:#fff}
-  .btn-primary:hover{background:var(--cobalt-deep);color:#fff}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--cobalt);color:var(--cobalt)}
-
-  .trust-row{
-    margin-top:26px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    max-width:58ch;
-  }
-
-  .trust-pill{
-    border:1px solid var(--line);
-    background:rgba(255,255,255,.62);
-    border-radius:999px;
-    padding:7px 11px;
-    font-size:.86rem;
-    color:rgba(17,21,34,.70);
-    font-weight:600;
-  }
-
-  /* Terminal — Signatur */
-  .terminal{
-    background:var(--ink);
-    border-radius:var(--radius);
-    box-shadow:0 24px 60px -24px rgba(21,44,116,.45);
-    overflow:hidden;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.88rem;
-  }
-
-  .term-bar{
-    display:flex;
-    gap:7px;
-    padding:12px 16px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
-
-  .term-bar span{
-    width:11px;
-    height:11px;
-    border-radius:50%;
-    background:rgba(255,255,255,.16);
-  }
-
-  .term-bar span:first-child{background:var(--iznik-red)}
-  .term-bar span:nth-child(2){background:#E8A33D}
-  .term-bar span:nth-child(3){background:var(--turquoise)}
-
-  .term-body{
-    padding:22px 22px 26px;
-    color:#D7DCEA;
-    min-height:210px;
-    max-height:340px;
-    overflow:auto;
-  }
-
-  .term-body .prompt{color:var(--turquoise)}
-  .term-body .ok{color:var(--turquoise)}
-
-  .term-line{
-    display:block;
-    margin-bottom:10px;
-    opacity:0;
-    animation:lineIn .3s forwards;
-  }
-
-  .term-line:nth-child(1){animation-delay:.25s}
-  .term-line:nth-child(2){animation-delay:.85s}
-  .term-line:nth-child(3){animation-delay:1.35s}
-  .term-line:nth-child(4){animation-delay:1.85s}
-  .term-line:nth-child(5){animation-delay:2.35s}
-
-  @keyframes lineIn{to{opacity:1}}
-
-  .term-input{
-    background:transparent;
-    border:0;
-    outline:0;
-    color:#D7DCEA;
-    font:inherit;
-    caret-color:var(--turquoise);
-    width:min(68%, 260px);
-  }
-
-  .term-input::placeholder{color:rgba(215,220,234,.38)}
-  .term-out{color:#AAB8D6}
-
-  @media(max-width:460px){
-    .terminal{font-size:.78rem}
-    .term-input{width:58%}
-  }
-
-  /* ——— Sections ——— */
-  main section{
-    padding:76px 0;
-    border-bottom:1px solid var(--line);
+    font-size:clamp(2.7rem,7.4vw,5.1rem);
+    line-height:.94;
+    letter-spacing:-.042em;
+    text-transform:uppercase;
   }
 
   h2{
-    font-family:'Archivo',sans-serif;
+    font-family:var(--display);
     font-weight:800;
-    font-size:clamp(1.75rem,4vw,2.45rem);
-    line-height:1.14;
-    letter-spacing:-.02em;
-    margin-bottom:14px;
+    font-size:clamp(1.7rem,3.6vw,2.5rem);
+    line-height:1.08;
+    letter-spacing:-.028em;
   }
 
-  .section-lead{
-    max-width:58ch;
+  h3{
+    font-family:var(--display);
+    font-weight:700;
+    letter-spacing:-.012em;
+  }
+
+  .kicker{
+    font-family:var(--mono);
+    font-weight:500;
+    font-size:.71rem;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:var(--turquoise);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .kicker::before{
+    content:"";
+    width:9px;height:9px;
+    border:1px solid currentColor;
+    transform:rotate(45deg);
+    flex:none;
+  }
+
+  .lead{
+    max-width:56ch;
     color:var(--muted);
-    margin-bottom:44px;
     font-size:1.02rem;
+    margin-top:14px;
   }
 
-  .pattern-divider{
-    height:38px;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='38'%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%231E3FA4' stroke-opacity='.16'/%3E%3Crect x='11.5' y='11.5' width='15' height='15' fill='none' stroke='%2317A398' stroke-opacity='.22' transform='rotate(45 19 19)'/%3E%3Ccircle cx='19' cy='19' r='1.6' fill='%23C6402F' fill-opacity='.25'/%3E%3C/svg%3E");
-    background-size:38px 38px;
-    background-repeat:repeat-x;
-    background-position:center;
+  /* ————— Nav ————— */
+  .site-nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(243,244,241,.92);
+    backdrop-filter:saturate(140%) blur(8px);
+    -webkit-backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--joint);
   }
+
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    min-height:62px;gap:18px;
+  }
+
+  .logo{
+    font-family:var(--display);font-weight:900;
+    font-size:1.16rem;letter-spacing:-.02em;
+    color:var(--ink);text-decoration:none;
+    display:flex;align-items:center;gap:.5em;white-space:nowrap;
+  }
+
+  .logo .moon{
+    width:.72em;height:.72em;border-radius:50%;
+    background:radial-gradient(circle at 70% 32%, transparent 53%, var(--cobalt) 55%);
+    flex:none;
+  }
+  .logo:hover .moon{background:radial-gradient(circle at 70% 32%, transparent 53%, var(--turquoise) 55%)}
+
+  .nav-links{display:flex;gap:22px;align-items:center}
+
+  .nav-links a{
+    font-family:var(--mono);
+    font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink);
+  }
+  .nav-links a:hover{color:var(--cobalt)}
+
+  .nav-cta{
+    background:var(--ink);color:#fff !important;
+    padding:9px 15px;border-radius:var(--r);
+    transition:background .18s;
+  }
+  .nav-cta:hover{background:var(--cobalt)}
+
+  .lang{display:flex;border:1px solid var(--joint);border-radius:var(--r);overflow:hidden}
+
+  .lang button{
+    border:0;background:transparent;cursor:pointer;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+    padding:6px 9px;color:var(--muted-2);
+    border-right:1px solid var(--joint);
+    transition:background .16s,color .16s;
+  }
+  .lang button:last-child{border-right:0}
+  .lang button:hover{color:var(--ink)}
+  .lang button.active{background:var(--ink);color:#fff}
+
+  @media(max-width:780px){.nav-links a:not(.nav-cta){display:none}}
+  @media(max-width:520px){.nav-cta{display:none}:root{--gut:18px}}
+
+  /* ————— Hero ————— */
+  header#top{
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--joint);
+    background:var(--porcelain);
+  }
+
+  .tilefield{position:absolute;inset:0;pointer-events:none;z-index:0}
+
+  .tf-base{
+    position:absolute;inset:-2px;
+    background-image:var(--tile-mute);
+    background-size:44px 44px;
+    background-position:center top;
+  }
+
+  /* Signatur: die Glasur folgt dem Zeiger */
+  .tf-glaze{
+    position:absolute;inset:-2px;
+    background-image:var(--tile-glaze);
+    background-size:44px 44px;
+    background-position:center top;
+    opacity:.88;
+    -webkit-mask-image:radial-gradient(circle 260px at var(--mx,74%) var(--my,42%), #000 0%, rgba(0,0,0,.5) 44%, transparent 74%);
+    mask-image:radial-gradient(circle 260px at var(--mx,74%) var(--my,42%), #000 0%, rgba(0,0,0,.5) 44%, transparent 74%);
+  }
+
+  .hero-grid{
+    position:relative;z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.06fr) minmax(300px,.94fr);
+    gap:48px;
+    align-items:center;
+    padding:92px 0 78px;
+  }
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:44px;padding:66px 0 58px}
+  }
+
+  h1 .line{display:block;overflow:hidden}
+  h1 .line > span{display:block;transform:translateY(103%);animation:riseIn .8s cubic-bezier(.16,.84,.3,1) forwards}
+  h1 .line:nth-child(1) > span{animation-delay:.08s}
+  h1 .line:nth-child(2) > span{animation-delay:.20s}
+  h1 .blue{color:var(--cobalt)}
+
+  @keyframes riseIn{to{transform:translateY(0)}}
+
+  .hero-copy{
+    margin-top:24px;
+    font-size:1.1rem;
+    max-width:50ch;
+    color:rgba(14,18,32,.78);
+    opacity:0;animation:fadeIn .7s ease .46s forwards;
+  }
+
+  @keyframes fadeIn{to{opacity:1}}
+
+  .hero-actions{
+    margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;
+    opacity:0;animation:fadeIn .7s ease .58s forwards;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    text-decoration:none;font-weight:700;font-size:.96rem;
+    padding:13px 24px;border-radius:var(--r);
+    transition:transform .14s, background .18s, box-shadow .18s, color .18s, border-color .18s;
+  }
+  .btn:active{transform:translateY(1px)}
+
+  .btn-primary{background:var(--cobalt);color:#fff}
+  .btn-primary:hover{background:var(--cobalt-deep);color:#fff;box-shadow:5px 5px 0 var(--turquoise)}
+
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{color:var(--cobalt);border-color:var(--cobalt);box-shadow:5px 5px 0 rgba(30,63,164,.16)}
+
+  /* Mond aus Kacheln + Terminal */
+  .hero-object{position:relative;display:flex;flex-direction:column;align-items:flex-end}
+
+  .moon-tile{
+    width:min(100%,340px);
+    height:auto;
+    opacity:0;
+    animation:fadeIn 1s ease .3s forwards;
+  }
+
+  .terminal{
+    width:100%;
+    margin-top:-58px;
+    background:var(--ink);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:var(--r);
+    box-shadow:14px 14px 0 rgba(30,63,164,.13);
+    overflow:hidden;
+    font-family:var(--mono);
+    font-size:.85rem;
+    position:relative;z-index:2;
+    opacity:0;animation:fadeIn .7s ease .5s forwards;
+  }
+
+  @media(max-width:900px){
+    .hero-object{align-items:center}
+    .moon-tile{width:min(72%,260px)}
+    .terminal{margin-top:-40px}
+  }
+
+  .term-bar{
+    display:flex;align-items:center;gap:8px;
+    padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .term-bar i{width:9px;height:9px;display:block;transform:rotate(45deg)}
+  .term-bar i:nth-child(1){background:var(--bole)}
+  .term-bar i:nth-child(2){background:var(--gold)}
+  .term-bar i:nth-child(3){background:var(--turquoise)}
+
+  .term-title{
+    margin-left:auto;font-size:.68rem;letter-spacing:.12em;
+    text-transform:uppercase;color:rgba(215,222,238,.42);
+  }
+
+  .term-body{
+    padding:18px 18px 20px;color:#D5DBE9;
+    min-height:186px;max-height:300px;overflow:auto;
+  }
+
+  .term-line{display:block;margin-bottom:9px;opacity:0;animation:fadeIn .3s forwards}
+  .term-line:nth-child(1){animation-delay:.9s}
+  .term-line:nth-child(2){animation-delay:1.3s}
+  .term-line:nth-child(3){animation-delay:1.6s}
+  .term-line:nth-child(4){animation-delay:1.9s}
+  .term-line:nth-child(5){animation-delay:2.2s}
+
+  .prompt{color:var(--turquoise)}
+  .ok{color:var(--turquoise)}
+  .term-out{color:#A9B7D4}
+
+  .term-input{
+    background:transparent;border:0;outline:0;color:#D5DBE9;
+    font:inherit;caret-color:var(--turquoise);width:min(70%,240px);
+  }
+  .term-input::placeholder{color:rgba(213,219,233,.36)}
+
+  .term-hint{
+    display:block;padding:0 18px 16px;
+    font-size:.68rem;letter-spacing:.06em;
+    color:rgba(213,219,233,.38);
+  }
+
+  @media(max-width:460px){
+    .terminal{font-size:.76rem}
+    .term-input{width:58%}
+  }
+
+  /* ————— Vertrauensband ————— */
+  .strip{background:var(--ink);color:rgba(255,255,255,.8)}
+  .strip .wrap{
+    display:flex;flex-wrap:wrap;gap:10px 30px;
+    padding-top:15px;padding-bottom:15px;
+    font-family:var(--mono);font-size:.73rem;
+    letter-spacing:.11em;text-transform:uppercase;
+  }
+  .strip span{display:flex;align-items:center;gap:10px}
+  .strip span::before{
+    content:"";width:7px;height:7px;flex:none;
+    border:1px solid var(--turquoise);transform:rotate(45deg);
+  }
+
+  /* ————— Sektionen ————— */
+  main section{
+    padding:74px 0;
+    border-bottom:1px solid var(--joint);
+  }
+  main section:nth-of-type(even){background:var(--porcelain-2)}
+  .sec-head{margin-bottom:40px}
 
   /* Leistungen */
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-  }
-
-  @media(max-width:860px){
-    .cards{grid-template-columns:1fr}
-  }
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--joint);border:1px solid var(--joint)}
+  @media(max-width:880px){.cards{grid-template-columns:1fr}}
 
   .card{
-    background:rgba(255,255,255,.84);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:28px 26px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    box-shadow:0 16px 44px -36px rgba(21,44,116,.35);
-    transition:transform .18s, box-shadow .18s, border-color .18s;
+    background:var(--white);
+    padding:30px 26px 28px;
+    display:flex;flex-direction:column;gap:11px;
+    position:relative;
+    transition:background .22s;
   }
-
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 22px 46px -30px rgba(21,44,116,.36);
-    border-color:rgba(30,63,164,.24);
+  .card::after{
+    content:"";position:absolute;left:0;right:0;top:0;height:2px;
+    background:var(--cobalt);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s cubic-bezier(.2,.8,.3,1);
   }
+  .card:hover{background:#FBFCFA}
+  .card:hover::after{transform:scaleX(1)}
 
-  .card .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.74rem;
-    color:var(--turquoise);
-    letter-spacing:.05em;
+  .tag{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--turquoise);
   }
+  .card h3{font-size:1.2rem}
+  .card p{font-size:.96rem;color:var(--muted);flex:1}
 
-  .card h3{
-    font-family:'Archivo',sans-serif;
-    font-weight:700;
-    font-size:1.18rem;
-  }
-
-  .card p{
-    font-size:.96rem;
-    color:var(--muted);
-    flex:1;
-  }
-
-  .mini-list{
-    list-style:none;
-    display:grid;
-    gap:6px;
-    margin-top:6px;
-    color:rgba(17,21,34,.66);
-    font-size:.9rem;
-  }
-
+  .mini-list{list-style:none;display:grid;gap:7px;margin-top:8px;font-size:.9rem;color:var(--muted-2)}
+  .mini-list li{display:flex;align-items:flex-start;gap:10px}
   .mini-list li::before{
-    content:"✓";
-    color:var(--turquoise);
-    font-weight:900;
-    margin-right:8px;
+    content:"";width:7px;height:7px;margin-top:.5em;flex:none;
+    background:var(--turquoise);transform:rotate(45deg);
   }
+
+
+  /* Stack + Projektbeispiel */
+  .stack{margin-top:34px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 20px}
+  .stack-label{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted-2);
+  }
+  .stack-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .stack-list li{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;
+    border:1px solid var(--joint);border-radius:var(--r);
+    padding:5px 10px;background:var(--white);color:var(--ink);
+  }
+
+  .case{
+    margin-top:26px;border:1px solid var(--joint);border-left:3px solid var(--cobalt);
+    background:var(--white);padding:26px 26px 24px;border-radius:var(--r);max-width:640px;
+  }
+  .case h3{font-size:1.14rem;margin:10px 0 8px}
+  .case p{color:var(--muted);font-size:.95rem}
+  .case-link{
+    display:inline-flex;align-items:center;gap:9px;margin-top:14px;
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink);
+    border:1px solid var(--joint);border-radius:var(--r);padding:9px 14px;
+    transition:border-color .18s,color .18s;
+  }
+  .case-link:hover{color:var(--cobalt);border-color:rgba(30,63,164,.45)}
 
   /* Für wen */
-  .audience{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    align-items:start;
-  }
+  .audience{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--joint);border:1px solid var(--joint)}
+  @media(max-width:760px){.audience{grid-template-columns:1fr}}
+  .audience-box{background:var(--porcelain);padding:30px 26px}
+  .audience-box h3{font-size:1.18rem;margin-bottom:8px}
+  .audience-box p{color:var(--muted);font-size:.96rem}
 
-  .audience-box{
-    background:rgba(255,255,255,.78);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:26px;
-  }
-
-  .audience-box h3{
-    font-family:'Archivo',sans-serif;
-    font-size:1.18rem;
-    margin-bottom:8px;
-  }
-
-  .audience-box p{color:var(--muted)}
-
-  @media(max-width:760px){
-    .audience{grid-template-columns:1fr}
-  }
-
-  /* Vorher/Nachher-Demo */
+  /* Demo */
   .demo-toggle{
-    display:inline-flex;
-    gap:4px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:4px;
-    margin-bottom:24px;
-    background:#fff;
+    display:inline-flex;border:1px solid var(--ink);border-radius:var(--r);
+    overflow:hidden;margin-bottom:26px;
   }
-
   .demo-toggle button{
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    font:inherit;
-    font-weight:700;
-    font-size:.92rem;
-    padding:8px 22px;
-    border-radius:999px;
-    color:var(--ink);
+    border:0;background:transparent;cursor:pointer;
+    font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:10px 20px;color:var(--ink);
     transition:background .2s,color .2s;
   }
-
-  .demo-toggle button.active{
-    background:var(--cobalt);
-    color:#fff;
-  }
+  .demo-toggle button + button{border-left:1px solid var(--ink)}
+  .demo-toggle button.active{background:var(--ink);color:#fff}
 
   .gcard{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    max-width:580px;
-    padding:26px;
-    box-shadow:0 18px 40px -26px rgba(21,44,116,.30);
+    background:var(--white);border:1px solid var(--joint);
+    border-radius:var(--r);max-width:560px;padding:26px;
+    box-shadow:12px 12px 0 rgba(14,18,32,.05);
   }
-
   .gcard-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:16px;
-    border-bottom:1px solid var(--line);
-    padding-bottom:14px;
-    margin-bottom:14px;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+    border-bottom:1px solid var(--joint);padding-bottom:14px;margin-bottom:6px;
+  }
+  .gcard-name{font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+  .gcard-meta{font-size:.86rem;color:var(--muted-2)}
+  .gcard-meta .stars{color:var(--gold);letter-spacing:1px}
+  .gcard-pin{
+    width:12px;height:12px;flex:none;margin-top:6px;
+    border:2px solid var(--cobalt);transform:rotate(45deg);
   }
 
-  .gcard-name{
-    font-family:'Archivo',sans-serif;
-    font-weight:800;
-    font-size:1.22rem;
-  }
-
-  .gcard-meta{
-    font-size:.88rem;
-    color:rgba(17,21,34,.65);
-  }
-
-  .gcard-meta .stars{
-    color:var(--gold);
-    letter-spacing:1px;
-  }
-
-  .gcard-pin{font-size:1.4rem}
-
-  .gcard-list{
-    list-style:none;
-    display:none;
-  }
-
+  .gcard-list{list-style:none;display:none}
   .gcard-list.active{display:block}
-
   .gcard-list li{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    padding:7px 0;
-    font-size:.96rem;
+    display:flex;gap:12px;align-items:flex-start;
+    padding:9px 0;font-size:.95rem;
+    border-bottom:1px solid var(--joint-soft);
+    opacity:0;transform:translateY(6px);
+    animation:rowIn .42s cubic-bezier(.2,.8,.3,1) forwards;
   }
+  .gcard-list li:last-child{border-bottom:0}
+  .gcard-list li:nth-child(1){animation-delay:.02s}
+  .gcard-list li:nth-child(2){animation-delay:.07s}
+  .gcard-list li:nth-child(3){animation-delay:.12s}
+  .gcard-list li:nth-child(4){animation-delay:.17s}
+  .gcard-list li:nth-child(5){animation-delay:.22s}
+  .gcard-list li:nth-child(6){animation-delay:.27s}
+  @keyframes rowIn{to{opacity:1;transform:none}}
 
-  .gcard-list .x{color:var(--iznik-red);font-weight:900}
-  .gcard-list .ok2{color:var(--turquoise);font-weight:900}
+  .mark{width:8px;height:8px;flex:none;margin-top:.55em;transform:rotate(45deg)}
+  .mark.no{background:var(--bole)}
+  .mark.yes{background:var(--turquoise)}
 
-  .demo-note{
-    margin-top:14px;
-    font-size:.82rem;
-    color:rgba(17,21,34,.52);
-  }
+  .demo-note{margin-top:16px;font-size:.82rem;color:rgba(14,18,32,.48);max-width:60ch}
 
   /* Warum */
-  .why{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px 40px;
-    max-width:900px;
-  }
-
-  @media(max-width:700px){
-    .why{grid-template-columns:1fr}
-  }
-
-  .why-item{
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
-  }
-
+  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 44px;max-width:920px}
+  @media(max-width:700px){.why{grid-template-columns:1fr}}
+  .why-item{display:flex;gap:14px;align-items:flex-start}
   .why-item .dot{
-    flex:none;
-    width:26px;
-    height:26px;
-    border-radius:50%;
-    background:radial-gradient(circle at 66% 34%, transparent 50%, var(--cobalt) 52%);
-    margin-top:2px;
+    flex:none;width:24px;height:24px;border-radius:50%;margin-top:3px;
+    background:radial-gradient(circle at 68% 32%, transparent 51%, var(--cobalt) 53%);
   }
-
-  .why-item strong{
-    display:block;
-    font-weight:700;
-    margin-bottom:2px;
-  }
-
-  .why-item span{
-    font-size:.94rem;
-    color:var(--muted);
-  }
+  .why-item strong{display:block;font-weight:600;margin-bottom:3px}
+  .why-item span{font-size:.94rem;color:var(--muted)}
 
   /* Ablauf */
-  .steps{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    counter-reset:step;
-  }
-
-  @media(max-width:860px){
-    .steps{grid-template-columns:1fr}
-  }
-
-  .step{
-    counter-increment:step;
-    position:relative;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:26px;
-  }
-
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--joint);border:1px solid var(--joint);counter-reset:step}
+  @media(max-width:880px){.steps{grid-template-columns:1fr}}
+  .step{counter-increment:step;background:var(--white);padding:30px 26px}
   .step::before{
-    content:"0" counter(step);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.8rem;
-    color:var(--iznik-red);
-    letter-spacing:.06em;
-    display:block;
-    margin-bottom:10px;
+    content:counter(step,decimal-leading-zero);
+    font-family:var(--display);font-weight:900;font-size:2.1rem;
+    letter-spacing:-.04em;color:var(--joint);
+    display:block;line-height:1;margin-bottom:14px;
   }
-
-  .step h3{
-    font-family:'Archivo',sans-serif;
-    font-size:1.08rem;
-    font-weight:700;
-    margin-bottom:6px;
-  }
-
-  .step p{
-    font-size:.94rem;
-    color:var(--muted);
-  }
+  .step h3{font-size:1.08rem;margin-bottom:7px}
+  .step p{font-size:.94rem;color:var(--muted)}
 
   /* FAQ */
-  .faq{
-    display:grid;
-    gap:12px;
-    max-width:760px;
-  }
-
-  details{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:18px 20px;
-  }
-
+  .faq{display:grid;max-width:780px;border-top:1px solid var(--joint)}
+  details{border-bottom:1px solid var(--joint);padding:18px 2px}
   summary{
-    cursor:pointer;
-    font-weight:800;
-    color:var(--ink);
+    cursor:pointer;font-weight:600;font-size:1.02rem;
+    list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:center;
   }
-
-  details p{
-    margin-top:10px;
-    color:var(--muted);
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"";width:9px;height:9px;flex:none;
+    border-right:1.5px solid var(--cobalt);border-bottom:1.5px solid var(--cobalt);
+    transform:rotate(45deg);transition:transform .22s;
   }
+  details[open] summary::after{transform:rotate(225deg)}
+  details p{margin-top:10px;color:var(--muted);max-width:66ch;font-size:.96rem}
 
   /* Kontakt */
-  #kontakt{border-bottom:none}
+  #kontakt{border-bottom:none;background:var(--porcelain);padding-bottom:88px}
 
   .contact{
-    background:
-      radial-gradient(circle at 18% 0%, rgba(23,163,152,.28), transparent 18rem),
-      var(--cobalt);
-    border-radius:22px;
-    padding:58px 48px;
-    color:#fff;
-    text-align:center;
-    box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+    background:var(--ink);color:#fff;
+    border-radius:var(--r);
+    padding:64px 48px;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background-image:var(--tile-dark);background-size:44px 44px;
+    opacity:.9;
+  }
+  .contact::after{
+    content:"";position:absolute;right:-70px;top:-70px;
+    width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle at 68% 32%, transparent 52%, rgba(23,163,152,.22) 54%);
+  }
+  .contact > *{position:relative;z-index:1}
+  .contact h2{max-width:16ch}
+  .contact p{max-width:52ch;margin:14px 0 28px;color:rgba(255,255,255,.78)}
+  .contact .btn-primary{background:var(--porcelain);color:var(--ink)}
+  .contact .btn-primary:hover{background:#fff;color:var(--cobalt-deep);box-shadow:5px 5px 0 var(--turquoise)}
+
+  .mail-mono{
+    display:block;margin-top:16px;font-family:var(--mono);
+    font-size:.86rem;letter-spacing:.05em;color:rgba(255,255,255,.6);
   }
 
-  @media(max-width:640px){
-    .contact{padding:42px 24px}
-  }
-
-  .contact h2{color:#fff}
-
-  .contact p{
-    max-width:50ch;
-    margin:0 auto 28px;
-    color:rgba(255,255,255,.88);
-  }
-
-  .contact .btn-primary{
-    background:#fff;
-    color:var(--cobalt);
-  }
-
-  .contact .btn-primary:hover{
-    background:var(--paper);
-    color:var(--cobalt-deep);
-  }
-
-  .contact .mail-mono{
-    display:block;
-    margin-top:18px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:.9rem;
-    color:rgba(255,255,255,.80);
-  }
-
-  .socials{
-    margin-top:26px;
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-  }
+  .socials{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+  .ic{width:16px;height:16px;flex:none;display:block}
+  .socials a .ic{opacity:.85;transition:opacity .18s}
+  .socials a:hover .ic{opacity:1}
 
   .socials a{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:9px 16px;
-    border-radius:999px;
-    border:1.5px solid rgba(255,255,255,.35);
-    color:#fff;
-    text-decoration:none;
-    font-size:.9rem;
-    font-weight:600;
-    transition:background .2s,border-color .2s;
+    display:inline-flex;align-items:center;gap:9px;
+    padding:9px 14px;border-radius:var(--r);
+    border:1px solid rgba(255,255,255,.26);
+    color:#fff;text-decoration:none;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+    transition:background .18s,border-color .18s;
   }
+  .socials a:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
 
-  .socials a:hover{
-    background:rgba(255,255,255,.12);
-    border-color:#fff;
-    color:#fff;
-  }
+  @media(max-width:640px){.contact{padding:44px 24px}}
 
   /* Footer */
-  footer{
-    padding:44px 0 60px;
-    font-size:.89rem;
-    color:rgba(17,21,34,.70);
-  }
-
-  .foot-grid{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:26px;
-    flex-wrap:wrap;
-  }
-
-  .foot-social{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    flex-wrap:wrap;
-  }
-
+  footer{background:var(--porcelain-2);border-top:1px solid var(--joint);padding:36px 0 46px;font-size:.86rem;color:var(--muted-2)}
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+  .foot-social{display:flex;gap:8px;flex-wrap:wrap}
   .foot-social a{
-    color:var(--ink);
-    opacity:.68;
-    text-decoration:none;
-    border:1px solid var(--line);
-    padding:6px 10px;
-    border-radius:999px;
-    transition:opacity .2s,color .2s,border-color .2s;
+    display:inline-flex;align-items:center;gap:7px;
+    color:var(--ink);text-decoration:none;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid var(--joint);padding:6px 10px;border-radius:var(--r);
+    transition:border-color .18s,color .18s;
   }
+  .foot-social a:hover{color:var(--cobalt);border-color:rgba(30,63,164,.4)}
+  .foot-social .ic{width:14px;height:14px;color:var(--turquoise)}
+  .foot-legal{margin-top:20px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em}
 
-  .foot-social a:hover{
-    opacity:1;
-    color:var(--cobalt);
-    border-color:rgba(30,63,164,.32);
-  }
-
-  .foot-legal{
-    margin-top:22px;
-  }
-
-  footer a{color:var(--cobalt)}
-
-  /* Scroll-Reveal */
+  /* Scroll-Reveal: Wischblende statt Einblenden */
   .reveal{
     opacity:0;
-    transform:translateY(16px);
-    transition:opacity .6s ease,transform .6s ease;
+    clip-path:inset(14% 0 0 0);
+    transform:translateY(10px);
+    transition:opacity .6s ease, clip-path .7s cubic-bezier(.2,.8,.3,1), transform .6s cubic-bezier(.2,.8,.3,1);
   }
+  .reveal.in{opacity:1;clip-path:inset(0 0 0 0);transform:none}
 
-  .reveal.in{
-    opacity:1;
-    transform:none;
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{
+      animation-duration:.01ms !important;
+      animation-delay:0ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.01ms !important;
+    }
+    h1 .line > span{transform:none}
+    .hero-copy,.hero-actions,.terminal,.moon-tile,.term-line{opacity:1}
+    .reveal{opacity:1;clip-path:none;transform:none}
+    .tf-glaze{opacity:.55}
   }
 </style>
 </head>
 
 <body>
 <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <symbol id="ic-instagram" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/>
+        <circle cx="12" cy="12" r="4.4"/>
+      </g>
+      <circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-tiktok" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    </symbol>
+    <symbol id="ic-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </symbol>
+  </defs>
+</svg>
+
 
 <nav class="site-nav" aria-label="Hauptnavigation">
   <div class="wrap nav-inner">
@@ -842,7 +697,7 @@
       AY-TEA
     </a>
 
-    <div class="nav-links" aria-label="Seitennavigation">
+    <div class="nav-links">
       <a href="#leistungen" data-i18n="nav_services">Leistungen</a>
       <a href="#ablauf" data-i18n="nav_process">Ablauf</a>
       <a href="#kontakt" class="nav-cta" data-i18n="nav_cta">Projekt anfragen</a>
@@ -857,14 +712,21 @@
 </nav>
 
 <header id="top">
+  <div class="tilefield" aria-hidden="true">
+    <div class="tf-base"></div>
+    <div class="tf-glaze"></div>
+  </div>
+
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow" data-i18n="eyebrow">// IT-Dienstleistungen · 100 % remote</span>
+      <p class="kicker" data-i18n="eyebrow">IT-Dienstleistungen · 100 % remote</p>
+
       <h1>
-        <span data-i18n="h1a">Digital sichtbar.</span><br>
-        <span class="blue" data-i18n="h1b">Sauber umgesetzt.</span>
+        <span class="line"><span data-i18n="h1a">Digital sichtbar.</span></span>
+        <span class="line"><span class="blue" data-i18n="h1b">Sauber gebaut.</span></span>
       </h1>
-      <p class="sub" data-i18n="sub">
+
+      <p class="hero-copy" data-i18n="sub">
         AY-TEA bringt kleine Unternehmen online: optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.
       </p>
 
@@ -872,40 +734,68 @@
         <a class="btn btn-primary" href="#kontakt" data-i18n="cta1">Projekt anfragen</a>
         <a class="btn btn-ghost" href="#leistungen" data-i18n="cta2">Leistungen ansehen</a>
       </div>
-
-      <div class="trust-row" aria-label="Vorteile">
-        <span class="trust-pill" data-i18n="pill1">Festpreis nach Erstgespräch</span>
-        <span class="trust-pill" data-i18n="pill2">DSGVO-bewusst</span>
-        <span class="trust-pill" data-i18n="pill3">Deutsch · Englisch · Türkisch</span>
-      </div>
     </div>
 
-    <div class="terminal" role="region" aria-label="Interaktives Terminal">
-      <div class="term-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="term-body" aria-live="polite">
-        <span class="term-line"><span class="prompt">$</span> ay-tea --start</span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t1">Google-Profil optimiert</span></span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t2">Onepager oft in ca. 7 Tagen möglich</span></span>
-        <span class="term-line"><span class="ok">✓</span> <span data-i18n="t3">Routine automatisiert</span></span>
-        <span class="term-line term-inputline">
-          <span class="prompt">$</span>
-          <label class="sr-only" for="termInput" hidden>Terminal-Eingabe</label>
-          <input id="termInput" class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='tippe "help"'>
-        </span>
+    <div class="hero-object">
+      <svg class="moon-tile" viewBox="0 0 400 400" role="img" aria-label="AY-TEA">
+        <defs>
+          <pattern id="izTile" width="44" height="44" patternUnits="userSpaceOnUse">
+            <rect x="0.5" y="0.5" width="43" height="43" fill="none" stroke="#1E3FA4" stroke-opacity=".45"/>
+            <path d="M22 6 L38 22 L22 38 L6 22 Z" fill="none" stroke="#17A398" stroke-opacity=".85"/>
+            <circle cx="22" cy="22" r="2" fill="#C6402F" fill-opacity=".8"/>
+          </pattern>
+          <mask id="crescent">
+            <rect width="400" height="400" fill="black"/>
+            <circle cx="196" cy="204" r="168" fill="white"/>
+            <circle cx="268" cy="140" r="150" fill="black"/>
+          </mask>
+        </defs>
+        <g mask="url(#crescent)">
+          <rect width="400" height="400" fill="#FFFFFF" fill-opacity=".7"/>
+          <rect width="400" height="400" fill="url(#izTile)"/>
+        </g>
+        <circle cx="196" cy="204" r="168" fill="none" stroke="#1E3FA4" stroke-opacity=".22"/>
+      </svg>
+
+      <div class="terminal" role="region" aria-label="Terminal mit festen Befehlen">
+        <div class="term-bar">
+          <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+          <span class="term-title">ay-tea</span>
+        </div>
+
+        <div class="term-body" aria-live="polite">
+          <span class="term-line"><span class="prompt">$</span> ay-tea --start</span>
+          <span class="term-line"><span class="ok">✓</span> <span data-i18n="t1">Google-Profil optimiert</span></span>
+          <span class="term-line"><span class="ok">✓</span> <span data-i18n="t2">Onepager oft in ca. 7 Tagen möglich</span></span>
+          <span class="term-line"><span class="ok">✓</span> <span data-i18n="t3">Routine automatisiert</span></span>
+          <span class="term-line">
+            <span class="prompt">$</span>
+            <label for="termInput" hidden>Terminal-Eingabe</label>
+            <input id="termInput" class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='tippe "help"'>
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<div class="pattern-divider" aria-hidden="true"></div>
+<div class="strip">
+  <div class="wrap">
+    <span data-i18n="pill1">Festpreis nach Erstgespräch</span>
+    <span data-i18n="pill2">DSGVO-bewusst umgesetzt</span>
+    <span data-i18n="pill3">Deutsch · Englisch · Türkisch</span>
+  </div>
+</div>
 
 <main id="inhalt">
   <section id="leistungen">
     <div class="wrap">
-      <h2 data-i18n="s1_h">Leistungen</h2>
-      <p class="section-lead" data-i18n="s1_lead">
-        Drei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.
-      </p>
+      <div class="sec-head">
+        <h2 data-i18n="s1_h">Leistungen</h2>
+        <p class="lead" data-i18n="s1_lead">
+          Drei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.
+        </p>
+      </div>
 
       <div class="cards">
         <article class="card">
@@ -940,16 +830,69 @@
             <li data-i18n="c3_l3">Kleine interne Web-Tools</li>
           </ul>
         </article>
+
+        <article class="card">
+          <span class="tag">java</span>
+          <h3 data-i18n="c4_h">Java-Anwendungen &amp; Backends</h3>
+          <p data-i18n="c4_p">Interne Anwendungen, Spring-Boot-Backends und REST-APIs für Abläufe, die keine Standardsoftware abbildet — sauber strukturiert, dokumentiert und jederzeit übergabefähig.</p>
+          <ul class="mini-list">
+            <li data-i18n="c4_l1">Spring-Boot-Backends</li>
+            <li data-i18n="c4_l2">REST-APIs &amp; Datenbankanbindung</li>
+            <li data-i18n="c4_l3">Dokumentierter, wartbarer Code</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">integration</span>
+          <h3 data-i18n="c5_h">Schnittstellen &amp; Systemintegration</h3>
+          <p data-i18n="c5_p">Systeme, die nicht miteinander reden, kosten jeden Monat Arbeitszeit. Shop, Buchhaltung, Kalender, E-Mail und Tabellen werden so verbunden, dass Daten von allein am richtigen Ort landen.</p>
+          <ul class="mini-list">
+            <li data-i18n="c5_l1">API-Anbindungen</li>
+            <li data-i18n="c5_l2">Automatischer Datenabgleich</li>
+            <li data-i18n="c5_l3">Geplante Jobs &amp; Benachrichtigungen</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">data</span>
+          <h3 data-i18n="c6_h">Daten &amp; Reporting</h3>
+          <p data-i18n="c6_p">Aus CSV- und Excel-Wildwuchs werden verlässliche Auswertungen: bereinigte Daten, wiederholbare Berichte und Kennzahlen, die aktuell bleiben, ohne dass sie jemand von Hand zusammenklickt.</p>
+          <ul class="mini-list">
+            <li data-i18n="c6_l1">Datenbereinigung &amp; Import</li>
+            <li data-i18n="c6_l2">Wiederholbare Berichte</li>
+            <li data-i18n="c6_l3">Kennzahlen automatisch aktuell</li>
+          </ul>
+        </article>
       </div>
+
+      <div class="stack">
+        <p class="stack-label" data-i18n="stack_h">Womit gearbeitet wird</p>
+        <ul class="stack-list">
+          <li>Java</li><li>Spring Boot</li><li>Python</li><li>REST-APIs</li><li>SQL</li>
+          <li>n8n</li><li>Git</li><li>GitHub Actions</li><li>HTML/CSS/JS</li>
+        </ul>
+      </div>
+
+      <div class="case">
+        <p class="stack-label" data-i18n="case_k">Projektbeispiel</p>
+        <h3 data-i18n="case_h">Google-Bewertungen automatisch beantworten</h3>
+        <p data-i18n="case_p">Ein Workflow holt neue Rezensionen ab, erzeugt einen passenden Antwortentwurf und schickt ihn per E-Mail zur Freigabe. Aufbau, Konfiguration und Code sind öffentlich einsehbar.</p>
+        <a class="case-link" href="https://github.com/ayteahq/google-review-automation" target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg><span data-i18n="case_a">Auf GitHub ansehen</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
   <section id="fuer-wen">
     <div class="wrap">
-      <h2 data-i18n="aud_h">Für wen ist AY-TEA?</h2>
-      <p class="section-lead" data-i18n="aud_lead">
-        Besonders sinnvoll für kleine Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.
-      </p>
+      <div class="sec-head">
+        <h2 data-i18n="aud_h">Für wen ist AY-TEA?</h2>
+        <p class="lead" data-i18n="aud_lead">
+          Besonders sinnvoll für kleine und mittelständische Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.
+        </p>
+      </div>
 
       <div class="audience">
         <div class="audience-box">
@@ -966,10 +909,12 @@
 
   <section id="demo">
     <div class="wrap">
-      <h2 data-i18n="d_h">Vorher / Nachher: ein Google-Profil im Vergleich</h2>
-      <p class="section-lead" data-i18n="d_lead">
-        Genau hier setzt AY-TEA an: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.
-      </p>
+      <div class="sec-head">
+        <h2 data-i18n="d_h">Vorher / Nachher: ein Google-Profil im Vergleich</h2>
+        <p class="lead" data-i18n="d_lead">
+          Genau hier setzt AY-TEA an: Aus einem vernachlässigten Eintrag wird ein Profil, das Kunden schneller versteht und Vertrauen aufbaut.
+        </p>
+      </div>
 
       <div class="demo-toggle" role="group" aria-label="Vorher / Nachher">
         <button type="button" class="active" data-state="before" data-i18n="d_before" aria-pressed="true">Vorher</button>
@@ -982,25 +927,25 @@
             <div class="gcard-name">Café Luna</div>
             <div class="gcard-meta"><span class="stars">★★★★☆</span> 4,3 · Café · Ulm</div>
           </div>
-          <span class="gcard-pin" aria-hidden="true">📍</span>
+          <span class="gcard-pin" aria-hidden="true"></span>
         </div>
 
         <ul class="gcard-list gcard-before active">
-          <li><span class="x">✗</span> <span data-i18n="db1">Nur 2 Fotos, keine Innenaufnahmen</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db2">Öffnungszeiten fehlen oder sind falsch</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db3">Keine Website verlinkt</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db4">Beschreibung leer</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db5">Bewertungen bleiben unbeantwortet</span></li>
-          <li><span class="x">✗</span> <span data-i18n="db6">Ungenaue Kategorie: nur „Café“</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db1">Nur 2 Fotos, keine Innenaufnahmen</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db2">Öffnungszeiten fehlen oder sind falsch</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db3">Keine Website verlinkt</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db4">Beschreibung leer</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db5">Bewertungen bleiben unbeantwortet</span></li>
+          <li><span class="mark no" aria-hidden="true"></span> <span data-i18n="db6">Ungenaue Kategorie: nur „Café“</span></li>
         </ul>
 
         <ul class="gcard-list gcard-after">
-          <li><span class="ok2">✓</span> <span data-i18n="da1">Mehr relevante Fotos</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da2">Öffnungszeiten aktuell, Feiertage gepflegt</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da3">Website & Reservierungslink verknüpft</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da4">Beschreibung mit relevanten Suchbegriffen</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da5">Bewertungen werden professionell beantwortet</span></li>
-          <li><span class="ok2">✓</span> <span data-i18n="da6">Präzisere Kategorien: Café · Frühstück · Brunch</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da1">Mehr relevante Fotos</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da2">Öffnungszeiten aktuell, Feiertage gepflegt</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da3">Website & Reservierungslink verknüpft</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da4">Beschreibung mit relevanten Suchbegriffen</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da5">Bewertungen werden professionell beantwortet</span></li>
+          <li><span class="mark yes" aria-hidden="true"></span> <span data-i18n="da6">Präzisere Kategorien: Café · Frühstück · Brunch</span></li>
         </ul>
       </div>
 
@@ -1010,8 +955,10 @@
 
   <section id="warum">
     <div class="wrap">
-      <h2 data-i18n="s2_h">Warum AY-TEA?</h2>
-      <p class="section-lead" data-i18n="s2_lead">Kurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.</p>
+      <div class="sec-head">
+        <h2 data-i18n="s2_h">Warum AY-TEA?</h2>
+        <p class="lead" data-i18n="s2_lead">Kurze Wege, ehrliche Preise und technisches Verständnis — ohne unnötige Komplexität.</p>
+      </div>
 
       <div class="why">
         <div class="why-item">
@@ -1051,8 +998,10 @@
 
   <section id="ablauf">
     <div class="wrap">
-      <h2 data-i18n="s3_h">So läuft’s ab</h2>
-      <p class="section-lead" data-i18n="s3_lead">Vom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.</p>
+      <div class="sec-head">
+        <h2 data-i18n="s3_h">So läuft’s ab</h2>
+        <p class="lead" data-i18n="s3_lead">Vom ersten Kontakt bis zum fertigen Ergebnis — klar, einfach und ohne unnötige Meetings.</p>
+      </div>
 
       <div class="steps">
         <article class="step">
@@ -1075,15 +1024,12 @@
 
   <section id="faq">
     <div class="wrap">
-      <h2 data-i18n="faq_h">Häufige Fragen</h2>
-      <p class="section-lead" data-i18n="faq_lead">Kurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.</p>
+      <div class="sec-head">
+        <h2 data-i18n="faq_h">Häufige Fragen</h2>
+        <p class="lead" data-i18n="faq_lead">Kurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.</p>
+      </div>
 
       <div class="faq">
-        <details>
-          <summary data-i18n="faq1_q">Arbeitest du nur in Ulm und Umgebung?</summary>
-          <p data-i18n="faq1_a">Nein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.</p>
-        </details>
-
         <details>
           <summary data-i18n="faq2_q">Gibt es feste Paketpreise?</summary>
           <p data-i18n="faq2_a">Der Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.</p>
@@ -1093,6 +1039,23 @@
           <summary data-i18n="faq3_q">Machst du auch mehrsprachige Websites?</summary>
           <p data-i18n="faq3_a">Ja. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.</p>
         </details>
+
+        <details>
+          <summary data-i18n="faq4_q">Wem gehört der Code am Ende?</summary>
+          <p data-i18n="faq4_a">Dir. Nach Abnahme bekommst du alle Dateien, Zugänge und die Dokumentation. Kein Baukasten, keine Abhängigkeit von mir und kein Abo, das im Hintergrund weiterläuft.</p>
+        </details>
+
+        <details>
+          <summary data-i18n="faq5_q">Übernimmst du auch Wartung und Weiterentwicklung?</summary>
+          <p data-i18n="faq5_a">Auf Wunsch. Entweder auf Zuruf nach Aufwand oder mit einem festen monatlichen Kontingent für Updates, kleine Änderungen und Erreichbarkeit.</p>
+        </details>
+
+        <details>
+          <summary data-i18n="faq6_q">Arbeitest du auch unter Vertraulichkeitsvereinbarung?</summary>
+          <p data-i18n="faq6_a">Ja. Eine NDA vor dem ersten Gespräch ist kein Problem. Zugangsdaten werden nur so lange verwendet wie nötig und nach Projektabschluss zurückgegeben.</p>
+        </details>
+
+
       </div>
     </div>
   </section>
@@ -1107,35 +1070,24 @@
         <span class="mail-mono">info@ay-tea.de</span>
 
         <div class="socials" aria-label="Social Media">
-          <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer" aria-label="Instagram @ayteahq">
-            <span aria-hidden="true">Instagram</span>
-            <span>@ayteahq</span>
-          </a>
-          <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer" aria-label="TikTok @ayteahq">
-            <span aria-hidden="true">TikTok</span>
-            <span>@ayteahq</span>
-          </a>
-          <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer" aria-label="GitHub ayteahq">
-            <span aria-hidden="true">GitHub</span>
-            <span>ayteahq</span>
-          </a>
+          <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-instagram"/></svg><span>Instagram @ayteahq</span></a>
+          <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-tiktok"/></svg><span>TikTok @ayteahq</span></a>
+          <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg><span>GitHub ayteahq</span></a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<div class="pattern-divider" aria-hidden="true"></div>
-
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <span>© 2026 AY-TEA</span>
       <span data-i18n="f_tag">IT-Dienstleistungen · Websites · Google-Profile · Automatisierung</span>
-      <div class="foot-social" aria-label="Footer Links">
-        <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div class="foot-social">
+        <a href="https://instagram.com/ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-instagram"/></svg><span>Instagram</span></a>
+        <a href="https://www.tiktok.com/@ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-tiktok"/></svg><span>TikTok</span></a>
+        <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg><span>GitHub</span></a>
       </div>
     </div>
 
@@ -1149,11 +1101,11 @@
 const T = {
   de: {
     nav_services:"Leistungen", nav_process:"Ablauf", nav_cta:"Projekt anfragen",
-    eyebrow:"// IT-Dienstleistungen · 100 % remote",
-    h1a:"Digital sichtbar.", h1b:"Sauber umgesetzt.",
+    eyebrow:"IT-Dienstleistungen · 100 % remote",
+    h1a:"Digital sichtbar.", h1b:"Sauber gebaut.",
     sub:"AY-TEA bringt kleine Unternehmen online: optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.",
     cta1:"Projekt anfragen", cta2:"Leistungen ansehen",
-    pill1:"Festpreis nach Erstgespräch", pill2:"DSGVO-bewusst", pill3:"Deutsch · Englisch · Türkisch",
+    pill1:"Festpreis nach Erstgespräch", pill2:"DSGVO-bewusst umgesetzt", pill3:"Deutsch · Englisch · Türkisch",
     t1:"Google-Profil optimiert", t2:"Onepager oft in ca. 7 Tagen möglich", t3:"Routine automatisiert",
     s1_h:"Leistungen",
     s1_lead:"Drei klar geschnittene Leistungen — ohne Agentur-Overhead. Nach einem kurzen Erstgespräch bekommst du ein transparentes Festpreis-Angebot.",
@@ -1166,8 +1118,28 @@ const T = {
     c3_h:"Automatisierung & Tools",
     c3_p:"Wiederkehrende Aufgaben abgeben: individuelle Skripte, Datenauswertung, kleine Web-Tools und einfache Schnittstellen — maßgeschneidert statt Software von der Stange.",
     c3_l1:"Skripte für Routinearbeit", c3_l2:"Daten aufbereiten & auswerten", c3_l3:"Kleine interne Web-Tools",
+    c4_h:"Java-Anwendungen & Backends",
+    c4_p:"Interne Anwendungen, Spring-Boot-Backends und REST-APIs für Abläufe, die keine Standardsoftware abbildet — sauber strukturiert, dokumentiert und jederzeit übergabefähig.",
+    c4_l1:"Spring-Boot-Backends",
+    c4_l2:"REST-APIs & Datenbankanbindung",
+    c4_l3:"Dokumentierter, wartbarer Code",
+    c5_h:"Schnittstellen & Systemintegration",
+    c5_p:"Systeme, die nicht miteinander reden, kosten jeden Monat Arbeitszeit. Shop, Buchhaltung, Kalender, E-Mail und Tabellen werden so verbunden, dass Daten von allein am richtigen Ort landen.",
+    c5_l1:"API-Anbindungen",
+    c5_l2:"Automatischer Datenabgleich",
+    c5_l3:"Geplante Jobs & Benachrichtigungen",
+    c6_h:"Daten & Reporting",
+    c6_p:"Aus CSV- und Excel-Wildwuchs werden verlässliche Auswertungen: bereinigte Daten, wiederholbare Berichte und Kennzahlen, die aktuell bleiben, ohne dass sie jemand von Hand zusammenklickt.",
+    c6_l1:"Datenbereinigung & Import",
+    c6_l2:"Wiederholbare Berichte",
+    c6_l3:"Kennzahlen automatisch aktuell",
+    stack_h:"Womit gearbeitet wird",
+    case_k:"Projektbeispiel",
+    case_h:"Google-Bewertungen automatisch beantworten",
+    case_p:"Ein Workflow holt neue Rezensionen ab, erzeugt einen passenden Antwortentwurf und schickt ihn per E-Mail zur Freigabe. Aufbau, Konfiguration und Code sind öffentlich einsehbar.",
+    case_a:"Auf GitHub ansehen",
     aud_h:"Für wen ist AY-TEA?",
-    aud_lead:"Besonders sinnvoll für kleine Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.",
+    aud_lead:"Besonders sinnvoll für kleine und mittelständische Unternehmen, Selbstständige und lokale Anbieter, die professioneller online auftreten möchten, aber keine große Agentur brauchen.",
     aud1_h:"Lokale Sichtbarkeit",
     aud1_p:"Ideal für Cafés, Barbershops, Handwerk, Praxen, Vereine, Dienstleister und kleine Shops, die bei Google besser wirken und leichter gefunden werden wollen.",
     aud2_h:"Kleine digitale Prozesse",
@@ -1208,12 +1180,16 @@ const T = {
     st3_p:"Lieferung zum vereinbarten Termin, eine Korrekturrunde inklusive. Danach bekommst du alles sauber übergeben.",
     faq_h:"Häufige Fragen",
     faq_lead:"Kurz beantwortet, damit du direkt einschätzen kannst, ob AY-TEA zu deinem Projekt passt.",
-    faq1_q:"Arbeitest du nur in Ulm und Umgebung?",
-    faq1_a:"Nein. AY-TEA arbeitet 100 % remote. Lokale Projekte aus Ulm, Neu-Ulm, Günzburg und Umgebung passen sehr gut, aber Anfragen aus ganz Deutschland sind möglich.",
     faq2_q:"Gibt es feste Paketpreise?",
     faq2_a:"Der Preis hängt vom Umfang ab. Nach einem kurzen Erstgespräch bekommst du ein Festpreis-Angebot, damit du vorher weißt, was es kostet.",
     faq3_q:"Machst du auch mehrsprachige Websites?",
     faq3_a:"Ja. Deutsch, Englisch und Türkisch sind möglich. Für andere Sprachen kann eine passende Lösung abgestimmt werden.",
+    faq4_q:"Wem gehört der Code am Ende?",
+    faq4_a:"Dir. Nach Abnahme bekommst du alle Dateien, Zugänge und die Dokumentation. Kein Baukasten, keine Abhängigkeit von mir und kein Abo, das im Hintergrund weiterläuft.",
+    faq5_q:"Übernimmst du auch Wartung und Weiterentwicklung?",
+    faq5_a:"Auf Wunsch. Entweder auf Zuruf nach Aufwand oder mit einem festen monatlichen Kontingent für Updates, kleine Änderungen und Erreichbarkeit.",
+    faq6_q:"Arbeitest du auch unter Vertraulichkeitsvereinbarung?",
+    faq6_a:"Ja. Eine NDA vor dem ersten Gespräch ist kein Problem. Zugangsdaten werden nur so lange verwendet wie nötig und nach Projektabschluss zurückgegeben.",
     k_h:"Projekt im Kopf?",
     k_p:"Schreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.",
     k_btn:"E-Mail schreiben",
@@ -1222,11 +1198,11 @@ const T = {
 
   en: {
     nav_services:"Services", nav_process:"Process", nav_cta:"Start a project",
-    eyebrow:"// IT services · 100% remote",
+    eyebrow:"IT services · 100% remote",
     h1a:"Digitally visible.", h1b:"Properly built.",
     sub:"AY-TEA gets small businesses online: optimized Google Business Profiles, fast one-page websites and automations that take routine work off your plate — technically clean, fairly priced.",
     cta1:"Start a project", cta2:"View services",
-    pill1:"Fixed quote after intro", pill2:"GDPR-aware", pill3:"German · English · Turkish",
+    pill1:"Fixed quote after intro", pill2:"Built with GDPR in mind", pill3:"German · English · Turkish",
     t1:"Google profile optimized", t2:"One-pagers often possible in about 7 days", t3:"Routine automated",
     s1_h:"Services",
     s1_lead:"Three clearly scoped services — no agency overhead. After a short intro conversation, you receive a transparent fixed quote.",
@@ -1239,8 +1215,28 @@ const T = {
     c3_h:"Automation & tools",
     c3_p:"Hand off repetitive tasks: custom scripts, data processing, small web tools and simple integrations — tailored instead of off-the-shelf.",
     c3_l1:"Scripts for routine work", c3_l2:"Prepare & analyze data", c3_l3:"Small internal web tools",
+    c4_h:"Java applications & backends",
+    c4_p:"Internal applications, Spring Boot backends and REST APIs for processes no off-the-shelf software covers — cleanly structured, documented and ready to hand over at any time.",
+    c4_l1:"Spring Boot backends",
+    c4_l2:"REST APIs & database access",
+    c4_l3:"Documented, maintainable code",
+    c5_h:"Interfaces & system integration",
+    c5_p:"Systems that don't talk to each other cost working hours every month. Shop, accounting, calendar, email and spreadsheets get connected so data ends up in the right place on its own.",
+    c5_l1:"API connections",
+    c5_l2:"Automatic data sync",
+    c5_l3:"Scheduled jobs & notifications",
+    c6_h:"Data & reporting",
+    c6_p:"Turning scattered CSV and Excel files into reliable analysis: cleaned data, repeatable reports and figures that stay current without anyone assembling them by hand.",
+    c6_l1:"Data cleaning & import",
+    c6_l2:"Repeatable reports",
+    c6_l3:"Figures updated automatically",
+    stack_h:"Built with",
+    case_k:"Project example",
+    case_h:"Answering Google reviews automatically",
+    case_p:"A workflow collects new reviews, produces a fitting draft reply and sends it by email for approval. Structure, configuration and code are publicly viewable.",
+    case_a:"View on GitHub",
     aud_h:"Who is AY-TEA for?",
-    aud_lead:"Especially useful for small businesses, freelancers and local providers who want a more professional online presence without needing a large agency.",
+    aud_lead:"Especially useful for small and mid-sized businesses, freelancers and local providers who want a more professional online presence without needing a large agency.",
     aud1_h:"Local visibility",
     aud1_p:"Ideal for cafés, barbershops, trades, practices, clubs, service providers and small shops that want to look better on Google and be easier to find.",
     aud2_h:"Small digital processes",
@@ -1281,12 +1277,16 @@ const T = {
     st3_p:"Delivery on the agreed date, one revision round included. After that, everything is handed over cleanly.",
     faq_h:"Frequently asked questions",
     faq_lead:"Short answers so you can quickly decide whether AY-TEA fits your project.",
-    faq1_q:"Do you only work in Ulm and nearby?",
-    faq1_a:"No. AY-TEA works 100% remotely. Local projects from Ulm, Neu-Ulm, Günzburg and the surrounding area fit well, but inquiries from all over Germany are possible.",
     faq2_q:"Are there fixed package prices?",
     faq2_a:"The price depends on the scope. After a short intro conversation, you receive a fixed quote so you know the cost in advance.",
     faq3_q:"Do you build multilingual websites?",
     faq3_a:"Yes. German, English and Turkish are possible. For other languages, a suitable solution can be discussed.",
+    faq4_q:"Who owns the code in the end?",
+    faq4_a:"You do. After acceptance you receive all files, access credentials and the documentation. No page builder, no dependency on me and no subscription running in the background.",
+    faq5_q:"Do you also handle maintenance and further development?",
+    faq5_a:"On request. Either ad hoc by effort, or with a fixed monthly allowance for updates, small changes and availability.",
+    faq6_q:"Do you work under a non-disclosure agreement?",
+    faq6_a:"Yes. An NDA before the first conversation is no problem. Access credentials are used only as long as necessary and returned once the project is finished.",
     k_h:"Got a project in mind?",
     k_p:"Write two or three sentences about your idea — you’ll get an honest assessment and, if the scope fits, a fixed quote.",
     k_btn:"Send an email",
@@ -1295,11 +1295,11 @@ const T = {
 
   tr: {
     nav_services:"Hizmetler", nav_process:"Süreç", nav_cta:"Proje talep et",
-    eyebrow:"// BT hizmetleri · %100 uzaktan",
-    h1a:"Dijitalde görünür.", h1b:"Temiz uygulanmış.",
+    eyebrow:"BT hizmetleri · %100 uzaktan",
+    h1a:"Dijitalde görünür.", h1b:"Temiz kurulmuş.",
     sub:"AY-TEA küçük işletmeleri internete taşır: optimize edilmiş Google İşletme Profilleri, hızlı tek sayfalık web siteleri ve rutin işleri azaltan otomasyonlar — teknik olarak temiz, adil fiyatlı.",
     cta1:"Proje talep et", cta2:"Hizmetleri gör",
-    pill1:"Ön görüşme sonrası sabit fiyat", pill2:"GDPR bilinçli", pill3:"Almanca · İngilizce · Türkçe",
+    pill1:"Ön görüşme sonrası sabit fiyat", pill2:"GDPR bilinçli uygulama", pill3:"Almanca · İngilizce · Türkçe",
     t1:"Google profili optimize edildi", t2:"Onepager genelde yaklaşık 7 günde mümkün", t3:"Rutin işler otomatikleşti",
     s1_h:"Hizmetler",
     s1_lead:"Net kapsamlı üç hizmet — ajans maliyeti yok. Kısa bir ön görüşmeden sonra şeffaf sabit fiyat teklifi alırsınız.",
@@ -1308,12 +1308,32 @@ const T = {
     c1_l1:"Profil denetimi", c1_l2:"Kategoriler & açıklama", c1_l3:"Yorum ve fotoğraf düzeni",
     c2_h:"Tek sayfalık web siteleri",
     c2_p:"Modern ve hızlı tek sayfalık web sitesi: mobil uyumlu, temiz yapılı, e-posta ile iletişim veya isteğe bağlı form ve temel SEO ile. İsteğe bağlı çok dilli — Almanca, İngilizce veya Türkçe.",
-    c2_l1:"Hızlı & mobil uyumlu", c2_l2:"Temel SEO & temiz yapı", c2_l3:"Baukasten bağımlılığı olmadan teslim",
+    c2_l1:"Hızlı & mobil uyumlu", c2_l2:"Temel SEO & temiz yapı", c2_l3:"Hazır site kurucusuna bağımlılık olmadan teslim",
     c3_h:"Otomasyon & araçlar",
     c3_p:"Tekrarlayan işleri devredin: özel scriptler, veri işleme, küçük web araçları ve basit entegrasyonlar — hazır yazılım yerine size özel.",
     c3_l1:"Rutin işler için scriptler", c3_l2:"Veri hazırlama & analiz", c3_l3:"Küçük dahili web araçları",
+    c4_h:"Java uygulamaları & backend",
+    c4_p:"Hazır yazılımın karşılamadığı süreçler için dahili uygulamalar, Spring Boot backend'leri ve REST API'ler — temiz yapılı, belgelenmiş ve her an devredilebilir.",
+    c4_l1:"Spring Boot backend'leri",
+    c4_l2:"REST API & veritabanı bağlantısı",
+    c4_l3:"Belgelenmiş, bakımı kolay kod",
+    c5_h:"Arayüzler & sistem entegrasyonu",
+    c5_p:"Birbiriyle konuşmayan sistemler her ay çalışma saati harcatır. Mağaza, muhasebe, takvim, e-posta ve tablolar, veriler kendiliğinden doğru yere düşecek şekilde bağlanır.",
+    c5_l1:"API bağlantıları",
+    c5_l2:"Otomatik veri eşitleme",
+    c5_l3:"Zamanlanmış görevler & bildirimler",
+    c6_h:"Veri & raporlama",
+    c6_p:"Dağınık CSV ve Excel dosyaları güvenilir analize dönüşür: temizlenmiş veri, tekrarlanabilir raporlar ve kimse elle derlemeden güncel kalan göstergeler.",
+    c6_l1:"Veri temizleme & içe aktarma",
+    c6_l2:"Tekrarlanabilir raporlar",
+    c6_l3:"Göstergeler otomatik güncel",
+    stack_h:"Neyle çalışılıyor",
+    case_k:"Proje örneği",
+    case_h:"Google yorumlarını otomatik yanıtlama",
+    case_p:"Bir iş akışı yeni yorumları toplar, uygun bir yanıt taslağı üretir ve onay için e-posta ile gönderir. Kurgusu, yapılandırması ve kodu herkese açık.",
+    case_a:"GitHub'da incele",
     aud_h:"AY-TEA kimler için?",
-    aud_lead:"Profesyonel bir online görünüm isteyen ama büyük ajansa ihtiyaç duymayan küçük işletmeler, serbest çalışanlar ve yerel hizmet sağlayıcılar için uygundur.",
+    aud_lead:"Profesyonel bir online görünüm isteyen ama büyük ajansa ihtiyaç duymayan küçük ve orta ölçekli işletmeler, serbest çalışanlar ve yerel hizmet sağlayıcılar için uygundur.",
     aud1_h:"Yerel görünürlük",
     aud1_p:"Google’da daha iyi görünmek ve daha kolay bulunmak isteyen kafeler, berberler, zanaatkârlar, muayenehaneler, dernekler, hizmet sağlayıcılar ve küçük mağazalar için ideal.",
     aud2_h:"Küçük dijital süreçler",
@@ -1354,12 +1374,16 @@ const T = {
     st3_p:"Kararlaştırılan tarihte teslim, bir revizyon turu dahil. Sonrasında her şey temiz şekilde size teslim edilir.",
     faq_h:"Sık sorulan sorular",
     faq_lead:"AY-TEA’nın projenize uygun olup olmadığını hızlıca anlamanız için kısa cevaplar.",
-    faq1_q:"Sadece Ulm ve çevresinde mi çalışıyorsun?",
-    faq1_a:"Hayır. AY-TEA %100 uzaktan çalışır. Ulm, Neu-Ulm, Günzburg ve çevresinden yerel projeler çok uygundur, ama Almanya genelinden talepler mümkündür.",
     faq2_q:"Sabit paket fiyatları var mı?",
     faq2_a:"Fiyat kapsamına göre değişir. Kısa bir ön görüşmeden sonra maliyeti önceden bilmeniz için sabit fiyat teklifi alırsınız.",
     faq3_q:"Çok dilli web sitesi yapıyor musun?",
     faq3_a:"Evet. Almanca, İngilizce ve Türkçe mümkündür. Diğer diller için uygun çözüm konuşulabilir.",
+    faq4_q:"Kod sonunda kime ait olur?",
+    faq4_a:"Size. Kabulden sonra tüm dosyalar, erişim bilgileri ve belgeler size geçer. Hazır site kurucusu yok, bana bağımlılık yok, arka planda işleyen abonelik yok.",
+    faq5_q:"Bakım ve geliştirmeyi de üstleniyor musun?",
+    faq5_a:"İstenirse. Ya ihtiyaç oldukça harcanan emek üzerinden ya da güncellemeler, küçük değişiklikler ve ulaşılabilirlik için sabit aylık bir kontenjanla.",
+    faq6_q:"Gizlilik sözleşmesiyle çalışıyor musun?",
+    faq6_a:"Evet. İlk görüşmeden önce NDA imzalamak sorun değil. Erişim bilgileri yalnızca gerektiği sürece kullanılır ve proje bitiminde iade edilir.",
     k_h:"Aklında bir proje mi var?",
     k_p:"Projenizi iki üç cümleyle anlatın — dürüst bir değerlendirme ve kapsam uygunsa sabit fiyat teklifi alırsınız.",
     k_btn:"E-posta gönder",
@@ -1389,8 +1413,17 @@ const TERM = {
     services:'Google-Profile · Onepager-Websites · Automatisierung & Tools',
     contact:'info@ay-tea.de — kurze Projektanfrage genügt',
     socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 „Ay“ ist Türkisch für Mond. AY-TEA klingt wie IT. Jetzt weißt du es.',
-    hist:'🏛️ Eines der ersten Kaffeehäuser der Welt eröffnete 1554 in Istanbul — gute Ideen brauchen seit jeher gute Getränke. ☕',
+    moon:'„Ay“ ist Türkisch für Mond. AY-TEA klingt wie IT. Jetzt weißt du es.',
+    hist:[
+      "1206 beschrieb Cezerî am Hof von Diyarbakır programmierbare Automaten mit Nockenwellen — Steuerlogik, lange vor dem ersten Computer.",
+      "Die ältesten bekannten Texte auf Türkisch sind die Orchon-Inschriften von 732 — geschrieben in Stein, nicht auf Papier.",
+      "Das leuchtende Rot der İznik-Kacheln im 16. Jahrhundert kam aus eisenhaltigem Ton. Das Rezept ging später verloren.",
+      "1513 zeichnete Piri Reis seine Weltkarte auf Gazellenhaut. Der erhaltene Teil liegt heute im Topkapı-Palast.",
+      "1577 baute Takiyüddin in Istanbul eine der modernsten Sternwarten seiner Zeit. Drei Jahre später wurde sie abgerissen.",
+      "1437 erstellte Uluğ Bey in Samarkand einen Sternkatalog, dessen Werte über 200 Jahre lang unübertroffen blieben.",
+      "1729 druckte İbrahim Müteferrika das erste Buch in osmanisch-türkischer Sprache. Es war ein Wörterbuch.",
+      "1554 öffneten in Istanbul die ersten Kaffeehäuser der Stadt — gute Ideen brauchten schon immer gute Getränke."
+    ],
     unknown:'Unbekannter Befehl — probier "help"'
   },
   en:{
@@ -1399,8 +1432,17 @@ const TERM = {
     services:'Google profiles · one-page websites · automation & tools',
     contact:'info@ay-tea.de — a short project request is enough',
     socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 "Ay" is Turkish for moon. AY-TEA sounds like IT. Now you know.',
-    hist:'🏛️ One of the first coffee houses in the world opened in Istanbul in 1554 — good ideas have always needed good drinks. ☕',
+    moon:'"Ay" is Turkish for moon. AY-TEA sounds like IT. Now you know.',
+    hist:[
+      "In 1206, Cezerî described programmable automata driven by camshafts at the court of Diyarbakır — control logic, long before the first computer.",
+      "The oldest known texts written in Turkish are the Orkhon inscriptions of 732 — carved in stone, not written on paper.",
+      "The glowing red of 16th-century İznik tiles came from iron-rich clay. The recipe was later lost.",
+      "In 1513, Piri Reis drew his world map on gazelle skin. The surviving fragment is kept at Topkapı Palace.",
+      "In 1577, Takiyüddin built one of the most advanced observatories of his time in Istanbul. Three years later it was torn down.",
+      "In 1437, Uluğ Bey compiled a star catalogue in Samarkand whose values went unmatched for over 200 years.",
+      "In 1729, İbrahim Müteferrika printed the first book in Ottoman Turkish. It was a dictionary.",
+      "In 1554, Istanbul's first coffee houses opened — good ideas have always needed good drinks."
+    ],
     unknown:'Unknown command — try "help"'
   },
   tr:{
@@ -1409,13 +1451,23 @@ const TERM = {
     services:'Google profilleri · tek sayfalık siteler · otomasyon & araçlar',
     contact:'info@ay-tea.de — kısa bir proje talebi yeterli',
     socials:'Instagram & TikTok: @ayteahq · GitHub: ayteahq',
-    moon:'🌙 "Ay" zaten biliyorsun. AY-TEA kulağa IT gibi gelir. Şimdi tamam.',
-    hist:"🏛️ Dünyanın ilk kahvehanelerinden biri 1554'te İstanbul'da açıldı — iyi fikirler her zaman iyi içecek ister. ☕",
+    moon:'"Ay" zaten biliyorsun. AY-TEA kulağa IT gibi gelir. Şimdi tamam.',
+    hist:[
+      "1206'da Cezerî, Diyarbakır'da eksantrik millerle çalışan programlanabilir otomatlar tasarladı — ilk bilgisayardan yüzyıllar önce kontrol mantığı.",
+      "Türkçe yazılmış bilinen en eski metinler 732 tarihli Orhun Yazıtları — kâğıda değil, taşa yazılmış.",
+      "16. yüzyıl İznik çinilerindeki parlak kırmızı, demir bakımından zengin kilden gelirdi. Tarifi sonradan kayboldu.",
+      "1513'te Piri Reis dünya haritasını ceylan derisine çizdi. Günümüze ulaşan parçası Topkapı Sarayı'nda.",
+      "1577'de Takiyüddin İstanbul'da çağının en gelişmiş rasathanelerinden birini kurdu. Üç yıl sonra yıktırıldı.",
+      "1437'de Uluğ Bey Semerkant'ta öyle bir yıldız kataloğu hazırladı ki değerleri 200 yıldan fazla aşılamadı.",
+      "1729'da İbrahim Müteferrika Osmanlı Türkçesiyle basılan ilk kitabı çıkardı: bir sözlük.",
+      "1554'te İstanbul'un ilk kahvehaneleri açıldı — iyi fikirler her zaman iyi içecek istemiştir."
+    ],
     unknown:'Bilinmeyen komut — "help" dene'
   }
 };
 
 let currentLang = localStorage.getItem('aytea-lang') || 'de';
+let histStep = 0;
 
 function setMeta(lang){
   document.title = META[lang].title;
@@ -1456,14 +1508,42 @@ document.querySelectorAll('.lang button').forEach(button=>{
   button.addEventListener('click', ()=>setLang(button.dataset.lang));
 });
 
-/* ——— Interaktives Terminal ——— */
+/* ——— Signatur: Glasur folgt dem Zeiger ——— */
+(function glaze(){
+  const hero = document.getElementById('top');
+  const layer = document.querySelector('.tf-glaze');
+  if(!hero || !layer) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false, px = 0, py = 0;
+
+  function apply(){
+    layer.style.setProperty('--mx', px + 'px');
+    layer.style.setProperty('--my', py + 'px');
+    ticking = false;
+  }
+
+  function track(event){
+    const rect = hero.getBoundingClientRect();
+    px = event.clientX - rect.left;
+    py = event.clientY - rect.top;
+    if(!ticking){ ticking = true; requestAnimationFrame(apply); }
+  }
+
+  hero.addEventListener('pointermove', track, {passive:true});
+  hero.addEventListener('pointerdown', track, {passive:true});
+})();
+
+/* ——— Terminal: feste Befehlsliste ——— */
 const termInput = document.getElementById('termInput');
-const inputLine = document.querySelector('.term-inputline');
+const inputLine = termInput ? termInput.closest('.term-line') : null;
 const termBody = document.querySelector('.term-body');
 const terminal = document.querySelector('.terminal');
 
 if(terminal && termInput){
-  terminal.addEventListener('click', ()=>termInput.focus());
+  terminal.addEventListener('click', event=>{
+    if(event.target.tagName !== 'A') termInput.focus();
+  });
 }
 
 function termAddText(prefix, text, className){
@@ -1516,14 +1596,17 @@ if(termInput){
     else if(['contact','kontakt','iletişim','iletisim','mail','email'].includes(command)) output = t.contact;
     else if(['socials','social','insta','instagram','tiktok','github'].includes(command)) output = t.socials;
     else if(['moon','ay','mond'].includes(command)) output = t.moon;
-    else if(['history','tarih','geschichte'].includes(command)) output = t.hist;
+    else if(['history','tarih','geschichte'].includes(command)){
+      output = t.hist[histStep % t.hist.length];
+      histStep++;
+    }
     else if(['ay-tea','aytea','ay-tea --start'].includes(command)) output = '✓ ' + t.services;
 
     termAddText('', output, 'term-out');
   });
 }
 
-/* ——— Vorher/Nachher-Demo ——— */
+/* ——— Vorher/Nachher ——— */
 document.querySelectorAll('.demo-toggle button').forEach(button=>{
   button.addEventListener('click', ()=>{
     document.querySelectorAll('.demo-toggle button').forEach(other=>{
@@ -1533,8 +1616,19 @@ document.querySelectorAll('.demo-toggle button').forEach(button=>{
     });
 
     const after = button.dataset.state === 'after';
-    document.querySelector('.gcard-before').classList.toggle('active', !after);
-    document.querySelector('.gcard-after').classList.toggle('active', after);
+    const beforeList = document.querySelector('.gcard-before');
+    const afterList = document.querySelector('.gcard-after');
+    const shown = after ? afterList : beforeList;
+
+    beforeList.classList.toggle('active', !after);
+    afterList.classList.toggle('active', after);
+
+    // Zeilen-Animation neu starten
+    shown.querySelectorAll('li').forEach(li=>{
+      li.style.animation = 'none';
+      void li.offsetWidth;
+      li.style.animation = '';
+    });
   });
 });
 
@@ -1547,9 +1641,9 @@ if('IntersectionObserver' in window){
         io.unobserve(entry.target);
       }
     });
-  }, {threshold:.15});
+  }, {threshold:.12});
 
-  document.querySelectorAll('.card,.step,.why-item,.contact,.gcard,.audience-box,details').forEach(el=>{
+  document.querySelectorAll('.sec-head,.cards,.stack,.case,.audience,.steps,.why-item,.gcard,.demo-toggle,.contact,details').forEach(el=>{
     el.classList.add('reveal');
     io.observe(el);
   });
