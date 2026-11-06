@@ -473,6 +473,49 @@
   }
   .case-link:hover{color:var(--cobalt);border-color:rgba(30,63,164,.45)}
 
+  /* Vorlagen */
+  .shop-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--joint);
+    border:1px solid var(--joint);
+  }
+  @media(max-width:980px){
+    .shop-grid{grid-template-columns:1fr 1fr}
+    .shop-card:last-child:nth-child(odd){grid-column:1 / -1}
+  }
+  @media(max-width:640px){.shop-grid{grid-template-columns:1fr}}
+
+  .shop-card{
+    background:var(--white);
+    padding:20px 18px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    text-decoration:none;
+    color:var(--ink);
+    position:relative;
+    transition:background .22s;
+  }
+  .shop-card::after{
+    content:"";
+    position:absolute;left:0;right:0;top:0;height:2px;
+    background:var(--cobalt);
+    transform:scaleX(0);transform-origin:left;
+    transition:transform .3s cubic-bezier(.2,.8,.3,1);
+  }
+  .shop-card:hover{background:#FBFCFA;color:var(--ink)}
+  .shop-card:hover::after{transform:scaleX(1)}
+  .shop-card strong{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1.05rem;
+    letter-spacing:-.012em;
+    line-height:1.25;
+  }
+  .shop-meta{font-size:.88rem;color:var(--muted)}
+
   /* Für wen */
   .audience{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--joint);border:1px solid var(--joint)}
   @media(max-width:760px){.audience{grid-template-columns:1fr}}
@@ -693,6 +736,7 @@
 
     <div class="nav-links">
       <a href="#leistungen" data-i18n="nav_services">Leistungen</a>
+      <a href="#vorlagen" data-i18n="nav_shop">Vorlagen</a>
       <a href="#ablauf" data-i18n="nav_process">Ablauf</a>
       <a href="#kontakt" class="nav-cta" data-i18n="nav_cta">Projekt anfragen</a>
     </div>
@@ -726,6 +770,7 @@
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="#kontakt" data-i18n="cta1">Projekt anfragen</a>
+        <a class="btn btn-ghost" href="#vorlagen" data-i18n="cta_shop">Vorlagen ansehen</a>
         <a class="btn btn-ghost" href="#leistungen" data-i18n="cta2">Leistungen ansehen</a>
       </div>
     </div>
@@ -1054,6 +1099,63 @@
     </div>
   </section>
 
+  <section id="vorlagen">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="shop_h">Vorlagen kaufen</h2>
+        <p class="lead" data-i18n="shop_lead">Digitale Vorlagen zum Sofort-Download auf Etsy und Gumroad. Für eine Tabelle nach Maß gibt es den Fiverr-Service.</p>
+      </div>
+
+      <div class="shop-grid">
+        <a class="shop-card" href="https://www.etsy.com/listing/4609570204" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Digitale Sticker Studium &amp; Alltag</strong>
+          <span class="shop-meta">66 GoodNotes-Sticker</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/listing/4609561457" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Stammbaum Deutsch–Türkisch</strong>
+          <span class="shop-meta">PDF zum Ausfüllen</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/listing/4609562117" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Kına-Hochzeitsplaner</strong>
+          <span class="shop-meta">Excel &amp; Google Sheets</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/listing/4609583680" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Studium-Bundle</strong>
+          <span class="shop-meta">Planer und Sticker</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/listing/4609299180" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Studenten-Budgetplaner</strong>
+          <span class="shop-meta">Google Sheets &amp; Excel</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/listing/4609279325" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong>Haushaltsbuch 2027</strong>
+          <span class="shop-meta">Google Sheets &amp; Excel</span>
+        </a>
+        <a class="shop-card" href="https://www.etsy.com/shop/AYTEAvorlagen" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Etsy</span>
+          <strong data-i18n="shop_etsy_all">Alle Vorlagen auf Etsy</strong>
+          <span class="shop-meta" data-i18n="shop_etsy_meta">Shop AYTEAvorlagen</span>
+        </a>
+        <a class="shop-card" href="https://aytea.gumroad.com" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Gumroad</span>
+          <strong data-i18n="shop_gum">Alle Vorlagen auf Gumroad</strong>
+          <span class="shop-meta" data-i18n="shop_gum_meta">Direkt bei AY-TEA</span>
+        </a>
+        <a class="shop-card" href="https://www.fiverr.com/ayteahq/erstelle-oder-passe-deine-excel-und-google-sheets-vorlage-an" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Fiverr</span>
+          <strong data-i18n="shop_fiverr">Excel- &amp; Google-Sheets-Vorlage</strong>
+          <span class="shop-meta" data-i18n="shop_fiverr_meta">erstellen oder anpassen</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="kontakt">
     <div class="wrap">
       <div class="contact">
@@ -1094,11 +1196,11 @@
 <script>
 const T = {
   de: {
-    nav_services:"Leistungen", nav_process:"Ablauf", nav_cta:"Projekt anfragen",
+    nav_services:"Leistungen", nav_shop:"Vorlagen", nav_process:"Ablauf", nav_cta:"Projekt anfragen",
     eyebrow:"IT-Dienstleistungen · 100 % remote",
     h1a:"Digital sichtbar.", h1b:"Sauber gebaut.",
     sub:"AY-TEA bringt kleine Unternehmen online: optimierte Google-Unternehmensprofile, schnelle Onepager-Websites und Automatisierungen, die Routinearbeit abnehmen — technisch sauber, fair kalkuliert.",
-    cta1:"Projekt anfragen", cta2:"Leistungen ansehen",
+    cta1:"Projekt anfragen", cta_shop:"Vorlagen ansehen", cta2:"Leistungen ansehen",
     pill1:"Festpreis nach Erstgespräch", pill2:"DSGVO-bewusst umgesetzt", pill3:"Deutsch · Englisch · Türkisch",
     t1:"Google-Profil optimiert", t2:"Onepager oft in ca. 7 Tagen möglich", t3:"Routine automatisiert",
     s1_h:"Leistungen",
@@ -1184,6 +1286,14 @@ const T = {
     faq5_a:"Auf Wunsch. Entweder auf Zuruf nach Aufwand oder mit einem festen monatlichen Kontingent für Updates, kleine Änderungen und Erreichbarkeit.",
     faq6_q:"Arbeitest du auch unter Vertraulichkeitsvereinbarung?",
     faq6_a:"Ja. Eine NDA vor dem ersten Gespräch ist kein Problem. Zugangsdaten werden nur so lange verwendet wie nötig und nach Projektabschluss zurückgegeben.",
+    shop_h:"Vorlagen kaufen",
+    shop_lead:"Digitale Vorlagen zum Sofort-Download auf Etsy und Gumroad. Für eine Tabelle nach Maß gibt es den Fiverr-Service.",
+    shop_etsy_all:"Alle Vorlagen auf Etsy",
+    shop_etsy_meta:"Shop AYTEAvorlagen",
+    shop_gum:"Alle Vorlagen auf Gumroad",
+    shop_gum_meta:"Direkt bei AY-TEA",
+    shop_fiverr:"Excel- & Google-Sheets-Vorlage",
+    shop_fiverr_meta:"erstellen oder anpassen",
     k_h:"Projekt im Kopf?",
     k_p:"Schreib zwei, drei Sätze zu deinem Vorhaben — du bekommst eine ehrliche Einschätzung und bei passendem Umfang ein Festpreis-Angebot.",
     k_btn:"E-Mail schreiben",
@@ -1191,11 +1301,11 @@ const T = {
   },
 
   en: {
-    nav_services:"Services", nav_process:"Process", nav_cta:"Start a project",
+    nav_services:"Services", nav_shop:"Templates", nav_process:"Process", nav_cta:"Start a project",
     eyebrow:"IT services · 100% remote",
     h1a:"Digitally visible.", h1b:"Properly built.",
     sub:"AY-TEA gets small businesses online: optimized Google Business Profiles, fast one-page websites and automations that take routine work off your plate — technically clean, fairly priced.",
-    cta1:"Start a project", cta2:"View services",
+    cta1:"Start a project", cta_shop:"View templates", cta2:"View services",
     pill1:"Fixed quote after intro", pill2:"Built with GDPR in mind", pill3:"German · English · Turkish",
     t1:"Google profile optimized", t2:"One-pagers often possible in about 7 days", t3:"Routine automated",
     s1_h:"Services",
@@ -1281,6 +1391,14 @@ const T = {
     faq5_a:"On request. Either ad hoc by effort, or with a fixed monthly allowance for updates, small changes and availability.",
     faq6_q:"Do you work under a non-disclosure agreement?",
     faq6_a:"Yes. An NDA before the first conversation is no problem. Access credentials are used only as long as necessary and returned once the project is finished.",
+    shop_h:"Buy templates",
+    shop_lead:"Digital templates for instant download on Etsy and Gumroad. For a spreadsheet tailored to your workflow, there is the Fiverr service.",
+    shop_etsy_all:"All templates on Etsy",
+    shop_etsy_meta:"Shop AYTEAvorlagen",
+    shop_gum:"All templates on Gumroad",
+    shop_gum_meta:"Directly from AY-TEA",
+    shop_fiverr:"Excel & Google Sheets template",
+    shop_fiverr_meta:"create or customize",
     k_h:"Got a project in mind?",
     k_p:"Write two or three sentences about your idea — you’ll get an honest assessment and, if the scope fits, a fixed quote.",
     k_btn:"Send an email",
@@ -1288,11 +1406,11 @@ const T = {
   },
 
   tr: {
-    nav_services:"Hizmetler", nav_process:"Süreç", nav_cta:"Proje talep et",
+    nav_services:"Hizmetler", nav_shop:"Şablonlar", nav_process:"Süreç", nav_cta:"Proje talep et",
     eyebrow:"BT hizmetleri · %100 uzaktan",
     h1a:"Dijitalde görünür.", h1b:"Temiz kurulmuş.",
     sub:"AY-TEA küçük işletmeleri internete taşır: optimize edilmiş Google İşletme Profilleri, hızlı tek sayfalık web siteleri ve rutin işleri azaltan otomasyonlar — teknik olarak temiz, adil fiyatlı.",
-    cta1:"Proje talep et", cta2:"Hizmetleri gör",
+    cta1:"Proje talep et", cta_shop:"Şablonları gör", cta2:"Hizmetleri gör",
     pill1:"Ön görüşme sonrası sabit fiyat", pill2:"GDPR bilinçli uygulama", pill3:"Almanca · İngilizce · Türkçe",
     t1:"Google profili optimize edildi", t2:"Onepager genelde yaklaşık 7 günde mümkün", t3:"Rutin işler otomatikleşti",
     s1_h:"Hizmetler",
@@ -1378,6 +1496,14 @@ const T = {
     faq5_a:"İstenirse. Ya ihtiyaç oldukça harcanan emek üzerinden ya da güncellemeler, küçük değişiklikler ve ulaşılabilirlik için sabit aylık bir kontenjanla.",
     faq6_q:"Gizlilik sözleşmesiyle çalışıyor musun?",
     faq6_a:"Evet. İlk görüşmeden önce NDA imzalamak sorun değil. Erişim bilgileri yalnızca gerektiği sürece kullanılır ve proje bitiminde iade edilir.",
+    shop_h:"Şablon satın al",
+    shop_lead:"Etsy ve Gumroad'da anında indirilebilen dijital şablonlar. Kendi işine göre bir tablo için Fiverr hizmeti var.",
+    shop_etsy_all:"Tüm şablonlar Etsy'de",
+    shop_etsy_meta:"Mağaza AYTEAvorlagen",
+    shop_gum:"Tüm şablonlar Gumroad'da",
+    shop_gum_meta:"Doğrudan AY-TEA",
+    shop_fiverr:"Excel ve Google Sheets şablonu",
+    shop_fiverr_meta:"oluştur veya uyarla",
     k_h:"Aklında bir proje mi var?",
     k_p:"Projenizi iki üç cümleyle anlatın — dürüst bir değerlendirme ve kapsam uygunsa sabit fiyat teklifi alırsınız.",
     k_btn:"E-posta gönder",
@@ -1637,7 +1763,7 @@ if('IntersectionObserver' in window){
     });
   }, {threshold:.12});
 
-  document.querySelectorAll('.sec-head,.cards,.stack,.case,.audience,.steps,.why-item,.gcard,.demo-toggle,.contact,details').forEach(el=>{
+  document.querySelectorAll('.sec-head,.cards,.stack,.case,.audience,.steps,.why-item,.gcard,.demo-toggle,.shop-grid,.contact,details').forEach(el=>{
     el.classList.add('reveal');
     io.observe(el);
   });
