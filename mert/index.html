@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Celaleddin Mert Eraslan — Informatik, Software Engineering &amp; Cybersecurity</title>
+<meta name="description" content="Informatikstudent an der Universität Ulm (5. Semester, Abschluss voraussichtlich Sommer 2027). Portfolio zu Software Engineering, Cybersecurity und Automatisierung. Kontakt: info@ay-tea.de.">
+<link rel="canonical" href="https://ay-tea.de/mert/">
+<meta name="theme-color" content="#0E1220">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Celaleddin Mert Eraslan">
+
+<meta property="og:title" content="Celaleddin Mert Eraslan — Informatik, Software Engineering &amp; Cybersecurity">
+<meta property="og:description" content="Informatikstudent an der Universität Ulm (5. Semester, Abschluss voraussichtlich Sommer 2027). Software Engineering, Cybersecurity und Automatisierung. Kontakt: info@ay-tea.de.">
+<meta property="og:url" content="https://ay-tea.de/mert/">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:profile:first_name" content="Celaleddin Mert">
+<meta property="og:profile:last_name" content="Eraslan">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E1220'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%2317A398'/%3E%3Ccircle cx='37' cy='28' r='13' fill='%230E1220'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Celaleddin Mert Eraslan",
+  "url": "https://ay-tea.de/mert/",
+  "email": "info@ay-tea.de",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Ulm, Germany",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ulm",
+      "addressCountry": "DE"
+    }
+  },
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universität Ulm"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "AY-TEA",
+    "url": "https://ay-tea.de/"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/celaleddin-mert-eraslan/",
+    "https://github.com/ayteahq",
+    "https://ay-tea.de/"
+  ]
+}
+</script>
+
+<style>
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:700;src:url('../fonts/archivo-700.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:800;src:url('../fonts/archivo-800.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:900;src:url('../fonts/archivo-900.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400;src:url('../fonts/instrument-sans-400.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;src:url('../fonts/instrument-sans-500.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;src:url('../fonts/instrument-sans-600.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('../fonts/ibm-plex-mono-400.woff2') format('woff2');font-display:swap}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('../fonts/ibm-plex-mono-500.woff2') format('woff2');font-display:swap}
+</style>
+
+<style>
+  :root{
+    --ink:#0E1220;
+    --porcelain:#F3F4F1;
+    --porcelain-2:#EAECE7;
+    --white:#FFFFFF;
+    --cobalt:#1E3FA4;
+    --cobalt-deep:#152C74;
+    --turquoise:#17A398;
+    --joint:rgba(14,18,32,.14);
+    --joint-soft:rgba(14,18,32,.08);
+    --muted:rgba(14,18,32,.68);
+    --muted-2:rgba(14,18,32,.55);
+    --max:1120px;
+    --gut:26px;
+    --r:3px;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --display:'Archivo',system-ui,sans-serif;
+    --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --tile-mute:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='%230E1220' stroke-opacity='.085'%3E%3Crect x='.5' y='.5' width='43' height='43'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z'/%3E%3C/g%3E%3Ccircle cx='22' cy='22' r='1.4' fill='%230E1220' fill-opacity='.10'/%3E%3C/svg%3E");
+    --tile-glaze:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect x='.5' y='.5' width='43' height='43' fill='none' stroke='%231E3FA4' stroke-opacity='.34'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z' fill='none' stroke='%2317A398' stroke-opacity='.62'/%3E%3Ccircle cx='22' cy='22' r='1.9' fill='%23C6402F' fill-opacity='.7'/%3E%3C/svg%3E");
+    --tile-dark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect x='.5' y='.5' width='43' height='43' fill='none' stroke='%23FFFFFF' stroke-opacity='.10'/%3E%3Cpath d='M22 6 L38 22 L22 38 L6 22 Z' fill='none' stroke='%2317A398' stroke-opacity='.34'/%3E%3Ccircle cx='22' cy='22' r='1.7' fill='%23E8A33D' fill-opacity='.42'/%3E%3C/svg%3E");
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--body);
+    background:var(--porcelain);
+    color:var(--ink);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--turquoise);color:#fff}
+  a{color:var(--cobalt);text-underline-offset:3px}
+  a:hover{color:var(--cobalt-deep)}
+  :focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+  .skip-link{
+    position:absolute;top:-60px;left:16px;z-index:999;
+    background:var(--ink);color:#fff;padding:10px 16px;
+    text-decoration:none;font-weight:700;font-size:.9rem;
+  }
+  .skip-link:focus{top:12px}
+
+  h1{
+    font-family:var(--display);
+    font-weight:900;
+    font-size:clamp(2.15rem,5.6vw,3.7rem);
+    line-height:.96;
+    letter-spacing:-.04em;
+    text-transform:uppercase;
+  }
+  h1 .line{display:block}
+  h1 .blue{color:var(--cobalt)}
+
+  h2{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:clamp(1.7rem,3.6vw,2.5rem);
+    line-height:1.08;
+    letter-spacing:-.028em;
+  }
+  h3{
+    font-family:var(--display);
+    font-weight:700;
+    letter-spacing:-.012em;
+    font-size:1.18rem;
+  }
+
+  .kicker{
+    font-family:var(--mono);
+    font-weight:500;
+    font-size:.71rem;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:var(--turquoise);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .kicker::before{
+    content:"";
+    width:9px;height:9px;
+    border:1px solid currentColor;
+    transform:rotate(45deg);
+    flex:none;
+  }
+
+  .site-nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(243,244,241,.92);
+    backdrop-filter:saturate(140%) blur(8px);
+    -webkit-backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--joint);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    min-height:62px;gap:16px;
+  }
+  .logo{
+    font-family:var(--display);font-weight:900;
+    font-size:1.16rem;letter-spacing:-.02em;
+    color:var(--ink);text-decoration:none;
+    display:flex;align-items:center;gap:.5em;white-space:nowrap;
+  }
+  .logo .moon{
+    width:.72em;height:.72em;border-radius:50%;
+    background:radial-gradient(circle at 70% 32%, transparent 53%, var(--cobalt) 55%);
+    flex:none;
+  }
+  .logo:hover .moon{background:radial-gradient(circle at 70% 32%, transparent 53%, var(--turquoise) 55%)}
+  .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a{
+    font-family:var(--mono);
+    font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink);
+  }
+  .nav-links a:hover{color:var(--cobalt)}
+  .lang{display:flex;border:1px solid var(--joint);border-radius:var(--r);overflow:hidden;flex:none}
+  .lang button{
+    border:0;background:transparent;cursor:pointer;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+    padding:6px 9px;color:var(--muted-2);
+    border-right:1px solid var(--joint);
+  }
+  .lang button:last-child{border-right:0}
+  .lang button:hover{color:var(--ink)}
+  .lang button.active{background:var(--ink);color:#fff}
+
+  header#top{
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--joint);
+  }
+  .tilefield{position:absolute;inset:0;pointer-events:none;z-index:0}
+  .tf-base{
+    position:absolute;inset:-2px;
+    background-image:var(--tile-mute);
+    background-size:44px 44px;
+  }
+  .tf-glaze{
+    position:absolute;inset:-2px;
+    background-image:var(--tile-glaze);
+    background-size:44px 44px;
+    opacity:.85;
+    -webkit-mask-image:radial-gradient(circle 280px at 78% 42%, #000 0%, rgba(0,0,0,.45) 46%, transparent 76%);
+    mask-image:radial-gradient(circle 280px at 78% 42%, #000 0%, rgba(0,0,0,.45) 46%, transparent 76%);
+  }
+  .hero-grid{
+    position:relative;z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.15fr) minmax(180px,.52fr);
+    gap:36px;
+    align-items:center;
+    padding:72px 0 64px;
+  }
+  .hero-copy{
+    margin-top:18px;
+    font-size:1.06rem;
+    max-width:62ch;
+    color:rgba(14,18,32,.78);
+  }
+  .hero-copy + .hero-copy{margin-top:12px}
+  .hero-actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .moon-tile{width:min(100%,280px);height:auto;justify-self:end}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    text-decoration:none;font-weight:700;font-size:.96rem;
+    padding:13px 20px;border-radius:var(--r);
+    transition:transform .14s, background .18s, box-shadow .18s, color .18s, border-color .18s;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--cobalt);color:#fff}
+  .btn-primary:hover{background:var(--cobalt-deep);color:#fff;box-shadow:5px 5px 0 var(--turquoise)}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+  .btn-ghost:hover{color:var(--cobalt);border-color:var(--cobalt);box-shadow:5px 5px 0 rgba(30,63,164,.16)}
+
+  .strip{background:var(--ink);color:rgba(255,255,255,.8)}
+  .strip .wrap{
+    display:flex;flex-wrap:wrap;gap:10px 28px;
+    padding-top:15px;padding-bottom:15px;
+    font-family:var(--mono);font-size:.73rem;
+    letter-spacing:.11em;text-transform:uppercase;
+  }
+  .strip span{display:flex;align-items:center;gap:10px}
+  .strip span::before{
+    content:"";width:7px;height:7px;flex:none;
+    border:1px solid var(--turquoise);transform:rotate(45deg);
+  }
+
+  main section{padding:74px 0;border-bottom:1px solid var(--joint);scroll-margin-top:84px}
+  main section:nth-of-type(even){background:var(--porcelain-2)}
+  .sec-head{margin-bottom:28px}
+  .lead{max-width:68ch;color:var(--muted);font-size:1.02rem;margin-top:12px}
+
+  .stack{display:grid;gap:14px}
+  .case{
+    border:1px solid var(--joint);
+    border-left:3px solid var(--cobalt);
+    background:var(--white);
+    padding:24px 24px 22px;
+    border-radius:var(--r);
+  }
+  .tag{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--turquoise);
+  }
+  .case h3{margin:8px 0 8px}
+  .case p{color:var(--muted);font-size:.98rem}
+  .case strong{color:var(--ink);font-weight:600}
+  .case .meta{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;
+    color:var(--muted-2);margin-bottom:8px;
+  }
+  .case-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .case-link{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink);
+    border:1px solid var(--joint);border-radius:var(--r);padding:9px 14px;
+    background:var(--porcelain);
+  }
+  .case-link:hover{color:var(--cobalt);border-color:rgba(30,63,164,.45)}
+  .note{
+    margin-top:12px;
+    font-size:.9rem;
+    color:var(--muted-2);
+  }
+
+  .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .chips li{
+    font-family:var(--mono);font-size:.8rem;letter-spacing:.03em;
+    border:1px solid var(--joint);border-radius:var(--r);
+    padding:8px 12px;background:var(--white);color:var(--ink);
+  }
+
+  .roles{display:grid;gap:14px}
+  .role{
+    background:var(--white);
+    border:1px solid var(--joint);
+    border-radius:var(--r);
+    padding:22px 24px 18px;
+  }
+  .role-top{display:flex;justify-content:space-between;gap:18px;align-items:baseline;flex-wrap:wrap}
+  .when{
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--muted-2);
+  }
+  .mini-list{list-style:none;display:grid;gap:7px;margin-top:12px;font-size:.95rem;color:var(--muted)}
+  .mini-list li{display:flex;align-items:flex-start;gap:10px}
+  .mini-list li::before{
+    content:"";width:7px;height:7px;margin-top:.55em;flex:none;
+    background:var(--turquoise);transform:rotate(45deg);
+  }
+
+  .skills{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--joint);
+    border:1px solid var(--joint);
+  }
+  .skills li{background:var(--white);padding:16px 18px 15px}
+  .skills strong{
+    display:block;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1.02rem;
+    letter-spacing:-.012em;
+  }
+  .skills span{display:block;margin-top:3px;color:var(--muted);font-size:.9rem}
+
+  .lang-grid{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:1px;
+    background:var(--joint);
+    border:1px solid var(--joint);
+  }
+  .lang-grid li{background:var(--white);padding:18px 16px}
+  .lang-grid strong{display:block;font-family:var(--display);font-weight:700}
+  .lang-grid span{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}
+
+  #kontakt{border-bottom:none;background:var(--porcelain);padding-bottom:88px}
+  .contact{
+    position:relative;overflow:hidden;
+    background:var(--ink);color:#fff;
+    border-radius:var(--r);
+    padding:56px 48px;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background-image:var(--tile-dark);background-size:44px 44px;
+    opacity:.9;
+  }
+  .contact > *{position:relative;z-index:1}
+  .contact h2{max-width:18ch}
+  .contact .lead{color:rgba(255,255,255,.78);margin:14px 0 26px}
+  .contact .btn-primary{background:var(--porcelain);color:var(--ink)}
+  .contact .btn-primary:hover{background:#fff;color:var(--cobalt-deep);box-shadow:5px 5px 0 var(--turquoise)}
+  .mail-mono{
+    display:block;margin-top:14px;font-family:var(--mono);
+    font-size:.9rem;letter-spacing:.04em;color:rgba(255,255,255,.72);
+    text-decoration:none;
+  }
+  .mail-mono:hover{color:#fff}
+  .socials{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .socials a{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:9px 14px;border-radius:var(--r);
+    border:1px solid rgba(255,255,255,.26);
+    color:#fff;text-decoration:none;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .socials a:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
+  .ic{width:16px;height:16px;flex:none;display:block}
+  .place{margin-top:18px;font-size:.95rem;color:rgba(255,255,255,.72)}
+
+  footer{
+    background:var(--porcelain-2);
+    border-top:1px solid var(--joint);
+    padding:32px 0 42px;
+    font-size:.86rem;
+    color:var(--muted-2);
+  }
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .foot-legal{margin-top:16px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em}
+  .foot-legal a{color:var(--ink);text-decoration:none}
+  .foot-legal a:hover{color:var(--cobalt)}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:28px;padding:52px 0 44px}
+    .moon-tile{width:min(52%,200px);justify-self:start}
+    .skills{grid-template-columns:1fr 1fr}
+    .lang-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:720px){
+    .nav-inner{flex-wrap:wrap;padding:8px 0 10px}
+    .nav-links{order:3;width:100%;justify-content:flex-start;gap:8px 14px}
+    main section{scroll-margin-top:118px}
+  }
+  @media(max-width:560px){
+    :root{--gut:18px}
+    .skills,.lang-grid{grid-template-columns:1fr}
+    .contact{padding:36px 22px}
+    main section{padding:56px 0}
+    .case,.role{padding:18px 16px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt" data-i18n="skip">Zum Inhalt springen</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <symbol id="ic-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </symbol>
+    <symbol id="ic-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5h4.37v2.12h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.76h-4.56v-7.76c0-1.85-.03-4.23-2.58-4.23-2.58 0-2.98 2.01-2.98 4.09V24H8.34V8.5z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="site-nav" aria-label="Hauptnavigation" data-i18n-aria="nav_label">
+  <div class="wrap nav-inner">
+    <a class="logo" href="../index.html" aria-label="AY-TEA Startseite" data-i18n-aria="logo_label">
+      <span class="moon" aria-hidden="true"></span>
+      AY-TEA
+    </a>
+    <div class="nav-links">
+      <a href="#studium" data-i18n="nav_study">Studium</a>
+      <a href="#fokus" data-i18n="nav_focus">Fokus</a>
+      <a href="#projekte" data-i18n="nav_projects">Projekte</a>
+      <a href="#erfahrung" data-i18n="nav_experience">Erfahrung</a>
+      <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
+    </div>
+    <div class="lang" role="group" aria-label="Sprache wählen" data-i18n-aria="lang_label">
+      <button type="button" data-lang="de" class="active" aria-pressed="true">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="tilefield" aria-hidden="true">
+    <div class="tf-base"></div>
+    <div class="tf-glaze"></div>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker" data-i18n="kicker">Informatik · Universität Ulm</p>
+      <h1>
+        <span class="line">Celaleddin</span>
+        <span class="line blue">Mert Eraslan</span>
+      </h1>
+      <p class="hero-copy" data-i18n="lead">Informatikstudent an der Universität Ulm (Bachelor of Science, Beginn 2024, 5. Semester, voraussichtlicher Abschluss Sommer 2027). Ich suche ein Praktikum oder eine studentische Tätigkeit in Software Engineering, auch in Teams mit Cybersecurity-Bezug und in technologie- und verteidigungsnahen Softwareteams.</p>
+      <p class="hero-copy" data-i18n="lead2">AY-TEA ist mein kleines IT-Kleingewerbe für Webentwicklung, Automatisierung und digitale Lösungen.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:info@ay-tea.de"><span data-i18n="cta_mail">E-Mail schreiben</span></a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/celaleddin-mert-eraslan/" target="_blank" rel="noopener noreferrer"><span data-i18n="cta_li">LinkedIn</span></a>
+        <a class="btn btn-ghost" href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer"><span data-i18n="cta_gh">GitHub</span></a>
+        <a class="btn btn-ghost" href="cv-mert-eraslan.pdf"><span data-i18n="cta_cv">Lebenslauf (PDF, Englisch)</span></a>
+      </div>
+    </div>
+    <svg class="moon-tile" viewBox="0 0 400 400" role="img" aria-label="AY-TEA">
+      <defs>
+        <pattern id="izTile" width="44" height="44" patternUnits="userSpaceOnUse">
+          <rect x="0.5" y="0.5" width="43" height="43" fill="none" stroke="#1E3FA4" stroke-opacity=".45"/>
+          <path d="M22 6 L38 22 L22 38 L6 22 Z" fill="none" stroke="#17A398" stroke-opacity=".85"/>
+          <circle cx="22" cy="22" r="2" fill="#C6402F" fill-opacity=".8"/>
+        </pattern>
+        <mask id="crescent">
+          <rect width="400" height="400" fill="black"/>
+          <circle cx="196" cy="204" r="168" fill="white"/>
+          <circle cx="268" cy="140" r="150" fill="black"/>
+        </mask>
+      </defs>
+      <g mask="url(#crescent)">
+        <rect width="400" height="400" fill="#FFFFFF" fill-opacity=".7"/>
+        <rect width="400" height="400" fill="url(#izTile)"/>
+      </g>
+      <circle cx="196" cy="204" r="168" fill="none" stroke="#1E3FA4" stroke-opacity=".22"/>
+    </svg>
+  </div>
+</header>
+
+<div class="strip" aria-label="Kurzüberblick">
+  <div class="wrap">
+    <span data-i18n="pill1">5. Semester</span>
+    <span data-i18n="pill2">Abschluss Sommer 2027</span>
+    <span data-i18n="pill3">Ulm, Deutschland</span>
+    <span data-i18n="pill4">Praktikum und studentische Tätigkeit</span>
+  </div>
+</div>
+
+<main id="inhalt">
+  <section id="studium">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="stu_h">Studium</h2>
+        <p class="lead" data-i18n="stu_lead">Universität Ulm, Bachelor of Science in Informatik. Das Security-Seminar läuft noch und ist keine abgeschlossene Forschungsarbeit.</p>
+      </div>
+      <div class="stack">
+        <article class="case">
+          <p class="tag">Universität Ulm</p>
+          <h3 data-i18n="stu_degree">Bachelor of Science, Informatik (Computer Science)</h3>
+          <p class="meta" data-i18n="stu_meta">Ulm · Beginn 2024 · 5. Semester · voraussichtlicher Abschluss Sommer 2027</p>
+          <p><strong data-i18n="stu_course_h">Relevante Lehrveranstaltungen: </strong><span data-i18n="stu_courses">Software Engineering, Databases &amp; Information Systems, Algorithms &amp; Data Structures, Computer Networks, Theoretical Computer Science, Object-Oriented Programming, Automated Testing, Software Architecture.</span></p>
+        </article>
+        <article class="case">
+          <p class="tag" data-i18n="sem_tag">Seminar · laufend</p>
+          <h3 data-i18n="sem_h">IT Security &amp; Privacy — Threat Modeling und Privacy-Frameworks im Mobilitätsbereich</h3>
+          <p data-i18n="sem_p">Themen: STRIDE, LINDDUN, Security und Privacy, Identifikation von Bedrohungen, Privacy-Risiken in Mobilitätssystemen (Standortverfolgung, Linkability und Identifiability) sowie Privacy-by-Design.</p>
+          <p class="note" data-i18n="sem_note">Akademisches Seminar in Arbeit, keine abgeschlossene Forschungsarbeit.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fokus">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="foc_h">Fokus</h2>
+        <p class="lead" data-i18n="foc_lead">Interessensgebiete, wie sie im Lebenslauf stehen: Software Engineering, Cybersecurity, Privacy Engineering und verlässliche Systeme.</p>
+      </div>
+      <ul class="chips">
+        <li>Software Engineering</li>
+        <li>Cybersecurity</li>
+        <li>Privacy Engineering</li>
+        <li>Software Quality</li>
+        <li>Networking</li>
+        <li>Automation</li>
+        <li>AI</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projekte">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="pro_h">Ausgewählte Projekte</h2>
+        <p class="lead" data-i18n="pro_lead">Zwei öffentliche Arbeiten und ein universitäres Teamprojekt. Beim Teamprojekt ist nur der eigene Anteil beschrieben.</p>
+      </div>
+      <div class="stack">
+        <article class="case">
+          <p class="tag" data-i18n="p1_tag">Öffentlich</p>
+          <h3>ay-tea-website</h3>
+          <p data-i18n="p1_p">Statische Unternehmenswebsite von AY-TEA, veröffentlicht unter ay-tea.de.</p>
+          <div class="case-links">
+            <a class="case-link" href="https://github.com/ayteahq/ay-tea-website" target="_blank" rel="noopener noreferrer">
+              <svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg>
+              <span data-i18n="p1_git">Auf GitHub ansehen</span>
+            </a>
+            <a class="case-link" href="../index.html"><span data-i18n="p1_web">Website ay-tea.de</span></a>
+          </div>
+        </article>
+
+        <article class="case">
+          <p class="tag" data-i18n="p2_tag">Öffentliche Demo</p>
+          <h3>google-review-automation</h3>
+          <p data-i18n="p2_p">n8n-Workflow: Google-Bewertung, daraus ein KI-Antwortentwurf, dann E-Mail zur menschlichen Freigabe.</p>
+          <div class="case-links">
+            <a class="case-link" href="https://github.com/ayteahq/google-review-automation" target="_blank" rel="noopener noreferrer">
+              <svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg>
+              <span data-i18n="p2_git">Auf GitHub ansehen</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="case">
+          <p class="tag" data-i18n="p3_tag">Universitäts-Teamprojekt</p>
+          <h3>Pomomon Arena</h3>
+          <p class="meta" data-i18n="p3_meta">PAC / Softwareprojekt · Client-Anwendung · Godot 4.6.1 / GDScript</p>
+          <p data-i18n="p3_p">Universitäres Teamprojekt. Mein Anteil: Übernahme des Editors, insbesondere des Network-Controllers für die Client-Server-Verbindung, und des Spielteils. Das Team hat den Editor als „bestes Editor“ gewählt.</p>
+          <p class="note" data-i18n="p3_note">Code und Screenshots aus diesem Projekt sind hier nicht enthalten.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="erfahrung">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="exp_h">Erfahrung</h2>
+        <p class="lead" data-i18n="exp_lead">Stationen aus dem Lebenslauf. AY-TEA ist ein IT-Kleingewerbe (Einzelunternehmen).</p>
+      </div>
+      <div class="roles">
+        <article class="role">
+          <div class="role-top">
+            <h3 data-i18n="e1_h">AY-TEA — Gründer und Inhaber (IT-Kleingewerbe)</h3>
+            <p class="when" data-i18n="e1_when">Juli 2026 – heute · Ulm</p>
+          </div>
+          <ul class="mini-list">
+            <li data-i18n="e1_l1">Kleines Einzelunternehmen für Software- und Webentwicklung, IT-Dienstleistungen, Automatisierung und digitale Lösungen.</li>
+            <li data-i18n="e1_l2">Unternehmenswebsite ay-tea.de erstellt und veröffentlicht (statische Website, Repository ay-tea-website).</li>
+            <li data-i18n="e1_l3">Öffentliche Demo google-review-automation: n8n-Workflow von der Bewertung zum KI-Antwortentwurf und zur E-Mail-Freigabe.</li>
+            <li data-i18n="e1_l4">Digitale Produkte: 6 Tabellen- und Druckvorlagen auf Etsy und Gumroad; Fiverr-Service für Excel- und Google-Sheets-Vorlagen.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <h3 data-i18n="e2_h">LEGOLAND Deutschland — Studentenjob (Teilzeit)</h3>
+            <p class="when" data-i18n="e2_when">Deutschland · seit 2021 · jährlich etwa 70 Tage</p>
+          </div>
+          <ul class="mini-list">
+            <li data-i18n="e2_l1">Verkauf von Tickets und Jahreskarten, Kundenservice und Besuchskommunikation bei hohem Besucheraufkommen.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <h3 data-i18n="e3_h">Freiberuflicher Dolmetscher (Türkisch–Deutsch)</h3>
+            <p class="when" data-i18n="e3_when">BAMF-bezogene Einsätze · seit 2024</p>
+          </div>
+          <ul class="mini-list">
+            <li data-i18n="e3_l1">Freiberufliches Dolmetschen Türkisch–Deutsch in BAMF-bezogenen Kontexten.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <h3 data-i18n="e4_h">SHS — Sicherheitsmitarbeiter (Veranstaltungsschutz)</h3>
+            <p class="when" data-i18n="e4_when">Sicherheitsunternehmen · seit 09/2026 · §34a</p>
+          </div>
+          <ul class="mini-list">
+            <li data-i18n="e4_l1">Sicherheitsdienst bei Veranstaltungen, zum Beispiel Fußballspielen. Qualifikation als Sicherheitskraft nach §34a.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kenntnisse">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="sk_h">Kenntnisse</h2>
+        <p class="lead" data-i18n="sk_lead">Programmiersprachen und Werkzeuge aus dem Lebenslauf, mit dem dort genannten Kontext.</p>
+      </div>
+      <ul class="skills">
+        <li><strong>Java</strong><span data-i18n="sk_java">OOP, Universitätsprojekte</span></li>
+        <li><strong>C#</strong></li>
+        <li><strong>Haskell</strong></li>
+        <li><strong>Python</strong><span data-i18n="sk_py">Lehrveranstaltung IT-Security</span></li>
+        <li><strong>SQL</strong><span data-i18n="sk_sql">Relationale Datenbanken</span></li>
+        <li><strong>Linux</strong><span data-i18n="sk_linux">Universitätslabor</span></li>
+        <li><strong>VHDL</strong><span data-i18n="sk_vhdl">Labor</span></li>
+        <li><strong>GDScript / Godot 4.6.1</strong></li>
+        <li><strong>MATLAB</strong><span data-i18n="sk_matlab">Lehrveranstaltung Numerische Methoden</span></li>
+        <li><strong>HTML/CSS</strong></li>
+        <li><strong>Git &amp; GitHub</strong></li>
+        <li><strong>Google Sheets / Excel</strong><span data-i18n="sk_sheets">Automatisierung und Vorlagen</span></li>
+        <li><strong>WebSocket / JSON</strong><span data-i18n="sk_ws">Nachrichtenverarbeitung</span></li>
+        <li><strong data-i18n="sk_test_name">Automatisiertes Testen</strong><span data-i18n="sk_test">Kontext Teamprojekt</span></li>
+        <li><strong>n8n</strong><span data-i18n="sk_n8n">Öffentliche Demo</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sprachen">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="lang_h">Sprachen</h2>
+        <p class="lead" data-i18n="lang_lead">Englisch, Französisch und Spanisch sind Selbsteinschätzungen aus dem Lebenslauf.</p>
+      </div>
+      <ul class="lang-grid">
+        <li><strong data-i18n="l_de">Deutsch</strong><span data-i18n="l_de_n">Muttersprache</span></li>
+        <li><strong data-i18n="l_tr">Türkisch</strong><span data-i18n="l_tr_n">Muttersprache</span></li>
+        <li><strong data-i18n="l_en">Englisch</strong><span data-i18n="l_en_n">B2, Selbsteinschätzung</span></li>
+        <li><strong data-i18n="l_fr">Französisch</strong><span data-i18n="l_fr_n">B1, Selbsteinschätzung</span></li>
+        <li><strong data-i18n="l_es">Spanisch</strong><span data-i18n="l_es_n">B1, Selbsteinschätzung</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="contact">
+        <h2 data-i18n="con_h">Kontakt</h2>
+        <p class="lead" data-i18n="con_p">Offen für Praktika und studentische Tätigkeiten in Software Engineering und in Teams mit Bezug zu Cybersecurity.</p>
+        <a class="btn btn-primary" href="mailto:info@ay-tea.de"><span data-i18n="cta_mail">E-Mail schreiben</span></a>
+        <a class="mail-mono" href="mailto:info@ay-tea.de">info@ay-tea.de</a>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/celaleddin-mert-eraslan/" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-linkedin"/></svg><span>LinkedIn</span></a>
+          <a href="https://github.com/ayteahq" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#ic-github"/></svg><span>GitHub ayteahq</span></a>
+          <a href="cv-mert-eraslan.pdf"><span data-i18n="cta_cv">Lebenslauf (PDF, Englisch)</span></a>
+        </div>
+        <p class="place" data-i18n="con_loc">Ulm, Deutschland · ay-tea.de</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <span>© 2026 Celaleddin Mert Eraslan</span>
+      <span data-i18n="foot_tag">Portfolio · Informatik · Universität Ulm</span>
+    </div>
+    <div class="foot-legal">
+      <a href="../impressum.html">Impressum</a>
+      · <a href="../impressum.html#datenschutz">Datenschutz</a>
+      · <a href="../index.html" data-i18n="foot_home">Zur AY-TEA-Startseite</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const T = {
+  de: {
+    skip:"Zum Inhalt springen",
+    nav_label:"Hauptnavigation",
+    logo_label:"AY-TEA Startseite",
+    lang_label:"Sprache wählen",
+    nav_study:"Studium",
+    nav_focus:"Fokus",
+    nav_projects:"Projekte",
+    nav_experience:"Erfahrung",
+    nav_contact:"Kontakt",
+    kicker:"Informatik · Universität Ulm",
+    lead:"Informatikstudent an der Universität Ulm (Bachelor of Science, Beginn 2024, 5. Semester, voraussichtlicher Abschluss Sommer 2027). Ich suche ein Praktikum oder eine studentische Tätigkeit in Software Engineering, auch in Teams mit Cybersecurity-Bezug und in technologie- und verteidigungsnahen Softwareteams.",
+    lead2:"AY-TEA ist mein kleines IT-Kleingewerbe für Webentwicklung, Automatisierung und digitale Lösungen.",
+    cta_mail:"E-Mail schreiben",
+    cta_li:"LinkedIn",
+    cta_gh:"GitHub",
+    cta_cv:"Lebenslauf (PDF, Englisch)",
+    pill1:"5. Semester",
+    pill2:"Abschluss Sommer 2027",
+    pill3:"Ulm, Deutschland",
+    pill4:"Praktikum und studentische Tätigkeit",
+    stu_h:"Studium",
+    stu_lead:"Universität Ulm, Bachelor of Science in Informatik. Das Security-Seminar läuft noch und ist keine abgeschlossene Forschungsarbeit.",
+    stu_degree:"Bachelor of Science, Informatik (Computer Science)",
+    stu_meta:"Ulm · Beginn 2024 · 5. Semester · voraussichtlicher Abschluss Sommer 2027",
+    stu_course_h:"Relevante Lehrveranstaltungen: ",
+    stu_courses:"Software Engineering, Databases & Information Systems, Algorithms & Data Structures, Computer Networks, Theoretical Computer Science, Object-Oriented Programming, Automated Testing, Software Architecture.",
+    sem_tag:"Seminar · laufend",
+    sem_h:"IT Security & Privacy — Threat Modeling und Privacy-Frameworks im Mobilitätsbereich",
+    sem_p:"Themen: STRIDE, LINDDUN, Security und Privacy, Identifikation von Bedrohungen, Privacy-Risiken in Mobilitätssystemen (Standortverfolgung, Linkability und Identifiability) sowie Privacy-by-Design.",
+    sem_note:"Akademisches Seminar in Arbeit, keine abgeschlossene Forschungsarbeit.",
+    foc_h:"Fokus",
+    foc_lead:"Interessensgebiete, wie sie im Lebenslauf stehen: Software Engineering, Cybersecurity, Privacy Engineering und verlässliche Systeme.",
+    pro_h:"Ausgewählte Projekte",
+    pro_lead:"Zwei öffentliche Arbeiten und ein universitäres Teamprojekt. Beim Teamprojekt ist nur der eigene Anteil beschrieben.",
+    p1_tag:"Öffentlich",
+    p1_p:"Statische Unternehmenswebsite von AY-TEA, veröffentlicht unter ay-tea.de.",
+    p1_git:"Auf GitHub ansehen",
+    p1_web:"Website ay-tea.de",
+    p2_tag:"Öffentliche Demo",
+    p2_p:"n8n-Workflow: Google-Bewertung, daraus ein KI-Antwortentwurf, dann E-Mail zur menschlichen Freigabe.",
+    p2_git:"Auf GitHub ansehen",
+    p3_tag:"Universitäts-Teamprojekt",
+    p3_meta:"PAC / Softwareprojekt · Client-Anwendung · Godot 4.6.1 / GDScript",
+    p3_p:"Universitäres Teamprojekt. Mein Anteil: Übernahme des Editors, insbesondere des Network-Controllers für die Client-Server-Verbindung, und des Spielteils. Das Team hat den Editor als „bestes Editor“ gewählt.",
+    p3_note:"Code und Screenshots aus diesem Projekt sind hier nicht enthalten.",
+    exp_h:"Erfahrung",
+    exp_lead:"Stationen aus dem Lebenslauf. AY-TEA ist ein IT-Kleingewerbe (Einzelunternehmen).",
+    e1_h:"AY-TEA — Gründer und Inhaber (IT-Kleingewerbe)",
+    e1_when:"Juli 2026 – heute · Ulm",
+    e1_l1:"Kleines Einzelunternehmen für Software- und Webentwicklung, IT-Dienstleistungen, Automatisierung und digitale Lösungen.",
+    e1_l2:"Unternehmenswebsite ay-tea.de erstellt und veröffentlicht (statische Website, Repository ay-tea-website).",
+    e1_l3:"Öffentliche Demo google-review-automation: n8n-Workflow von der Bewertung zum KI-Antwortentwurf und zur E-Mail-Freigabe.",
+    e1_l4:"Digitale Produkte: 6 Tabellen- und Druckvorlagen auf Etsy und Gumroad; Fiverr-Service für Excel- und Google-Sheets-Vorlagen.",
+    e2_h:"LEGOLAND Deutschland — Studentenjob (Teilzeit)",
+    e2_when:"Deutschland · seit 2021 · jährlich etwa 70 Tage",
+    e2_l1:"Verkauf von Tickets und Jahreskarten, Kundenservice und Besuchskommunikation bei hohem Besucheraufkommen.",
+    e3_h:"Freiberuflicher Dolmetscher (Türkisch–Deutsch)",
+    e3_when:"BAMF-bezogene Einsätze · seit 2024",
+    e3_l1:"Freiberufliches Dolmetschen Türkisch–Deutsch in BAMF-bezogenen Kontexten.",
+    e4_h:"SHS — Sicherheitsmitarbeiter (Veranstaltungsschutz)",
+    e4_when:"Sicherheitsunternehmen · seit 09/2026 · §34a",
+    e4_l1:"Sicherheitsdienst bei Veranstaltungen, zum Beispiel Fußballspielen. Qualifikation als Sicherheitskraft nach §34a.",
+    sk_h:"Kenntnisse",
+    sk_lead:"Programmiersprachen und Werkzeuge aus dem Lebenslauf, mit dem dort genannten Kontext.",
+    sk_java:"OOP, Universitätsprojekte",
+    sk_py:"Lehrveranstaltung IT-Security",
+    sk_sql:"Relationale Datenbanken",
+    sk_linux:"Universitätslabor",
+    sk_vhdl:"Labor",
+    sk_matlab:"Lehrveranstaltung Numerische Methoden",
+    sk_sheets:"Automatisierung und Vorlagen",
+    sk_ws:"Nachrichtenverarbeitung",
+    sk_test_name:"Automatisiertes Testen",
+    sk_test:"Kontext Teamprojekt",
+    sk_n8n:"Öffentliche Demo",
+    lang_h:"Sprachen",
+    lang_lead:"Englisch, Französisch und Spanisch sind Selbsteinschätzungen aus dem Lebenslauf.",
+    l_de:"Deutsch",
+    l_de_n:"Muttersprache",
+    l_tr:"Türkisch",
+    l_tr_n:"Muttersprache",
+    l_en:"Englisch",
+    l_en_n:"B2, Selbsteinschätzung",
+    l_fr:"Französisch",
+    l_fr_n:"B1, Selbsteinschätzung",
+    l_es:"Spanisch",
+    l_es_n:"B1, Selbsteinschätzung",
+    con_h:"Kontakt",
+    con_p:"Offen für Praktika und studentische Tätigkeiten in Software Engineering und in Teams mit Bezug zu Cybersecurity.",
+    con_loc:"Ulm, Deutschland · ay-tea.de",
+    foot_tag:"Portfolio · Informatik · Universität Ulm",
+    foot_home:"Zur AY-TEA-Startseite"
+  },
+  en: {
+    skip:"Skip to content",
+    nav_label:"Main",
+    logo_label:"AY-TEA home",
+    lang_label:"Choose language",
+    nav_study:"Studies",
+    nav_focus:"Focus",
+    nav_projects:"Projects",
+    nav_experience:"Experience",
+    nav_contact:"Contact",
+    kicker:"Computer Science · Ulm University",
+    lead:"Computer Science student at Universität Ulm (Bachelor of Science, started 2024, 5th semester, expected graduation summer 2027). I am looking for an internship or student role in software engineering, including cybersecurity-aware teams and technology and defense-adjacent software teams.",
+    lead2:"AY-TEA is my small IT sole proprietorship (Kleingewerbe) for web development, automation and digital solutions.",
+    cta_mail:"Send an email",
+    cta_li:"LinkedIn",
+    cta_gh:"GitHub",
+    cta_cv:"CV (PDF, English)",
+    pill1:"5th semester",
+    pill2:"Graduation summer 2027",
+    pill3:"Ulm, Germany",
+    pill4:"Internship and student role",
+    stu_h:"Studies",
+    stu_lead:"Universität Ulm, Bachelor of Science in Computer Science. The security seminar is still in progress and is not a completed research project.",
+    stu_degree:"Bachelor of Science, Computer Science (Informatik)",
+    stu_meta:"Ulm · Started 2024 · 5th semester · Expected graduation summer 2027",
+    stu_course_h:"Relevant coursework: ",
+    stu_courses:"Software Engineering, Databases & Information Systems, Algorithms & Data Structures, Computer Networks, Theoretical Computer Science, Object-Oriented Programming, Automated Testing, Software Architecture.",
+    sem_tag:"Seminar · ongoing",
+    sem_h:"IT Security & Privacy — threat modeling and privacy frameworks in the mobility domain",
+    sem_p:"Topics: STRIDE, LINDDUN, security and privacy, threat identification, privacy risks in mobility systems (location tracking, linkability and identifiability), and privacy-by-design.",
+    sem_note:"Academic seminar in progress, not a completed research project.",
+    foc_h:"Focus",
+    foc_lead:"Areas of interest as stated on the CV: software engineering, cybersecurity, privacy engineering and reliable systems.",
+    pro_h:"Selected projects",
+    pro_lead:"Two public pieces of work and one university team project. The team project lists only my own part.",
+    p1_tag:"Public",
+    p1_p:"Static company website for AY-TEA, published at ay-tea.de.",
+    p1_git:"View on GitHub",
+    p1_web:"Website ay-tea.de",
+    p2_tag:"Public demo",
+    p2_p:"n8n workflow: a Google review becomes an AI draft reply, then an email for a person to approve.",
+    p2_git:"View on GitHub",
+    p3_tag:"University team project",
+    p3_meta:"PAC / software project · client application · Godot 4.6.1 / GDScript",
+    p3_p:"University team project. My part: I took over the editor, especially the network controller for the client–server connection, and the game part. The team voted that editor “bestes Editor”.",
+    p3_note:"Code and screenshots from this project are not included here.",
+    exp_h:"Experience",
+    exp_lead:"Roles from the CV. AY-TEA is an IT Kleingewerbe (sole proprietorship).",
+    e1_h:"AY-TEA — Founder and sole proprietor (IT Kleingewerbe)",
+    e1_when:"July 2026 – present · Ulm",
+    e1_l1:"Small sole proprietorship for software and web development, IT services, automation and digital solutions.",
+    e1_l2:"Built and published the company website ay-tea.de (static site, repository ay-tea-website).",
+    e1_l3:"Public demo google-review-automation: n8n workflow from a review to an AI draft reply and an approval email.",
+    e1_l4:"Digital products: 6 spreadsheet and printable templates on Etsy and Gumroad; Fiverr service for Excel and Google Sheets templates.",
+    e2_h:"LEGOLAND Deutschland — student worker (part-time)",
+    e2_when:"Germany · since 2021 · about 70 days per year",
+    e2_l1:"Ticket and annual-pass (Jahreskarten) sales, customer service and visitor communication in a high-volume setting.",
+    e3_h:"Freelance interpreter (Turkish–German)",
+    e3_when:"BAMF-related assignments · since 2024",
+    e3_l1:"Freelance Turkish–German interpreting in BAMF-related contexts.",
+    e4_h:"SHS — security staff (event security)",
+    e4_when:"Security company · since 09/2026 · §34a",
+    e4_l1:"Security staff at events such as football matches. Holds the §34a security-guard qualification.",
+    sk_h:"Skills",
+    sk_lead:"Programming languages and tools from the CV, with the context given there.",
+    sk_java:"OOP, university projects",
+    sk_py:"IT-security coursework",
+    sk_sql:"Relational databases",
+    sk_linux:"University lab",
+    sk_vhdl:"Lab",
+    sk_matlab:"Numerical-methods coursework",
+    sk_sheets:"Automation and templates",
+    sk_ws:"Message handling",
+    sk_test_name:"Automated testing",
+    sk_test:"Team-project context",
+    sk_n8n:"Public demo",
+    lang_h:"Languages",
+    lang_lead:"English, French and Spanish levels are self-assessed on the CV.",
+    l_de:"German",
+    l_de_n:"Native",
+    l_tr:"Turkish",
+    l_tr_n:"Native",
+    l_en:"English",
+    l_en_n:"B2, self-assessed",
+    l_fr:"French",
+    l_fr_n:"B1, self-assessed",
+    l_es:"Spanish",
+    l_es_n:"B1, self-assessed",
+    con_h:"Contact",
+    con_p:"Open to internships and student roles in software engineering and on teams that work with cybersecurity.",
+    con_loc:"Ulm, Germany · ay-tea.de",
+    foot_tag:"Portfolio · Computer Science · Ulm University",
+    foot_home:"Back to AY-TEA"
+  }
+};
+
+const META = {
+  de: {
+    title:"Celaleddin Mert Eraslan — Informatik, Software Engineering & Cybersecurity",
+    description:"Informatikstudent an der Universität Ulm (5. Semester, Abschluss voraussichtlich Sommer 2027). Portfolio zu Software Engineering, Cybersecurity und Automatisierung. Kontakt: info@ay-tea.de."
+  },
+  en: {
+    title:"Celaleddin Mert Eraslan — Computer Science, Software Engineering & Cybersecurity",
+    description:"Computer Science student at Universität Ulm (5th semester, expected graduation summer 2027). Portfolio for software engineering, cybersecurity and automation. Contact: info@ay-tea.de."
+  }
+};
+
+function storedLang(){
+  try {
+    return localStorage.getItem("aytea-lang") === "en" ? "en" : "de";
+  } catch (err) {
+    return "de";
+  }
+}
+
+function setMeta(lang){
+  const meta = META[lang];
+  document.title = meta.title;
+  const desc = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  const ogAlt = document.querySelector('meta[property="og:locale:alternate"]');
+  if (desc) desc.setAttribute("content", meta.description);
+  if (ogTitle) ogTitle.setAttribute("content", meta.title);
+  if (ogDesc) ogDesc.setAttribute("content", meta.description);
+  if (ogLocale) ogLocale.setAttribute("content", lang === "en" ? "en_US" : "de_DE");
+  if (ogAlt) ogAlt.setAttribute("content", lang === "en" ? "de_DE" : "en_US");
+}
+
+function setLang(lang, persist){
+  const next = T[lang] ? lang : "de";
+  document.documentElement.lang = next;
+  if (persist) {
+    try { localStorage.setItem("aytea-lang", next); } catch (err) { /* keep the visible language */ }
+  }
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (T[next][key] != null) el.textContent = T[next][key];
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+    const key = el.getAttribute("data-i18n-aria");
+    if (T[next][key]) el.setAttribute("aria-label", T[next][key]);
+  });
+  document.querySelectorAll(".lang button").forEach(button => {
+    const active = button.dataset.lang === next;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
+  setMeta(next);
+}
+
+document.querySelectorAll(".lang button").forEach(button => {
+  button.addEventListener("click", () => setLang(button.dataset.lang, true));
+});
+
+setLang(storedLang(), false);
+</script>
+</body>
+</html>
